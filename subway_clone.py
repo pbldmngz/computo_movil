@@ -99,11 +99,35 @@ def create_sw(): #Método para la creación de sw
     print("\033[;36m"+"Product/s added"+'\033[0;m')
     for s in catalogo:
         print(s.name)
-    
+
+def auto_create():
+    #Generar ingredientes
+    ingred.append(Ingredient("jamon", 50, 100))
+    ingred.append(Ingredient("tocino", 90, 100))
+    ingred.append(Ingredient("aguacate", 15, 100))
+    #Generar sandwiches
+    catalogo.append(Basic("mexican", 250))
+    catalogo.append(Basic("american", 250))
+    catalogo.append(Basic("italian", 250))
+
+def selector():
+    auto_create()
+    print("\033[;36m"+"Añadir ingrediente: A, Añadir Sandwich: B, Modo cajero: C")
+    while True:
+        val = input("\n¿Qué desea hacer?\n").casefold()
+        print('\033[0;m')
+        if val == "a": 
+            create_ing()
+            break
+        elif val == "b": 
+            create_sw()
+            break
+        elif val == "c": 
+            start()
+            break
+        else: print(val, " no es una opción válida, vuelva a intentarlo")
+
 def start(): #Método de inicio rápido
-    create_ing()
-    create_sw()
-    
     print("\033[;36m"+"¡BIENVENIDO A SUNWAY! ¿QUÉ DESEA ORDENAR?\n")
     print("CATÁLOGO:"+'\033[0;m')
     for i in catalogo:
@@ -150,4 +174,4 @@ def main(): #Ciclo de pedidos
         if input() == "N":
             break
 
-start()
+selector()
