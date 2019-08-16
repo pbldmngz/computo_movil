@@ -1,5 +1,12 @@
-<sandwich>
-    <name>simple</name>
-    <cost>90</cost>
-    <ingredients>jamon</ingredients>
-</sandwich>
+<comida>
+    <sandwich id = "1">
+        <name>simple</name>
+        <cost>90</cost>
+        <ingredients>jamon</ingredients>
+    </sandwich>
+    <sandwich id = "2">
+        <name>simple</name>
+        <cost>190</cost>
+        <ingredients>jamon, tocino</ingredients>
+    </sandwich>
+</comida>
