@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (isbn, title, author+, editorial+, year)>
+    <!ELEMENT author (name+, surname)>
+    <!ELEMENT isbn (#PCDATA)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT surname (#PCDATA)>
+]>
+<biblioteca>
+    <libro>
+        <isbn>987478577906</isbn>
+        <title>EL NOMBRE DEL VIENTO</title>
+        <author>
+            <name>PATRICK</name>
+            <surname>ROTHFUSS</surname>
+        </author>
+        <editorial>DEBOLSILLO</editorial>
+        <year>2007</year>
+    </libro>
+    <libro>
+        <isbn>9685609613549</isbn>
+        <title>EL TEMOR DE UN HOMBRE SABIO</title>
+        <author>
+            <name>PATRICK</name>
+            <surname>ROTHFUSS</surname>
+        </author>
+        <editorial>DEBOLSILLO</editorial>
+        <year>2011</year>
+    </libro>
+</biblioteca>
