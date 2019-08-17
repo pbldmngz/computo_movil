@@ -1,12 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE biblioteca [
     <!ELEMENT biblioteca (libro+)>
-    <!ELEMENT libro (isbn, title, author+, editorial+, year)>
+    <!ELEMENT libro (isbn, title, author+, editorial+, year, image)>
     <!ELEMENT author (name+, surname)>
     <!ELEMENT isbn (#PCDATA)>
     <!ELEMENT title (#PCDATA)>
     <!ELEMENT editorial (#PCDATA)>
     <!ELEMENT year (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+    <!ELEMENT src (#PCDATA)>
+    <!ELEMENT heigth (#PCDATA)>
+    <!ELEMENT width (#PCDATA)>
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT surname (#PCDATA)>
 ]>
@@ -20,6 +24,12 @@
         </author>
         <editorial>DEBOLSILLO</editorial>
         <year>2007</year>
+        <image>
+            <src>../images_sample.jpg</src>
+            <height units="pixels"> 500</height>
+            <width units="pixels"> 500</width>
+            <title> Title of image</title>
+        </image>
     </libro>
     <libro>
         <isbn>9685609613549</isbn>

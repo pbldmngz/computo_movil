@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>ColorXML</title>
+<script type="text/javascript">
+function readXML()
+{
+    var xml = new XMLHttpRequest();
+    xml.open("GET", "biblioteca_9864.xml", false);
+    xml.send();
+    var xmlData = xml.responseXML;
+    if (!xmlData)
+    {
+        xmlData = (new DOMParser()).parseFromString(xml.responseText, "text/xml");
+        var book = xmlData.getElementsByTagName("libro");
+        var title = book[0].getElementsByTagName("isbn")[0].firstChild.data;
+        var edit = book[0].getElementsByTagName("editorial")[0].firstChild.data;
+        var year = book[0].getElementsByTagName("year")[0].firstChild.data;
+
+        document.write("Title: " + title);
+        document.write("Editorial: " + edit);
+        document.write("Year: " + year);
+    }
+}
+</script>
+</head>
+<body>
+<h1>Table:</h1>
+<button onclick="readXML()">Load Info</button>
+</body>
+</html>
