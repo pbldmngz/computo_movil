@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIBLIOTECA</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            function script(){
+            $.ajax({
+                type: "GET",
+                url: "biblioteca.xml",
+                dataType: "xml",
+                success: xmlParser
+            });
+            document.getElementById("button").outerHTML = "";
+            }
+            
+
+            function xmlParser(xml){
+                $(xml).find("libro").each(function(){
+                    $("#container").append('<div class="book"><img src="' + 
+                    $(this).find("image").text() + '" width="200" heigth="200" alt="' +
+                    $(this).find("title").text() + '" /><br/><br/><div class="title">TITLE: ' +
+                    $(this).find("title").text()  + '<br/><br/>AUTHOR: ' +
+                    $(this).find("author").text() + '<br/><br/>ISBN: ' +
+                    $(this).find("isbn").text() + '<br/><br/>EDITORIAL: ' +
+                    $(this).find("editorial").text() + '<br/><br/>YEAR: ' +
+                    $(this).find("year").text()
+                    + '<br/><br/></div></div><br/>')
+                });
+            }
+        </script>
+    </head>
+    <body id = "container">
+        <h1>Load data from XML (with jQuery)</h1>
+        <button id="button" onclick="script()">Load Info</button>
+    </body>
+</html>

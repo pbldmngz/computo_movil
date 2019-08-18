@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (isbn, title, image)>
+    <!ELEMENT isbn (#PCDATA)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+]>
+<biblioteca>
+    <libro>
+        <isbn>987478577906</isbn>
+        <title>EL NOMBRE DEL VIENTO</title>
+        <image>image_sample.jpg</image>
+    </libro>
+    <libro>
+        <isbn>9685609613549</isbn>
+        <title>EL TEMOR DE UN HOMBRE SABIO</title>
+        <image>image_sample.jpg</image>
+    </libro>
+</biblioteca>
