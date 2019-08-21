@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="school.xsl"?>
+<!-- <!DOCTYPE school SYSTEM "school.dtd"> -->
+<!-- <school> -->
+<school xmlns="http://127.0.0.1:5500/movil/practicas/xml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://127.0.0.1:5500/movil/practicas/xml school.xsd">
+  <students>
+    <student>
+        <avatar>profile-pic.jpeg</avatar>
+        <name>Hector</name>
+        <lastname>Hernandez</lastname>
+        <age>28</age>
+    </student>
+    <student>
+        <avatar>profile-pic.jpeg</avatar>
+        <name>Enrique</name>
+        <lastname>Hernandez</lastname>
+        <age>30</age>
+    </student>
+    <student>
+        <name>Juan</name>
+        <lastname>Perez</lastname>
+        <age>25</age>
+    </student>
+    <student>
+        <avatar>profile-pic.jpeg</avatar>
+        <name>Mike</name>
+        <lastname>Jordan</lastname>
+        <age>40</age>
+    </student>
+  </students>
+</school>
