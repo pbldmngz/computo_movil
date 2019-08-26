@@ -36,4 +36,39 @@
     </mod_4>
     <barras>cb_1.jpg</barras>
   </cliente>
+  <cliente>
+    <mod_1>
+        <nombre>ESTE NO ES PABLO</nombre>
+        <ciudad>TIJUANA, BC</ciudad>
+        <colonia>ZONA CENTRO</colonia>
+        <calle>SAN RAFAEL 2077</calle>
+    </mod_1>
+    <mod_2>
+        <m_total>693</m_total>
+        <m_antes>21-DIC-2012</m_antes>
+        <m_mes>DICIEMBRE</m_mes>
+        <m_telefono>(646) 000 0000</m_telefono>
+        <m_factura>9842874287628</m_factura>
+    </mod_2>
+    <mod_3>
+        <s_anterior>996</s_anterior>
+        <s_pago>996</s_pago>
+        <s_saldo>0</s_saldo>
+        <s_cargos>597</s_cargos>
+        <s_iva>95</s_iva>
+        <s_sub>692</s_sub>
+        <s_redondeo>0.68</s_redondeo>
+        <s_total>693</s_total>
+    </mod_3>
+    <mod_4>
+        <a_planes>328</a_planes>
+        <a_servicio>40</a_servicio>
+        <a_tiendas>111</a_tiendas>
+        <a_especial>29</a_especial>
+        <a_celulares>76</a_celulares>
+        <a_ieps>10</a_ieps>
+        <a_sub>597</a_sub>
+    </mod_4>
+    <barras>cb_1.jpg</barras>
+  </cliente>
 </catalog>

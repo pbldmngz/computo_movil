@@ -8,7 +8,7 @@
     
     <table style="width:40%; background-color: white;">
     <tr>
-    <td colspan="2"><center><img style=" width: 300px;" src="logo.png" align="middle"/></center><br/></td>
+    <td colspan="2"><center><br/><img style=" width: 300px;" src="logo.png" align="middle"/></center><br/></td>
     </tr>
     <tr>
     <td style="font-family: fantasy;">
@@ -163,7 +163,7 @@
           <td>$<xsl:value-of select="a_sub"/></td>
         </tr>
         <tr>
-          <td STYLE="COLOR: WHITE"> _ </td>
+          <td STYLE="color: white"> _ </td>
         </tr>
         </xsl:for-each>
       </table>
@@ -239,10 +239,13 @@
     </tr>
 
     </table>
-    
+    <br/>
+    <br/>
+    <br/>
     
     </xsl:for-each>
     </center>
+
   </body>
   </html>
   </xsl:template>
