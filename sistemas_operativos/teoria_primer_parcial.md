@@ -13,3 +13,16 @@ Generalmente, en un sistema operativo como Windows, Mac OS o Linux, el usuario n
 |User Mode: User interface program|
 |**Kernel mode: Operating System**|
 |Hardware|
+
+> La mayoría de los computadores dispone de dos modos de operación: **modo usuario** y **modo kernel** (también llamado modo supervisor).
+
+**Modo Kernel**
+* Tiene total acceso al hardware
+* Puede ejecutar cualquier instrucción
+
+**Modo usuario**
+* Instrucciones limitadas
+
+|**Capas de un sistema operativo**|
+|:-------------------------------:|
+|Capa 1|Kernel|
