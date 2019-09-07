@@ -8,5 +8,4 @@ Ya que es imposible para un humano comprender en su totalidad cada uno de los co
 Generalmente, en un sistema operativo como Windows, Mac OS o Linux, el usuario nunca interactúa realmente con el sistema operativo en sí, sino que con una **shell** cuando es en forma de texto y con una **GUI** (Graphic User Interface) cuando es de forma gráfica. Tanto la shell como la GUI son herramientas del sistema operativo para recibir las instrucciones del usuario.
 
 |Table|
-|-----|
 |something|
