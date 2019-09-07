@@ -24,7 +24,7 @@ El kernel es la parte fundamental del sistema operativo y se encarga de manejar 
 * Acceso compartido a los recursos, algunas CPU los dividen en *rings*
 
 |**Anillos**|
-|:-------------------------------:|
+|:-------------------------------|
 |Capa 1: Kernel|
 |Capa 2: Manejo de memoria|
 |Capa 3: Entrada/Salida|
@@ -60,7 +60,7 @@ Los sistemas monolíticos son aquellos en los que su centro es un grupo de estru
 Consiste en organizar el sistema operativo como una jerarquía de capas, cada una construida sobre la inmediata inferior.
 
 |**Capas**|
-|:-------------------------------:|
+|:-------------------------------|
 |Capa 0: Hardware|
 |Capa 1: Gestión del procesador|
 |Capa 2: Gestión de memoria|
