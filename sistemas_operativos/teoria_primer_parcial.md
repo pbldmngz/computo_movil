@@ -168,6 +168,6 @@ Todo proceso a lo largo de su existencia puede cambiar de estado varias veces, a
 |**Transición**|**Descripción**|
 |:--------||:--------|
 |*Comienzo de la ejecución*|El proceso se inserta en la cola de preparados|
-|*Paso a estado de ejecución*|Cuando el procesador se encuentre inactivo y exista un proceso en la cola de preparados se pondrá en ejecución|
-|*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados, cambiando su estado e iniciando el siguiente proceso|
+|*Paso a estado de ejecución*|Cuando un proceso en estado preparado pasa|
+|*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados|
 |*Paso a estado preparado*|El proceso cambia a estado preparado|
