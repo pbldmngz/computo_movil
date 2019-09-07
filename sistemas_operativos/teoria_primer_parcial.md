@@ -94,20 +94,80 @@ El ordenador **cliente** envía información al **servidor** (el eslabón más i
     * Asimétricos
 
 #### Por la forma de ofrecer los servicios
-* Sistemas centralizados
-* Sistemas de red
-* Sistemas distribuidos
-* Sistemas operativos paralelos
+* Sistemas *centralizados*
+* Sistemas de *red*
+* Sistemas *distribuidos*
+* Sistemas *operativos paralelos*
 
 ### Estructura de un sistema operativo
-* Administrador de procesos
-* Administrador de memoria
-* Administrador de almacenamiento secundario
-* Administrador de sistemas de entrada/salida
-* Administrador de archivos
-* Sistemas de protección
+* Administrador de *procesos*
+* Administrador de *memoria*
+* Administrador de *almacenamiento secundario*
+* Administrador de *sistemas de entrada/salida*
+* Administrador de *archivos*
+* Sistemas de *intérpretes de comandos*
+* Sistemas de *protección*
 * Networking
-* Sistemas de intérpretes de comandos
 * Núcleos de sistemas operativos
 
 ## Procesos e hilos
+En un inicio, los sistemas operativos solo permitían ejecutar un programa a la vez. Este programa obtenía el control completo del sistema. Cuando se permitió la ejecución concurrente de múltiples programas, se dió nombre al **"proceso"**.
+
+### Proceso
+#### *¿Qué es?*
+* Es un programa en ejecución
+* Es la unidad de trabajo de un sistema operativo moderno
+* Un sistema operativo se puede ver como un conjunto de procesos
+  * Los procesos del sistema operativo ejecutan "código de sistema"
+  * Los procesos del usuario ejecutan "código de usuario"
+* Todos los procesos se ejecutan de forma *pseudo-concurrente* (mientras espera a que una finalice, puede atender otras peticiones), con la CPU conmutando entre ellos
+
+> Para hacer más eficiente el proceso, el CPU cambia de un proceso a otro, dando la ilusión de paralelismo. A este funcionamiento se le conoce como *multiprogramación*.
+
+#### *Características:*
+* Valores actuales del contador del programa, registros y variables
+* Cada proceso tiene su propia CPU virtual
+* Tiene:
+  * Programa
+  * Entrada
+  * Salida
+  * Estado
+
+> Un único procesador puede ser compartido entre varios procesos. Un programa es algo que puede simplemente almacenarse en el disco.
+
+#### *Cuatro eventos principales hacen que se creen procesos*
+* Inicialización del sistema
+* Ejecución de una llamada al sistema de creación de procesos por un proceso en ejecución
+* Una solicitud del usuario para crear un nuevo proceso
+* Inicialización de un trabajo por lotes
+
+> Los conceptos de **tareas** y **procesos** son equivalentes y se pueden intercambiar.
+
+#### *Recursos de un proceso*
+* Código ejecutable
+* Registros temporales
+* Contador
+* Datos
+* Pila
+
+> Si dos o mas procesos forman parte de un mismo programa, se consideran secuencias separadas de ejecución y pueden cooperar entre ellos.
+
+#### *Estados de los procesos*
+Un proceso tiene una naturaleza dinámica, cuando un proceso se ejecuta cambia de estado. Estos estados no son visibles para el usuario, quien siempre verá como que un proceso se está *ejecutando*.
+
+|**Estado**|**Descripción**|
+|:--------||:--------|
+|*Nuevo*|Se está creando|
+|*Corriendo*|Se está ejecutando. El proceso tiene el control del procesador|
+|*En espera*|No puede ejecutarse de momento porque está a la espera de algún recurso o evento|
+|*Preparado*|El proceso está listo para ocupar la CPU pero no está en ejecución por alguna causa|
+|*Finalizado*|El proceso terminó su ejecución|
+
+Todo proceso a lo largo de su existencia puede cambiar de estado varias veces, a esto se le denomina *transición de estado*:
+
+|**Transición**|**Descripción**|
+|:--------||:--------|
+|*Comienzo de la ejecución*|El proceso se inserta en la cola de preparados|
+|*Paso a estado de ejecución*|Cuando el procesador se encuentre inactivo y exista un proceso en la cola de preparados se pondrá en ejecución|
+|*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados, cambiando su estado e iniciando el siguiente proceso|
+|*Paso a estado preparado*|El proceso cambia a estado preparado|
