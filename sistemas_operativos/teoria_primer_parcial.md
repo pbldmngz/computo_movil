@@ -48,9 +48,7 @@ Según la perspectiva con la que se observen los sistemas operativos, pueden rea
 * Sistemas operativos por los **servicios que ofrecen**
 * Sistemas operativos por la **forma en que ofrecen sus servicios** *(visión externa)*
 
-#### Por su estructura
-
-##### Monolítica
+#### Monolítica
 Los sistemas monolíticos son aquellos en los que su centro es un grupo de estructuras fijas, las cuales funcionan entre sí.
 
 **Procesos principales:**
@@ -58,7 +56,7 @@ Los sistemas monolíticos son aquellos en los que su centro es un grupo de estru
 * Un conjunto de procedimientos de servicio que llevan a cabo las llamadas del sistema.
 * Un conjunto de procedimientos de utilería que ayudan a los procedimientos del servicio.
 
-##### Capas
+#### Capas
 Consiste en organizar el sistema operativo como una jerarquía de capas, cada una construida sobre la inmediata inferior.
 
 |**Capas**|
@@ -70,10 +68,10 @@ Consiste en organizar el sistema operativo como una jerarquía de capas, cada un
 |Capa 4: Gestión de dispositivos|
 |Capa 5: Gestión de la información|
 
-##### Máquina virtual
+#### Máquina virtual
 Un sistema de máquina virtual corre sobre el sistema operativo de la máquina como si fuese una aplicación, pero simula ser un sistema operativo usando los recursos asignados de la máquina en la que corre. En esencia es **una computadora dentro de una computadora**.
 
-##### Cliente-Servidor
+#### Cliente-Servidor
 El ordenador **cliente** envía información al **servidor** (el eslabón más importante) y este la devuelve. Altamente efectivo para escalabilidad, fiabilidad y seguridad.
 
 #### Por modos de explotación
@@ -94,3 +92,22 @@ El ordenador **cliente** envía información al **servidor** (el eslabón más i
 * Multi-proceso
   * Simétricos
   * Asimétricos
+
+#### Por la forma de ofrecer los servicios
+* Sistemas centralizados
+* Sistemas de red
+* Sistemas distribuidos
+* Sistemas operativos paralelos
+
+### Estructura de un sistema operativo
+* Administrador de procesos
+* Administrador de memoria
+* Administrador de almacenamiento secundario
+* Administrador de sistemas de entrada/salida
+* Administrador de archivos
+* Sistemas de protección
+* Networking
+* Sistemas de intérpretes de comandos
+* Núcleos de sistemas operativos
+
+## Procesos e hilos
