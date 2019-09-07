@@ -74,5 +74,26 @@ group by nombre, cat.name
 ## Ejercicio 6
 Elaborar una consulta que regrese la lista de clientes (nombre y apellido) que rentaron la película **“BUCKET BROTHERHOOD”**, junto con la lista de actores que participaron en la película (nombre y apellido).
 ```
-
+(
+select concat(c.first_name, " ", c.last_name) as nombre
+from customer as c
+join rental as r
+on c.customer_id = r.customer_id
+join inventory as i
+on i.inventory_id = r.inventory_id
+join film as f
+on i.film_id = f.film_id
+where f.title like "%bucket brotherhood%"
+group by c.customer_id
+)
+union
+(
+select concat(a.first_name, " ", a.last_name) as nombre
+from actor as a
+join film_actor as fa
+on fa.actor_id = a.actor_id
+join film as f
+on fa.film_id = f.film_id
+where f.title like "%BUCKET BROTHERHOOD%"
+)
 ```
