@@ -25,4 +25,8 @@ Generalmente, en un sistema operativo como Windows, Mac OS o Linux, el usuario n
 
 |**Capas de un sistema operativo**|
 |:-------------------------------:|
-|Capa 1|Kernel|
+|Capa 1: Kernel|
+|Capa 2: Manejo de memoria|
+|Capa 3: Entrada/Salida|
+|Capa 4: Sistema de archivos|
+|Capa 5: Interfaz de usuario|
