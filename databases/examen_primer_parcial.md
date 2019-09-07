@@ -3,7 +3,8 @@ Usar la base de datos `sakila` para resolver los siguientes ejercicios.
 ## Ejercicio 1
 Elaborar una consulta que utilice **JOIN** para mostrar el monto total registrado por cada miembro del personal en agosto de 2005.
 ```
-select s.staff_id, sum(p.amount) as "payment"
+select concat(s.first_name, " ", s.last_name) as nombre, 
+sum(p.amount) as "payment"
 from staff as s
 join payment as p
 on s.staff_id = p.staff_id
