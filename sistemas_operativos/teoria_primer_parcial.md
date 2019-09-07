@@ -156,7 +156,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 Un proceso tiene una naturaleza dinámica, cuando un proceso se ejecuta cambia de estado. Estos estados no son visibles para el usuario, quien siempre verá como que un proceso se está *ejecutando*.
 
 |**Estado**|**Descripción**|
-|:--------||:--------|
+|:--------|:--------|
 |*Nuevo*|Se está creando|
 |*Corriendo*|Se está ejecutando. El proceso tiene el control del procesador|
 |*En espera*|No puede ejecutarse de momento porque está a la espera de algún recurso o evento|
@@ -166,7 +166,7 @@ Un proceso tiene una naturaleza dinámica, cuando un proceso se ejecuta cambia d
 Todo proceso a lo largo de su existencia puede cambiar de estado varias veces, a esto se le denomina *transición de estado*:
 
 |**Transición**|**Descripción**|
-|:--------||:--------|
+|:--------|:--------|
 |*Comienzo de la ejecución*|El proceso se inserta en la cola de preparados|
 |*Paso a estado de ejecución*|Cuando un proceso en estado preparado pasa|
 |*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados|
