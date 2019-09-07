@@ -55,7 +55,20 @@ where date(r.return_date) - date(r.rental_date) > 2
 ## Ejercicio 5
 Elaborar una consulta que regrese una lista con los nombres de los clientes y películas rentadas por categoría, ordenadas por el nombre del cliente y nombre de la categoría.
 ```
-
+select concat(c.first_name, " ", c.last_name) as nombre,
+cat.name, count(f.film_id)
+from customer as c
+join rental as r
+on c.customer_id = r.customer_id
+join inventory as i
+on i.inventory_id = r.inventory_id
+join film as f
+on i.film_id = f.film_id
+join film_category as fc
+on fc.film_id = f.film_id
+join category as cat
+on cat.category_id = fc.category_id
+group by nombre, cat.name
 ```
 ## Ejercicio 6
 Elaborar una consulta que regrese la lista de clientes (nombre y apellido) que rentaron la película **“BUCKET BROTHERHOOD”**, junto con la lista de actores que participaron en la película (nombre y apellido).
