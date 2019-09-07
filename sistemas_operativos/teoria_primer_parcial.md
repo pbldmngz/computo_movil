@@ -23,7 +23,7 @@ Además el kernel es encargado de proporcionar:
 * Protección mediante **niveles de acceso**
 * Acceso compartido a los recursos, algunas CPU los dividen en *rings*
 
-|**Capas de un sistema operativo**|
+|**Anillos**|
 |:-------------------------------:|
 |Capa 1: Kernel|
 |Capa 2: Manejo de memoria|
@@ -41,6 +41,56 @@ Además el kernel es encargado de proporcionar:
 * Optimizar recursos
 * Cargar y descargar programas automáticamente
 
+### Clasificaciones de sistemas operativos
+Según la perspectiva con la que se observen los sistemas operativos, pueden realizarse múltiples clasificaciones:
+* Sistemas operativos por su **estructura** *(visión interna)*
+* Sistemas operativos por los **modos de explotación**
+* Sistemas operativos por los **servicios que ofrecen**
+* Sistemas operativos por la **forma en que ofrecen sus servicios** *(visión externa)*
 
+#### Por su estructura
 
+##### Monolítica
+Los sistemas monolíticos son aquellos en los que su centro es un grupo de estructuras fijas, las cuales funcionan entre sí.
 
+**Procesos principales:**
+* Un programa principal que invoca el procedimiento de servicio solicitado.
+* Un conjunto de procedimientos de servicio que llevan a cabo las llamadas del sistema.
+* Un conjunto de procedimientos de utilería que ayudan a los procedimientos del servicio.
+
+##### Capas
+Consiste en organizar el sistema operativo como una jerarquía de capas, cada una construida sobre la inmediata inferior.
+
+|**Capas**|
+|:-------------------------------:|
+|Capa 0: Hardware|
+|Capa 1: Gestión del procesador|
+|Capa 2: Gestión de memoria|
+|Capa 3: Gestión de procesos|
+|Capa 4: Gestión de dispositivos|
+|Capa 5: Gestión de la información|
+
+##### Máquina virtual
+Un sistema de máquina virtual corre sobre el sistema operativo de la máquina como si fuese una aplicación, pero simula ser un sistema operativo usando los recursos asignados de la máquina en la que corre. En esencia es **una computadora dentro de una computadora**.
+
+##### Cliente-Servidor
+El ordenador **cliente** envía información al **servidor** (el eslabón más importante) y este la devuelve. Altamente efectivo para escalabilidad, fiabilidad y seguridad.
+
+#### Por modos de explotación
+* Por lotes
+* Por multiprogramación
+
+#### Por servicios ofrecidos
+**Por el número de usuarios:**
+* Mono-usuario
+* Multi-usuario
+
+**Por el número de tareas:**
+* Mono-tarea
+* Multi-tarea
+
+**Por el número de procesadores:**
+* Mono-proceso
+* Multi-proceso
+  * Simétricos
+  * Asimétricos
