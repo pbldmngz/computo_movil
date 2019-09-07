@@ -40,7 +40,17 @@ order by c.last_name, c.first_name, f.title
 ## Ejercicio 4
 Elaborar una consulta que regrese una lista de rentas donde las películas hayan sido devueltas más de dos días después de la fecha de renta, la lista debe presentar apellido paterno del cliente, nombre del cliente, título de la película, fecha de renta, fecha de devolución y diferencia en días.
 ```
-
+select concat(c.first_name, " ", c.last_name) as nombre,
+f.title, date(r.rental_date), date(r.return_date), 
+date(r.return_date) - date(r.rental_date) as days
+from customer as c
+join rental as r
+on c.customer_id = r.customer_id
+join inventory as i
+on r.inventory_id = i.inventory_id
+join film as f
+on i.film_id = f.film_id
+where date(r.return_date) - date(r.rental_date) > 2
 ```
 ## Ejercicio 5
 Elaborar una consulta que regrese una lista con los nombres de los clientes y películas rentadas por categoría, ordenadas por el nombre del cliente y nombre de la categoría.
