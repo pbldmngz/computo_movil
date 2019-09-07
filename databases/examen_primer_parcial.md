@@ -1,4 +1,4 @@
-# EXAMEN
+# EXAMEN DEL PRIMER PARCIAL
 Usar la base de datos `sakila` para resolver los siguientes ejercicios.
 ## Ejercicio 1
 Elaborar una consulta que utilice **JOIN** para mostrar el monto total registrado por cada miembro del personal en agosto de 2005.
@@ -21,7 +21,7 @@ Elaborar una consulta que regrese una lista de rentas donde las películas hayan
 
 ```
 ## Ejercicio 5
-Elaborar una consulta que regrese una lista con los nombres de los clientes y películas rentadas por categoría, ordenadas nombre del cliente y nombre de la categoría.
+Elaborar una consulta que regrese una lista con los nombres de los clientes y películas rentadas por categoría, ordenadas por el nombre del cliente y nombre de la categoría.
 ```
 
 ```
