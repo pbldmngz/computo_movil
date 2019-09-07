@@ -7,6 +7,8 @@ select s.staff_id, sum(p.amount) as "payment"
 from staff as s
 join payment as p
 on s.staff_id = p.staff_id
+where p.payment_date between "2005-08-01 00:00:00" 
+and "2005-08-31 23:59:59"
 group by p.staff_id
 ```
 ## Ejercicio 2
