@@ -18,6 +18,7 @@ El kernel es la parte fundamental del sistema operativo y se encarga de manejar 
 * CPU
 * Memoria
 * Dispositivos de entrada/salida
+
 Además el kernel es encargado de proporcionar:
 * Protección mediante **niveles de acceso**
 * Acceso compartido a los recursos, algunas CPU los dividen en *rings*
