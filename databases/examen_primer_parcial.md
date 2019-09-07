@@ -83,7 +83,7 @@ join inventory as i
 on i.inventory_id = r.inventory_id
 join film as f
 on i.film_id = f.film_id
-where f.title like "%bucket brotherhood%"
+where f.title = "BUCKET BROTHERHOOD"
 group by c.customer_id
 )
 union
@@ -94,6 +94,6 @@ join film_actor as fa
 on fa.actor_id = a.actor_id
 join film as f
 on fa.film_id = f.film_id
-where f.title like "%BUCKET BROTHERHOOD%"
+where f.title = "BUCKET BROTHERHOOD"
 )
 ```
