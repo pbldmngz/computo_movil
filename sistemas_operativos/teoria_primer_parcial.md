@@ -19,7 +19,7 @@ El kernel es la parte fundamental del sistema operativo y se encarga de manejar 
 * Memoria
 * Dispositivos de entrada/salida
 
-Además el kernel es encargado de proporcionar:
+**Además el kernel es encargado de proporcionar:**
 * Protección mediante **niveles de acceso**
 * Acceso compartido a los recursos, algunas CPU los dividen en *rings*
 
@@ -51,7 +51,7 @@ Según la perspectiva con la que se observen los sistemas operativos, pueden rea
 #### Monolítica
 Los sistemas monolíticos son aquellos en los que su centro es un grupo de estructuras fijas, las cuales funcionan entre sí.
 
-**Procesos principales:**
+*Procesos principales:*
 * Un programa principal que invoca el procedimiento de servicio solicitado.
 * Un conjunto de procedimientos de servicio que llevan a cabo las llamadas del sistema.
 * Un conjunto de procedimientos de utilería que ayudan a los procedimientos del servicio.
@@ -79,19 +79,19 @@ El ordenador **cliente** envía información al **servidor** (el eslabón más i
 * Por multiprogramación
 
 #### Por servicios ofrecidos
-**Por el número de usuarios:**
-* Mono-usuario
-* Multi-usuario
+* Por el número de usuarios:
+  * Mono-usuario
+  * Multi-usuario
 
-**Por el número de tareas:**
-* Mono-tarea
-* Multi-tarea
+* Por el número de tareas:
+  * Mono-tarea
+  * Multi-tarea
 
-**Por el número de procesadores:**
-* Mono-proceso
-* Multi-proceso
-  * Simétricos
-  * Asimétricos
+* Por el número de procesadores:
+  * Mono-proceso
+  * Multi-proceso
+    * Simétricos
+    * Asimétricos
 
 #### Por la forma de ofrecer los servicios
 * Sistemas centralizados
