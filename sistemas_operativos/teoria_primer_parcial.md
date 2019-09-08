@@ -135,6 +135,17 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Un único procesador puede ser compartido entre varios procesos. Un programa es algo que puede simplemente almacenarse en el disco.
 
+##### Características a considerar
+Ya que no todos los equios de cómputo procesan el mismo tipo de trabajos, se deben de tomar en cuenta estas características:
+
+|**Característica**|**Definición**|
+|:-----------------|:-------------|
+|*Cantidad de entrada/salida*|Existen procesos con una gran cantidad de entrada/salida, como las aplicaciones de bases de datos|
+|*Cantidad de uso del CPU*|Existen procesos que no realizan muchas operaciones de entrada/salida pero si la CPU, por ejemplo, operaciones con matrices|
+|*Procesos por lotes o interactivos*|Un proceso por lote es más rápido ya que lee datos de archivos, uno interactivo debe esperar por la respuesta del usuario|
+|*Procesos en tiempo real*|Si los procesos deben dar respuesta en tiempo real se requiere que tengan prioridad para los turnos de ejecución|
+|*Longevidad de los procesos*|Existen procesos que pueden demorar varias horas en finalizar, otros son casi instantáneos|
+
 #### Cuatro eventos principales hacen que se creen procesos
 * Inicialización del sistema
 * Ejecución de una llamada al sistema de creación de procesos por un proceso en ejecución
@@ -320,11 +331,74 @@ En algunos sistemas operativos, los procesos que trabajan juntos pueden comparti
 
 > El almacenamiento compartido puede ser en la memoria principal o un archivo compartido.
 
+##### Sincronización de procesos
+Cuando procesos cooperan en una tarea se denominan **procesos cooperativos** y necesitarán compartir datos.
+
+> El acceso concurrente a datos puede generar inconsistencias difíciles de detectar.
+
 #### Problemas: región crítica
-Se necesitan ciertas condiciones para tener una buena solución:
+ Si tomamos de ejemplo el `modelo productor-consumidor`, ambos tendrán acceso a una parte del código con sus respectivas variables compartidas, a esto se le denomina región crítica. Se necesitan ciertas condiciones para tener una buena solución:
 * No pueden existir dos procesos simultaneamente dentro de sus regiones críticas
 * No se pueden hacer suposiciones sobre las velocidades o el número de CPU
 * Ningún proceso que se ejecute fuera de su región crítica puede bloquear ningún proceso
 * Ningún proceso debería tener que esperar indefinidamente para ingresar a su región crítica
 
-# Llegamos hasta la diapositiva 58 del p1, habiendo ya hecho el p2. Sincronización de procesos
+### Calendarización
+Son las técnicas utilizadas para decidir cuánto tiempo de ejecución y en que momento se le asigna a cada proceso del sistema.
+
+#### Niveles de planificación
+Generalmente se identifican: alto, medio y bajo.
+
+##### Nivel alto
+Decide que conjunto de procesos es candidato a recibir recursos del sistema.
+
+##### Nivel intermedio
+Decide que procesos se suspenden o reanudan para lograr ciertas metas de rendimiento.
+
+##### Nivel bajo
+Decide que proceso, de los que ya están listos, es ejecutado.
+
+#### Objetivos de la planificación
+Una estrategia de planificación debe buscar que los procesos obtengan sus turnos de ejecución adecuadamente, con un buen rendimiento y minimizando la sobrecarga del planificador, que se reducen a estos cinco objetivos:
+
+|**Objetivo**|**Definición**|
+|:-----------|:-------------|
+|*Justicia o imparcialidad*|Todos los procesos son tratados de la misma forma|
+|*Maximizar la producción*|El sistema deberá finalizar la mayor cantidad de procesos posibles por unidad de tiempo|
+|*Maximizar el tiempo de respuesta*|El usuario siempre deberá ver al sistema respondiendo a sus peticiones|
+|*Evitar el aplazamiento indefinido*|Los procesos deben terminar en un plazo finito de tiempo|
+|*El sistema debe ser predecible*|Si se ejecuta el mismo proceso en cargas similares de todo el sistema, la respuesta en todos lo casos debe ser similar|
+
+##### Planificación apropiativa
+Una vez que a un proceso entra en ejecución ya **no puede ser suspendido**.
+
+> Es peligroso ya que puede llegar a aplazar procesos indefinidamente si es un bucle infinito.
+
+##### Planificación no apropiativa
+En esta existe un reloj que lanza interrupciones periódicas en las cuales el planificador toma el control y se decide si el mismo proceso seguirá ejecutándose o se le cederá su turno a otro.
+
+> Este reloj también sirve para lanzar procesos manejados por el reloj del sistema.
+
+#### Planeadores - Itineradores
+* El objetivo de la **multiprogramación** es maximizar la utilización del CPU
+* El objetivo de un sistema de **tiempo compartido** es conmutar el CPU de forma rápida para que todos los usuarios puedan interactuar con la aplicación
+* Cuando un proceso entra al sistema es puesto en una cola de tareas
+* Los procesos que residen en memoria y están listos para ser ejecutados están en la **cola de preparados**
+* Los procesos que están a la espera por dispositivos de entrada/salida están en la **cola de dispositivos**
+* El CPU despacha procesos de la cola de preparados
+* Un proceso puede pasar por varias colas durante su ciclo de vida
+* La selección de un proceso la hace el planeador
+* Existen dos planeadores:
+  * *De tareas*: Selecciona un proceso del disco y lo carga en memoria
+  * *De CPU*: Selecciona un proceso de la cola ready y le asigna CPU
+
+##### Itinerador de tareas
+* Actúa menos frecuentemente que el itinerador de CPU. Este controla el grado de multiprogramación, el número de tareas en memoria
+* Si el grado de multiprogramación es estable, la tasa de creación de procesos es igual a la tasa de procesos que terminan.
+* Cuando la CPU no tiene tareas pendientes, el itinerador selecciona un proceso de la cola de preparados.
+
+> La cola de preparados no es necesariamente FIFO, su estructura varía según el algoritmo de itineración.
+
+##### Itinerador de CPU
+* El itinerador del CPU actúa frecuentemente. Normalmente un proceso solo ocupa la CPU durante milisegundos antes de esperar por entrada/salida
+* El itinerador de CPU debe ser muy eficiente. Si normalmente un proceso toma 100ms antes de la entrada/salida, el tiempo que toma el itinerador no debe superar 10ms
