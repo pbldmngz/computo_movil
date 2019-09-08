@@ -226,7 +226,7 @@ Hace que un proceso se ejecute cada cierto tiempo.
 Es una forma de desbloquear un proceso que había sido previamente bloqueado.
 
 #### Prioridades
-Todo proceso lleva integradas ciertas necesidades de ejecución en cuanto a urgencia y asignación de recursos. Estas **prioridades** se pueden clasificar como **asginadas** por el **sistema** operativo o por el **propietario**. También se separan en **estáticas** y **dinámicas**, siendo no modificables y modificables, respectivamente.
+Todo proceso lleva integradas ciertas necesidades de ejecución en cuanto a urgencia y asignación de recursos. Estas **prioridades** se pueden clasificar como **asginadas** por el **sistema operativo** o por el **propietario**. También se separan en **estáticas** y **dinámicas**, siendo no modificables y modificables, respectivamente.
 
 ##### Prioridades asignadas por el sistema operativo
 La prioridad fue asignada al proceso en el momento de comenzar su ejecución y dependen fundamentalemente de los privilegios de su propietario y del modo de ejecución.
