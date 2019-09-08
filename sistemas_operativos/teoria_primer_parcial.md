@@ -198,7 +198,7 @@ Los procesos en un sistema operativo pueden ejecutarse concurrentemente y deben 
 ##### Crear el proceso
 Al producirse la orden de ejecución se suelen necesitar varios argumentos (como el nombre o la prioridad). En este momento aparece el **PCB** (bloque de control del proceso), que será insertado en la cola de procesos preparados.
 
-La creación de un proceso puede ser de dos tipos, la arcaica y poco usada actualmente, **"no jerárquica"** y la **"jerárquica"**. En esta última, el proceso creado es hijo del proceso anterior y hereda el entorno de ejecución de su padre. Un proceso hijo puede a su vez ser padre de otras tareas, formando así una **jerarquía de procesos**.
+La creación de un proceso puede ser de dos tipos, la arcaica y poco usada actualmente, **no jerárquica** y la **jerárquica**. En esta última, el proceso creado es hijo del proceso anterior y hereda el entorno de ejecución de su padre. Un proceso hijo puede a su vez ser padre de otras tareas, formando así una **jerarquía de procesos**.
 
 > El primer proceso que ejecuta un usuario será hijo del intérprete de comandos con el que interactúa.
 
