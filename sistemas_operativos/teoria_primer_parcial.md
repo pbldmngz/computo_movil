@@ -89,8 +89,8 @@ El ordenador **cliente** envía información al **servidor** (el eslabón más i
   * Multi-tarea
 
 * Por el número de procesadores:
-  * Mono-proceso
-  * Multi-proceso
+  * Mono-procesador
+  * Multi-procesador
     * Simétricos
     * Asimétricos
 
