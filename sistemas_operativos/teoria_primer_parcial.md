@@ -248,3 +248,17 @@ Esta información se encuentra en la memoria principal del disco y se accede a e
 > Existe un Bloque de Control de Sistema (SCB) con objetivos similares al anterior, entre los que se encuentra el enlazado de los bloques de control de procesos existentes en el sistema. El cambio de contexto se producirá siempre que se requiera la atención de algún servicio del sistema operativo.
 
 #### Conmutación de procesos
+Es la operación que consiste en retirar el procesador a un proceso para dárselo a otro. Se produce por una de estas razones:
+* Para garantizar la multiprogramación, si un proceso agota el tiempo máximo asignado de procesador, se dará paso al siguiente
+* Un proceso está pendiente de un evento externo, por tanto pasa a estado bloqueado. El procesador deberá tomar uno nuevo de la pila de preparados
+* Terminó la ejecución del proceso
+* Se dió una interrupción desde un dispositivo de entrada/salida o por medio de una instrucción del CPU que interrumpe software
+
+*Los pasos que siguen son los siguientes:*
+* Pasar a modo privilegiado el CPU
+* Guardar el contenido de los registros del hardware (*contexto de ejecución*) en el PCB
+* Actualizar el estado del proceso en el PCB
+* Si se produjo una interrupción, atenderla
+* Seleccionar un nuevo proceso
+* Restaurar el contexto de ejecución del nuevo proceso seleccionado. Si no estaba en el contexto de ejecución, inicializarlo
+* Pasar a modo no privilegiado el CPU
