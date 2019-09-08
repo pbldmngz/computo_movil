@@ -222,6 +222,28 @@ La prioridad fue asignada al proceso en el momento de comenzar su ejecución y d
 Es el usuario queien asigna la prioridad con la que un proceso deberá ejecutarse.
 
 #### Clasificación de procesos
-*Procesos limitados por la entrada/salida*
- * Son aquellos procesos que pasan más tiempo realizando entrada/salida que haciendo cálculos.
-*Procesos limitados por el CPU*
+##### Procesos limitados por la entrada/salida
+Son aquellos procesos que pasan más tiempo realizando entrada/salida que haciendo cálculos.
+##### Procesos limitados por el CPU
+Son aquellos procesos que pasan la mayor parte del tiempo haciendo cálculos, ocupando CPU.
+
+#### Bloque de Control del Proceso (PCB)
+Cada proceso tiene asociado un **PCB**, representado por un conjunto de datos como el estado, recursos utilizados, registros,  etc... y es creado junto con cada proceso nuevo. Un PCB tiene la funcion de **localizar la información del proceso por parte del sistema operativo y mantener registrados los datos del proceso** en caso de tener que suspender temporalmente la ejecución.
+
+##### Información
+Esta información se encuentra en la memoria principal del disco y se accede a ella en los momentos en que se hace necesaria su actualización o consulta. Los datos relativos al estado siempre se encuentran en la memoria principal.
+|**Nombre**|**Descripción**|
+|:---|:---|
+|PID|Identificador del proceso|
+|Estado|Espera, Corriendo, Listo, etc...|
+|Program Counter (PC)|Información relativa al contenido del contador de programa|
+|Registros de CPU|Archivos de registros en uso|
+|Información de iteración|Información para el *calendarizador*. Contadores, relojes, prioridad, punteros a colas de ejecución|
+|Información de manejo de memoria|Registros base y límite, tablas para manejo de memoria virtual, lista de páginas, etc...|
+|Información de contabilidad|Tiempo de CPU utilizado, tiempo real utilizado, límites de tiempo, etc...|
+|Información sobre el estado de la entrada/salida|Dispositivos asignados al proceso, lista de archivos abiertos, estado de esos archivos, etc...|
+|Credenciales|UID, GID, PPID (identificadores de usuario y proceso)|
+
+> Existe un Bloque de Control de Sistema (SCB) con objetivos similares al anterior, entre los que se encuentra el enlazado de los bloques de control de procesos existentes en el sistema. El cambio de contexto se producirá siempre que se requiera la atención de algún servicio del sistema operativo.
+
+#### Conmutación de procesos
