@@ -114,7 +114,7 @@ El ordenador **cliente** envía información al **servidor** (el eslabón más i
 En un inicio, los sistemas operativos solo permitían ejecutar un programa a la vez. Este programa obtenía el control completo del sistema. Cuando se permitió la ejecución concurrente de múltiples programas, se dió nombre al **"proceso"**.
 
 ### Proceso
-#### *¿Qué es?*
+#### ¿Qué es?
 * Es un programa en ejecución
 * Es la unidad de trabajo de un sistema operativo moderno
 * Un sistema operativo se puede ver como un conjunto de procesos
@@ -124,7 +124,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Para hacer más eficiente el proceso, el CPU cambia de un proceso a otro, dando la ilusión de paralelismo. A este funcionamiento se le conoce como *multiprogramación*.
 
-#### *Características:*
+#### Características:
 * Valores actuales del contador del programa, registros y variables
 * Cada proceso tiene su propia CPU virtual
 * Tiene:
@@ -135,7 +135,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Un único procesador puede ser compartido entre varios procesos. Un programa es algo que puede simplemente almacenarse en el disco.
 
-#### *Cuatro eventos principales hacen que se creen procesos*
+#### Cuatro eventos principales hacen que se creen procesos
 * Inicialización del sistema
 * Ejecución de una llamada al sistema de creación de procesos por un proceso en ejecución
 * Una solicitud del usuario para crear un nuevo proceso
@@ -143,7 +143,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Los conceptos de **tareas** y **procesos** son equivalentes y se pueden intercambiar.
 
-#### *Recursos de un proceso*
+#### Recursos de un proceso
 * Código ejecutable
 * Registros temporales
 * Contador
@@ -152,7 +152,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Si dos o mas procesos forman parte de un mismo programa, se consideran secuencias separadas de ejecución y pueden cooperar entre ellos.
 
-#### *Estados de los procesos*
+#### Estados de los procesos
 Un proceso tiene una naturaleza dinámica, cuando un proceso se ejecuta cambia de estado. Estos estados no son visibles para el usuario, quien siempre verá como que un proceso se está *ejecutando*.
 
 |**Estado**|**Descripción**|
@@ -171,3 +171,57 @@ Todo proceso a lo largo de su existencia puede cambiar de estado varias veces, a
 |*Paso a estado de ejecución*|Cuando el procesador no tiene tareas pendientes y existe un proceso en la cola de preparados, toma el primero y pasa a ejecución|
 |*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados, cambiando su estado e iniciando el siguiente proceso|
 |*Paso a estado preparado*|El proceso cambia a estado preparado|
+
+#### Operaciones sobre procesos
+Los procesos en un sistema operativo pueden ejecutarse concurrentemente y deben ser creados y eliminados dinámicamente. Para esto se deben proveer llamadas al sistema que permitan:
+* Crear procesos
+* Destruir procesos
+* Suspender procesos
+* Reanudar procesos
+* Cambiar prioridad al proceso
+* Temporizar un proceso
+* Despertar un proceso
+* Terminar procesos
+
+##### Crear el proceso
+Al producirse la orden de ejecución se suelen necesitar varios argumentos (como el nombre o la prioridad). En este momento aparece el **PCB** (bloque de control del proceso), que será insertado en la cola de procesos preparados.
+
+La creación de un proceso puede ser de dos tipos, la arcaica y poco usada actualmente, **"no jerárquica"** y la **"jerárquica"**. En esta última, el proceso creado es hijo del proceso anterior y hereda el entorno de ejecución de su padre. Un proceso hijo puede a su vez ser padre de otras tareas, formando así una **jerarquía de procesos**.
+
+> El primer proceso que ejecuta un usuario será hijo del intérprete de comandos con el que interactúa.
+
+Un proceso padre tiene dos opciones para compartir recursos, puede continuar ejecutandose de forma concurrente o esperar a que sus hijos terminen. O en ciertos casos puede obtener recursos directamente del sistema operativo.
+
+##### Destruír un proceso
+Se envía la orden de eliminación del proceso, con la cual el sistema operativo destruye su **PCB**.
+Un proceso pide al sistema operativo que lo elimine cuando se da por terminado, al hacerlo, todos los recursos se devuelven al sistema. Un proceso se puede dar por terminado en estos casos:
+* Se ejecutó la última sentencia
+* Un proceso decide terminar
+* Un proceso decide matar a otro
+* Un proceso padre puede matar a sus hijos
+
+##### Suspender un proceso
+Paraliza un proceso que más tarde puede ser reanidado. Se suele utilizar en situaciones de mal funcionamiento o sobrecarga.
+
+##### Reanudar un proceso
+Tratar de activar un proceso suspendido previamente.
+
+##### Temporizar la ejecución de un proceso
+Hace que un proceso se ejecute cada cierto tiempo.
+
+##### Despertar un proceso
+Es una forma de desbloquear un proceso que había sido previamente bloqueado.
+
+#### Prioridades
+Todo proceso lleva integradas ciertas necesidades de ejecución en cuanto a urgencia y asignación de recursos. Estas **prioridades** se pueden clasificar como **asginadas** por el **sistema** operativo o por el **propietario**. También se separan en **estáticas** y **dinámicas**, siendo no modificables y modificables, respectivamente.
+
+##### Prioridades asignadas por el sistema operativo
+La prioridad fue asignada al proceso en el momento de comenzar su ejecución y dependen fundamentalemente de los privilegios de su propietario y del modo de ejecución.
+
+##### Prioridades asignadas por el propietario
+Es el usuario queien asigna la prioridad con la que un proceso deberá ejecutarse.
+
+#### Clasificación de procesos
+*Procesos limitados por la entrada/salida*
+ * Son aquellos procesos que pasan más tiempo realizando entrada/salida que haciendo cálculos.
+*Procesos limitados por el CPU*
