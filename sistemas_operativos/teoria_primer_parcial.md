@@ -232,7 +232,7 @@ Todo proceso lleva integradas ciertas necesidades de ejecución en cuanto a urge
 La prioridad fue asignada al proceso en el momento de comenzar su ejecución y dependen fundamentalemente de los privilegios de su propietario y del modo de ejecución.
 
 ##### Prioridades asignadas por el propietario
-Es el usuario queien asigna la prioridad con la que un proceso deberá ejecutarse.
+Es el usuario quien asigna la prioridad con la que un proceso deberá ejecutarse.
 
 #### Clasificación de procesos
 ##### Procesos limitados por la entrada/salida
