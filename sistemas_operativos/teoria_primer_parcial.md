@@ -214,7 +214,7 @@ Un proceso pide al sistema operativo que lo elimine cuando se da por terminado, 
 > Un proceso padre puede matar a sus hijos
 
 ##### Suspender un proceso
-Paraliza un proceso que más tarde puede ser reanidado. Se suele utilizar en situaciones de mal funcionamiento o sobrecarga.
+Paraliza un proceso que más tarde puede ser reanimado. Se suele utilizar en situaciones de mal funcionamiento o sobrecarga.
 
 ##### Reanudar un proceso
 Tratar de activar un proceso suspendido previamente.
