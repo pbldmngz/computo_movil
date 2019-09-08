@@ -210,7 +210,8 @@ Un proceso pide al sistema operativo que lo elimine cuando se da por terminado, 
 * Se ejecutó la última sentencia
 * Un proceso decide terminar
 * Un proceso decide matar a otro
-* Un proceso padre puede matar a sus hijos
+
+> Un proceso padre puede matar a sus hijos
 
 ##### Suspender un proceso
 Paraliza un proceso que más tarde puede ser reanidado. Se suele utilizar en situaciones de mal funcionamiento o sobrecarga.
