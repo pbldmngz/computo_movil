@@ -262,3 +262,69 @@ Es la operación que consiste en retirar el procesador a un proceso para dársel
 * Seleccionar un nuevo proceso
 * Restaurar el contexto de ejecución del nuevo proceso seleccionado. Si no estaba en el contexto de ejecución, inicializarlo
 * Pasar a modo no privilegiado el CPU
+
+> En cada iteración de ejecución/ocio, se guarda y se cargan los datos del PCB
+
+### Hilo (thread)
+Un **thread** es una una unidad básica de utilización de CPU. Un conjunto de hilos se denomina **tarea**. Un proceso puede tener varios hilos en ejecución y cada hilo realizará una tarea. La principal diferencia entre hilo y proceso es que los procesos tienen su propia **zona de memoria** mientras que los hilos de un proceso la comparten, además los hilos **no son independientes**.
+
+> A los procesos normales se les llama **procesos pesados** mientras que a los hilos **procesos livianos**. Siendo un proceso pesado uno con un solo thread.
+
+Un proceso está definido por sus recursos y por su ubicación en el espacio de memoria. Los threads comparten código, datos y otros recursos, pero pertenecen siempre al mismo proceso.
+
+> Es más eficiente a la hora de realizar la misma tarea, el tener un proceso con varios threads que tener varios procesos.
+
+### Comunicación
+Los procesos pueden cooperar en la realización de una tarea. Una forma de cooperación es a través del **IPC** (Inter Process Communication). Este provee la forma a través de la cual los procesos se pueden comunicar y sincronizar.
+
+#### Mensajes
+La comunicación vía IPC no necesita compartir variables, solo requiere de dos operaciones como mínimo: Enviar y Recibir.
+
+#### Tipos de comunicación
+##### Comunicación directa
+Cada proceso deberá explícitamente indicar el nombre del proceso fuente o del proceso de destino en el mensaje.
+
+##### La interacción productor-consumidor
+El proceso productor genera datos y el proceso consumidor los recibe para procesarlo.
+
+##### Direccionamiento simétrico y asimétrico
+Tanto el transmisor como el receptor deberán nombrarse explícitamente.
+
+> Una variación consiste en que solo el transmisor señala el nombre del receptor y el receptor pone una variable.
+
+##### Comunicación indirecta
+Los mensajes se envían y reciben desde objetos llamados **mailbox**, cada uno de estos tiene una identificación única. Dos procesos solo se podrán comunicar si ambos comparten mailbox.
+
+#### Aspectos de la comunicación
+El sistema IPC requiere la comunicación entre dos procesos. Un enlace de comunicación puede considerarse una cola de mensajes, que se pueden implementar de dos formas:
+
+##### Capacidad limitada y capacidad ilimitada
+Es necesario señalar cuando un mensaje ha llegado a su destino, esto se puede hacer mediante un mensaje corto llamado **ACK** o **Sincronización con buffers**.
+
+##### Rendez-vous
+Comunicación directa entre procesos (solamente un enlace por cada par de procesos) y de capacidad cero (no se puede hacer nada mientras la petición no haya sido despachada)
+
+###### Características:
+* Encuentro simétrico (el que llega antes espera al otro)
+* Encuentro simple (solo una transacción de información)
+* Exclusión mutua (solo dos procesos en un encuentro)
+* Doble sentido (puede haber información de ida y vuelta)
+
+#### Problemas en la comunicación
+* Interrupciones
+* Los procesos se interponen
+* El segundo tiene que esperar al primero
+
+#### Compartir
+En algunos sistemas operativos, los procesos que trabajan juntos pueden compartir algo de almacenamiento común que cada uno podrá leer y escribir. 
+
+> El almacenamiento compartido puede ser en la memoria principal o un archivo compartido.
+
+#### Problemas: región crítica
+Se necesitan ciertas condiciones para tener una buena solución:
+* No pueden existir dos procesos simultaneamente dentro de sus regiones críticas
+* No se pueden hacer suposiciones sobre las velocidades o el número de CPU
+* Ningún proceso que se ejecute fuera de su región crítica puede bloquear ningún proceso
+* Ningún proceso debería tener que esperar indefinidamente para ingresar a su región crítica
+
+# Llegamos hasta la diapositiva 58 del p1, habiendo ya hecho el p2. Sincronización de procesos
