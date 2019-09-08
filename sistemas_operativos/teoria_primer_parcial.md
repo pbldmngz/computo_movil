@@ -233,7 +233,7 @@ Cada proceso tiene asociado un **PCB**, representado por un conjunto de datos co
 ##### Información
 Esta información se encuentra en la memoria principal del disco y se accede a ella en los momentos en que se hace necesaria su actualización o consulta. Los datos relativos al estado siempre se encuentran en la memoria principal.
 |**Nombre**|**Descripción**|
-|:---|:---|
+|---------|---------|
 |PID|Identificador del proceso|
 |Estado|Espera, Corriendo, Listo, etc...|
 |Program Counter (PC)|Información relativa al contenido del contador de programa|
