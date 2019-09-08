@@ -232,17 +232,18 @@ Cada proceso tiene asociado un **PCB**, representado por un conjunto de datos co
 
 ##### Información
 Esta información se encuentra en la memoria principal del disco y se accede a ella en los momentos en que se hace necesaria su actualización o consulta. Los datos relativos al estado siempre se encuentran en la memoria principal.
+
 |**Nombre**|**Descripción**|
 |---------|---------|
-|PID|Identificador del proceso|
-|Estado|Espera, Corriendo, Listo, etc...|
-|Program Counter (PC)|Información relativa al contenido del contador de programa|
-|Registros de CPU|Archivos de registros en uso|
-|Información de iteración|Información para el *calendarizador*. Contadores, relojes, prioridad, punteros a colas de ejecución|
-|Información de manejo de memoria|Registros base y límite, tablas para manejo de memoria virtual, lista de páginas, etc...|
-|Información de contabilidad|Tiempo de CPU utilizado, tiempo real utilizado, límites de tiempo, etc...|
-|Información sobre el estado de la entrada/salida|Dispositivos asignados al proceso, lista de archivos abiertos, estado de esos archivos, etc...|
-|Credenciales|UID, GID, PPID (identificadores de usuario y proceso)|
+|*PID*|Identificador del proceso|
+|*Estado*|Espera, Corriendo, Listo, etc...|
+|*Program Counter (PC)*|Información relativa al contenido del contador de programa|
+|*Registros de CPU*|Archivos de registros en uso|
+|*Información de iteración*|Información para el *calendarizador*. Contadores, relojes, prioridad, punteros a colas de ejecución|
+|*Información de manejo de memoria*|Registros base y límite, tablas para manejo de memoria virtual, lista de páginas, etc...|
+|*Información de contabilidad*|Tiempo de CPU utilizado, tiempo real utilizado, límites de tiempo, etc...|
+|*Información sobre el estado de la entrada/salida*|Dispositivos asignados al proceso, lista de archivos abiertos, estado de esos archivos, etc...|
+|*Credenciales*|UID, GID, PPID (identificadores de usuario y proceso)|
 
 > Existe un Bloque de Control de Sistema (SCB) con objetivos similares al anterior, entre los que se encuentra el enlazado de los bloques de control de procesos existentes en el sistema. El cambio de contexto se producirá siempre que se requiera la atención de algún servicio del sistema operativo.
 
