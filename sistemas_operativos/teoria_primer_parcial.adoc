@@ -1,4 +1,11 @@
 # SISTEMAS OPERATIVOS, PRIMER PARCIAL
+## Contenido
+:toc: macro
+:toc-title:
+:toclevels: 99
+
+toc::[]
+
 ## Sistema Operativo
 Ya que es imposible para un humano comprender en su totalidad cada uno de los componentes de un ordenador, estos vienen equipados con una capa de software llamada **"Sistema Operativo"**. Un sistema operativo es un programa que actúa de **intermediario entre el usuario y el hardware**, haciendo un **uso eficiente** de los recursos y proporcionando un **modelo de interacción más comprensible** y limpio para el usuario.
 
@@ -198,6 +205,7 @@ Si un proceso **no libera un recurso sino que lo solicita de nuevo** cuando otro
 El interbloqueo se produce cuando en un grupo de procesos, todos se estan esperando entre si.
 
 *Condiciones para el interbloqueo:*
+
 |**Condición**|**Descripción**|
 |:------------|:--------------|
 |*Exclusión mutua*|Un recurso **no compartible** está siendo usado, otro proceso lo solicita, este será retardado hasta que el recurso haya sido liberado.|
