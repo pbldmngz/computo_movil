@@ -42,7 +42,7 @@
     + [Bloque de Control del Proceso (PCB)](#bloque-de-control-del-proceso--pcb-)
       - [Información](#informaci-n)
     + [Conmutación de procesos](#conmutaci-n-de-procesos)
-  * [Hilo (thread)](#hilo--thread-)
+  * [Hilo (thread)](#hilo)
   * [Comunicación](#comunicaci-n)
     + [Mensajes](#mensajes)
     + [Tipos de comunicación](#tipos-de-comunicaci-n)
@@ -389,8 +389,8 @@ Es la operación que consiste en retirar el procesador a un proceso para dársel
 
 > En cada iteración de ejecución/ocio, se guarda y se cargan los datos del PCB
 
-### Hilo (thread)
-Un **thread** es una una unidad básica de utilización de CPU. Un conjunto de hilos se denomina **tarea**. Un proceso puede tener varios hilos en ejecución y cada hilo realizará una tarea. La principal diferencia entre hilo y proceso es que los procesos tienen su propia **zona de memoria** mientras que los hilos de un proceso la comparten, además los hilos **no son independientes**.
+### Hilo
+Un **thread**, o hilo, es una una unidad básica de utilización de CPU. Un conjunto de hilos se denomina **tarea**. Un proceso puede tener varios hilos en ejecución y cada hilo realizará una tarea. La principal diferencia entre hilo y proceso es que los procesos tienen su propia **zona de memoria** mientras que los hilos de un proceso la comparten, además los hilos **no son independientes**.
 
 > A los procesos normales se les llama **procesos pesados** mientras que a los hilos **procesos livianos**. Siendo un proceso pesado uno con un solo thread.
 
