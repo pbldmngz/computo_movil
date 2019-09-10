@@ -162,6 +162,13 @@ Ya que no todos los equios de cómputo procesan el mismo tipo de trabajos, se de
 * Datos
 * Pila
 
+#### Secuencia
+|**Nombre**|**Descripción**|
+|:---------|:--------------|
+|*Petición*|Si la petición no puede ser satisfecta inmediatamente, el proceso solicitante debe esperar hasta que pueda adquirir el recuso.|
+|*Uso*|El proceso puede utilizar un recurso.|
+|*Liberación*|El proceso libera el recurso.|
+
 > Si dos o mas procesos forman parte de un mismo programa, se consideran secuencias separadas de ejecución y pueden cooperar entre ellos.
 
 #### Estados de los procesos
