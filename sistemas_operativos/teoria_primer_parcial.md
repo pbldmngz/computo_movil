@@ -191,6 +191,36 @@ Todo proceso a lo largo de su existencia puede cambiar de estado varias veces, a
 |*Paso a estado bloqueado*|Un proceso que espera un evento se mueve a la cola de de bloqueados, cambiando su estado e iniciando el siguiente proceso|
 |*Paso a estado preparado*|El proceso cambia a estado preparado|
 
+##### Bloqueo
+Si un proceso **no libera un recurso sino que lo solicita de nuevo** cuando otro ya está esperando por el, se produce un **bloqueo**.
+
+###### Interbloqueo
+El interbloqueo se produce cuando en un grupo de procesos, todos se estan esperando entre si.
+
+*Condiciones para el interbloqueo:*
+|**Condición**|**Descripción**|
+|:------------|:--------------|
+|*Exclusión mutua*|Un recurso **no compartible** está siendo usado, otro proceso lo solicita, este será retardado hasta que el recurso haya sido liberado.|
+|*Retener y esperar*|Existe un proceso que retiene al menos un recurso y está esperando para adquirir recursos adicionales que están siendo usados por otros procesos.|
+|*No existe el derecho de desasignar (No preemption)*|Recursos previamente otorgados no pueden extraerse a la fuerza, el proceso que lo usa debe liberarlo *voluntariamente* al de terminar su tarea.|
+|*Espera circular*|Una cadena de más de dos procesos donde cada uno está esperando un recurso usado por el proceso siguiente de la cadena.|
+
+###### Grafos
+Una forma de visualizar estas condiciones es mediante grafos de recursos.
+* Los círculos representan procesos
+* Los cuadrados representan recursos
+* Una arista desde un proceso a un recurso indica que el proceso ha solicitado el recurso, y está bloqueado esperándolo
+* Una arista desde un recurso a un proceso indica que el recurso ha sido asignado al proceso
+
+> Si hacemos el grafo con todos los procesos y recursos de un sistema y encontramos un círculo, los procesos del ciclo están bajo bloqueo mutuo.
+
+###### Algoritmos
+* Algoritmo del banquero
+* Algoritmo del avestruz
+
+###### Deadlock
+Si un proceso solicita recursos y estos no están disponibles, se pone **en espera**. Si estos recursos estan siendo detenidos por otros procesos en espera es posible que **nunca cambie de estado**.
+
 #### Operaciones sobre procesos
 Los procesos en un sistema operativo pueden ejecutarse concurrentemente y deben ser creados y eliminados dinámicamente. Para esto se deben proveer llamadas al sistema que permitan:
 * Crear procesos
