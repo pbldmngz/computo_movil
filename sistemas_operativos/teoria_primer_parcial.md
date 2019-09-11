@@ -276,7 +276,7 @@ El interbloqueo se produce cuando en un grupo de procesos, todos se estan espera
 |:------------|:--------------|
 |*Exclusión mutua*|Un recurso **no compartible** está siendo usado, otro proceso lo solicita, este será retardado hasta que el recurso haya sido liberado.|
 |*Retener y esperar*|Existe un proceso que retiene al menos un recurso y está esperando para adquirir recursos adicionales que están siendo usados por otros procesos.|
-|*No existe el derecho de desasignar (No preemption)*|Recursos previamente otorgados no pueden extraerse a la fuerza, el proceso que lo usa debe liberarlo *voluntariamente* al de terminar su tarea.|
+|*No existe el derecho de desasignar (No preemption)*|Recursos previamente otorgados no pueden extraerse a la fuerza, el proceso que lo usa debe liberarlo *voluntariamente* al terminar su tarea.|
 |*Espera circular*|Una cadena de más de dos procesos donde cada uno está esperando un recurso usado por el proceso siguiente de la cadena.|
 
 ###### Grafos
