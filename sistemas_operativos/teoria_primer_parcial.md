@@ -15,8 +15,8 @@
 - [Procesos e hilos](#procesos-e-hilos)
   * [Proceso](#proceso)
     + [¿Qué es?](#-qu--es-)
-    + [Características:](#caracter-sticas-)
-      - [Características a considerar](#caracter-sticas-a-considerar)
+    + [Componentes](#caracter-sticas-)
+    - [Características](#caracter-sticas-a-considerar)
     + [Cuatro eventos principales hacen que se creen procesos](#cuatro-eventos-principales-hacen-que-se-creen-procesos)
     + [Recursos de un proceso](#recursos-de-un-proceso)
     + [Secuencia](#secuencia)
@@ -198,7 +198,7 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Para hacer más eficiente el proceso, el CPU cambia de un proceso a otro, dando la ilusión de paralelismo. A este funcionamiento se le conoce como *multiprogramación*.
 
-#### Características:
+#### Componentes
 * Valores actuales del contador del programa, registros y variables
 * Cada proceso tiene su propia CPU virtual
 * Tiene:
@@ -209,8 +209,8 @@ En un inicio, los sistemas operativos solo permitían ejecutar un programa a la 
 
 > Un único procesador puede ser compartido entre varios procesos. Un programa es algo que puede simplemente almacenarse en el disco.
 
-##### Características a considerar
-Ya que no todos los equios de cómputo procesan el mismo tipo de trabajos, se deben de tomar en cuenta estas características:
+#### Características
+Ya que no todos los equipos de cómputo procesan el mismo tipo de trabajos, se deben de tomar en cuenta estas características:
 
 |**Característica**|**Definición**|
 |:-----------------|:-------------|
