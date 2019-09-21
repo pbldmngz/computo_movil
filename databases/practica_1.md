@@ -6,12 +6,12 @@ select concat(c.first_name, " ", c.last_name) as c_name,
 f.title, cat.name,
 (
 	select count(f2.film_id)
-    from film as f2
-    join inventory as i2
-    on i2.film_id = f2.film_id
-    join rental as r2
-    on r2.inventory_id = i2.film_id
-    where f2.film_id = f.film_id
+	from film as f2
+	join inventory as i2
+	on i2.film_id = f2.film_id
+	join rental as r2
+	on r2.inventory_id = i2.film_id
+	where f2.film_id = f.film_id
 ) as rentas
 from customer as c
 join rental as r
@@ -26,12 +26,12 @@ join category as cat
 on cat.category_id = fc.category_id
 where (
 	select count(f2.film_id)
-    from film as f2
-    join inventory as i2
-    on i2.film_id = f2.film_id
-    join rental as r2
-    on r2.inventory_id = i2.film_id
-    where f2.film_id = f.film_id
+    	from film as f2
+    	join inventory as i2
+    	on i2.film_id = f2.film_id
+    	join rental as r2
+    	on r2.inventory_id = i2.film_id
+    	where f2.film_id = f.film_id
 ) > 30
 order by c_name;
 ```
