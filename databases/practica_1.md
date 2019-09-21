@@ -2,7 +2,7 @@
 ## Ejercicio 1
 Elaborar una consulta que devuelva el nombre concatenado de los clientes, el título de las películas rentadas, la categoría de estas y la cantidad de veces que fue rentada, para aquellas películas que hayan sido rentadas más de 30 veces. Usar una tabla derivada para obtener los ID’s de las películas con más de 30 rentas.
 ```sql
-select concat(c.first_name, " ", c.last_name) as name, 
+select concat(c.first_name, " ", c.last_name) as c_name, 
 f.title, cat.name,
 (
 	select count(f2.film_id)
@@ -33,4 +33,5 @@ where (
     on r2.inventory_id = i2.film_id
     where f2.film_id = f.film_id
 ) > 30
+order by c_name;
 ```
