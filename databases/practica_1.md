@@ -28,3 +28,24 @@ on cat.category_id = fc.category_id
 where rentas.fl_id = f.film_id
 order by c_name;
 ```
+## Ejercicio 2
+Elaborar una consulta que muestre una lista de películas y las veces ha que ha sido rentada, para aquellos títulos que hayan sido rentados más veces que el promedio de rentas por película.
+```sql
+select f.title as pelicula, count(r.rental_id) as rentas
+from film as f
+inner join inventory as i on f.film_id = i.film_id
+inner join rental as r on i.inventory_id = r.inventory_id
+group by f.title
+having rentas > (
+	select avg(tab1.rentas)
+	from film as f
+	inner join (
+		select ff.film_id as idpelicula, count(r.rental_id) as rentas
+        from film as ff
+        inner join inventory as i on ff.film_id = i.film_id
+        inner join rental as r on i.inventory_id = r.inventory_id
+        group by ff.film_id
+	) as tab1 on tab1.idpelicula = f.film_id
+    order by rentas
+)
+```
