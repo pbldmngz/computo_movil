@@ -63,5 +63,6 @@ on i.inventory_id = r.inventory_id
 join film as f
 on i.film_id = f.film_id
 where r.return_date is null
-and datediff(date(r.rental_date), "2006-02-18") < 0
+and datediff(date_add(date(r.rental_date), 
+INTERVAL f.rental_duration DAY), "2006-02-18") < 0
 ```
