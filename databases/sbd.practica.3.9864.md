@@ -54,7 +54,7 @@ and fa.actor_id in (
 ## Ejercicio 5
 Many DVD stores produce a daily list of overdue rentals so that customers can be contacted and asked to return their overdue DVDs. To create such a list, search the rental table for films with a return date that is NULL and where the rental date is further in the past than the rental duration specified in the film table. If so, the film is overdue and we should produce the name of the film along with the customer name and phone number.
 ```sql
-select concat(c.first_name, " ", c.last_name) as name, c.email
+select concat(c.first_name, " ", c.last_name) as name, c.email, f.title
 from rental as r
 join customer as c
 on r.customer_id = c.customer_id
