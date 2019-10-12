@@ -2,10 +2,15 @@
 ## Ejercicio 1
 Use JOIN to display the first and last names, as well as the address, of each staff member. 
 ```sql
-select s.first_name, s.last_name, a.address
+select concat(s.first_name, " ", s.last_name) as name, 
+concat(a.address,", ", city, ", ", country) as address
 from staff as s
 join address as a
 on a.address_id = s.address_id
+join city as c
+on c.city_id = a.city_id
+join country as co
+on co.country_id = c.country_id
 ```
 
 ## Ejercicio 2
