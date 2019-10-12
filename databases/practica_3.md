@@ -42,7 +42,7 @@ on a.actor_id = fa.actor_id
 where f.title = "Alone Trip"
 and fa.actor_id in (
 	select actor_id
-    from actor    
+	from actor    
 )
 ```
 
