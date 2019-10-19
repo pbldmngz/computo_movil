@@ -98,14 +98,13 @@ declare c_id int default 0;
 declare r_id int default 0;
 declare fe int default 0.0;
 
-select customer_id, rental_id, fee 
-into c_id, r_id, fe
+select customer_id, rental_id, fee into c_id, r_id, fe
 from (select c.customer_id as customer_id, 
 	r.rental_id as rental_id, ifnull(
-	(f.rental_duration + datediff(date_add(date(r.rental_date), 
-	interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, 
-	(f.rental_duration + datediff(date_add(date(r.rental_date), 
-	interval f.rental_duration day), t_date)*(-1))*f.rental_rate) as fee
+		(datediff(date_add(date(r.rental_date), 
+		interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, 
+		(datediff(date_add(date(r.rental_date), 
+		interval f.rental_duration day), t_date)*(-1))*f.rental_rate) as fee
 	from rental as r
 	join customer as c
 	on r.customer_id = c.customer_id
