@@ -92,27 +92,32 @@ primary key(ticket_id))
 ```
 
 ```sql
-CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`(id_c int, id_r int)
+CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`(t_date timestamp, id_r int)
 BEGIN
-	insert into ticket values (
-	0, current_timestamp(), id_c, id_r, 
-		ifnull((select ifnull(
-		(f.rental_duration + datediff(date_add(date(r.rental_date), 
-		interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, 
-		(f.rental_duration + datediff(date_add(date(r.rental_date), 
-		interval f.rental_duration day), current_timestamp())*(-1))*f.rental_rate) as fee
-		from rental as r
-		join customer as c
-		on r.customer_id = c.customer_id
-		join inventory as i
-		on i.inventory_id = r.inventory_id
-		join film as f
-		on i.film_id = f.film_id
-		where (r.return_date is null
-		or datediff(date_add(date(r.rental_date), 
-		interval f.rental_duration day), r.return_date) < 0)
-		and c.customer_id = id_c
-		and r.rental_id = id_r), 0),
-	0);
+declare c_id int default 0;
+declare r_id int default 0;
+declare fe int default 0.0;
+
+select customer_id, rental_id, fee 
+into c_id, r_id, fe
+from (select c.customer_id as customer_id, 
+	r.rental_id as rental_id, ifnull(
+	(f.rental_duration + datediff(date_add(date(r.rental_date), 
+	interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, 
+	(f.rental_duration + datediff(date_add(date(r.rental_date), 
+	interval f.rental_duration day), t_date)*(-1))*f.rental_rate) as fee
+	from rental as r
+	join customer as c
+	on r.customer_id = c.customer_id
+	join inventory as i
+	on i.inventory_id = r.inventory_id
+	join film as f
+	on i.film_id = f.film_id
+	where (r.return_date is null
+	or datediff(date_add(date(r.rental_date), 
+	interval f.rental_duration day), r.return_date) < 0)
+	and r.rental_id = id_r) as sos;
+
+insert into ticket values (0, t_date, c_id, r_id, fe, 0);
 END
 ```
