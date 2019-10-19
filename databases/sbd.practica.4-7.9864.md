@@ -56,7 +56,23 @@ Salidas:
 Si la combinación ID cliente y ID renta no existe, debe regresar No data para las variables tipo texto y 0 para las numéricas.
 
 ```sql
-
+CREATE DEFINER=`spectra`@`%` PROCEDURE `rental_recipt`(id_c int, id_r int)
+BEGIN
+		select c.customer_id, c.first_name,
+		c.last_name, r.rental_id,
+		f.film_id, f.title, p.amount
+		from customer as c
+		join rental as r
+		on r.customer_id = c.customer_id
+		join payment as p
+		on r.rental_id = p.rental_id
+		join inventory as i
+		on i.inventory_id = r.inventory_id
+		join film as f
+		on f.film_id = i.film_id
+		where c.customer_id = id_c ##No es necesario
+		and r.rental_id = id_r;
+END
 ```
 
 # Práctica 7
