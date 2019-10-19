@@ -26,8 +26,7 @@ El procedimiento debe obtener en la ejecución:
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_5`(e_nombre varchar(255), e_puesto varchar(255), e_fecha_contratacion date, e_departamento varchar(255))
 BEGIN
-	declare aux int default 0;
-    	set aux = (select max(noEmpleado) as mx from empleado);
+	declare aux int default (select max(noEmpleado) as mx from empleado);
 	insert into empleado (noEmpleado, nombre, puesto, fecha_contratacion, Comision, depto) values(
     	aux + 1, 
     	e_nombre,
@@ -39,12 +38,13 @@ END
 ```
 
 # Práctica 6
-Elaborar el procedimiento almacenado “rental_recipt” que genere el recibo de pago de una renta.
+Elaborar el procedimiento almacenado “rental_recipt” que genere el recibo de pago de una renta. Entradas:
 
-* Entradas
 * ID de cliente
 * ID de renta
-* Salidas
+
+Salidas:
+
 * ID de cliente
 * Nombre del cliente
 * Apellido del cliente
@@ -52,7 +52,8 @@ Elaborar el procedimiento almacenado “rental_recipt” que genere el recibo de
 * ID de película
 * Título de película
 * Costo
-* Si la combinación ID cliente y ID renta no existe, debe regresar No data para las variables tipo texto y 0 para las numéricas.
+
+Si la combinación ID cliente y ID renta no existe, debe regresar No data para las variables tipo texto y 0 para las numéricas.
 
 ```sql
 
