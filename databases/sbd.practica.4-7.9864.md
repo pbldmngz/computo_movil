@@ -27,14 +27,14 @@ El procedimiento debe obtener en la ejecución:
 CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_5`(e_nombre varchar(255), e_puesto varchar(255), e_fecha_contratacion date, e_departamento varchar(255))
 BEGIN
 	declare aux int default 0;
-    set aux = (select max(noEmpleado) as mx from empleado);
+    	set aux = (select max(noEmpleado) as mx from empleado);
 	insert into empleado (noEmpleado, nombre, puesto, fecha_contratacion, Comision, depto) values(
-    aux + 1, 
-    e_nombre,
-    (select IdPuesto from puesto where lower(Puesto) = lower(e_puesto)),
-    e_fecha_contratacion,
-    0.0,
-    (select IdDepto from departamento where lower(Nombre) = (e_departamento)));
+    	aux + 1, 
+    	e_nombre,
+    	(select IdPuesto from puesto where lower(Puesto) = lower(e_puesto)),
+    	e_fecha_contratacion,
+    	0.0,
+    	(select IdDepto from departamento where lower(Nombre) = (e_departamento)));
 END
 ```
 
