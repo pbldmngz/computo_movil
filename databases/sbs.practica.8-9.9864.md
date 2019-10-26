@@ -12,25 +12,31 @@ Salidas:
 * Rentas del staff2
 
 ```sql
-CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_81`(antes timestamp, despues timestamp)
+CREATE DEFINER=`spectra`@`%` PROCEDURE `p8`(dateA timestamp, dateB timestamp)
 BEGIN
-	declare r int default 0;
+	declare temp int default 0;
+    declare totalA int default 0;
+    declare totalB int default 0;
     declare done int default 0;
-    declare cuentas cursor for
-    select count(r.rental_id)
-	from rental as r
-	where r.rental_date between antes and despues
-	group by r.staff_id;
+    
+    declare basic cursor for
+    select staff_id from rental;
+    
     declare continue handler for SQLSTATE '02000' set done = 1;
     
-    open cuentas;
+    open basic;
     
     repeat
-    fetch cuentas into r;
-    select r;
+		fetch basic into temp;
+        if temp = 1 then
+			set totalA = totalA + 1;
+		else
+			set totalB = totalB + 1;
+		end if;
     until done end repeat;
     
-    close cuentas;
+    select totalA, totalB;
+    close basic;
 END
 ```
 
