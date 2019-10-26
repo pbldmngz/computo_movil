@@ -35,7 +35,9 @@ END
 ```
 
 # Práctica 9
-h
+* Hacer una copia de la tabla rental.
+* Elaborar un procedimiento almacenado con el uso de cursores que elimine de la tabla rental todas las rentas que el valor de la película sea menor a dos dólares y el costo de reemplazo sea mayor a 20 dólares.
+
 ```sql
 
 ```
