@@ -15,28 +15,28 @@ Salidas:
 CREATE DEFINER=`spectra`@`%` PROCEDURE `p8`(dateA timestamp, dateB timestamp)
 BEGIN
 	declare temp int default 0;
-    declare totalA int default 0;
-    declare totalB int default 0;
-    declare done int default 0;
+   	declare totalA int default 0;
+   	declare totalB int default 0;
+   	declare done int default 0;
     
-    declare basic cursor for
-    select staff_id from rental;
+   	declare basic cursor for
+  		select staff_id from rental;
     
-    declare continue handler for SQLSTATE '02000' set done = 1;
+   	declare continue handler for SQLSTATE '02000' set done = 1;
     
-    open basic;
+ 	open basic;
     
-    repeat
+  	repeat
 		fetch basic into temp;
-        if temp = 1 then
+		if temp = 1 then
 			set totalA = totalA + 1;
 		else
 			set totalB = totalB + 1;
 		end if;
-    until done end repeat;
+    	until done end repeat;
     
-    select totalA, totalB;
-    close basic;
+    	select totalA, totalB;
+    	close basic;
 END
 ```
 
