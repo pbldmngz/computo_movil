@@ -102,7 +102,7 @@ create temporary table if not exists mart as
 	from (select c.customer_id as customer_id, 
 	r.rental_id as rental_id, ifnull(
 	(datediff(date_add(date(r.rental_date), 
-	interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, "no hay adeudo") as fee
+	interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, 0) as fee
 	from rental as r
 	join customer as c
 	on r.customer_id = c.customer_id
@@ -180,6 +180,33 @@ Reglas de negocio:
 de todos los artículos multiplicados por la cantidad comprada.
 * El procedimiento debe considerar el costo de envío (shipping_price de la tabla customerorder)
 
-```sql
+## Procedimiento A
 
+```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_12A`(id int, out res numeric)
+BEGIN
+	select sum(p.unit_price * coi.quantity) into res
+	from product as p
+	join customerorderitem as coi
+	on coi.product_id = p.product_id
+	join customerorder as co
+	on co.order_id = coi.order_id
+	where coi.order_id = id;
+END
+```
+
+## Procedimiento B
+
+```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_12B`(id int)
+BEGIN
+	declare total int default 0;
+    call practica_12A(id, @shipy);
+    
+	select co.shipping_price into total
+	from customerorder as co
+	where co.order_id = id;
+    
+    select round(total + @shipy, 2) as total;
+END
 ```
