@@ -82,7 +82,7 @@ END
 
 # Práctica 11
 ## Customer_Ticket
-Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio. Para poder usarlo es importante usar `SET @@local.net_read_timeout=360`.
+*Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio.*
 
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`()
@@ -166,4 +166,20 @@ END
 ```
 
 # Práctica 12
+Elaborar un SP que calcule el monto total de una venta de los artículos registrados en la tabla customerorderitem, de la BD curso_sbd para una venta dada.
 
+Entradas:
+* ID orden
+* Costo (tipo OUT)
+
+Salidas:
+* Costo redondeado a dos decimales
+
+Reglas de negocio:
+* El procedimiento debe obtener el valor total de una venta considerando el valor de la suma del precio
+de todos los artículos multiplicados por la cantidad comprada.
+* El procedimiento debe considerar el costo de envío (shipping_price de la tabla customerorder)
+
+```sql
+
+```
