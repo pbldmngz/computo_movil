@@ -79,3 +79,55 @@ close base;
 close cat;
 END
 ```
+
+# Práctica 11
+## Customer_Ticket
+Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio
+
+```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`()
+BEGIN
+declare c_id int default 0;
+declare r_id int default 0;
+declare fe int default 0.0;
+
+declare done int default 0;
+declare count int default 0;
+
+declare continue handler for SQLSTATE '02000' set done = 1;
+
+drop temporary table if exists mart;
+create temporary table if not exists mart as
+	select customer_id, rental_id, fee# into c_id, r_id, fe
+	from (select c.customer_id as customer_id, 
+	r.rental_id as rental_id, ifnull(
+	(datediff(date_add(date(r.rental_date), 
+	interval f.rental_duration day), r.return_date)*(-1))*f.rental_rate, "no hay adeudo") as fee
+	from rental as r
+	join customer as c
+	on r.customer_id = c.customer_id
+	join inventory as i
+	on i.inventory_id = r.inventory_id
+	join film as f
+	on i.film_id = f.film_id
+	where (r.return_date is null
+	or datediff(date_add(date(r.rental_date), 
+	interval f.rental_duration day), r.return_date) < 0)
+    order by r.rental_id) as sos;
+    
+    while count < (
+    select count(customer_id) from mart
+    ) do
+		select * into c_id, r_id, fe
+        from mart 
+        where rental_id = count;
+		insert into ticket values (0, current_timestamp(), c_id, r_id, fe, 0);
+        set count = count + 1;
+    end while;
+END
+```
+
+## Práctica
+
+```sql
+```
