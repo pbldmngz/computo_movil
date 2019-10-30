@@ -82,7 +82,7 @@ END
 
 # Práctica 11
 ## Customer_Ticket
-Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio
+Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio. Para poder usarlo es importante usar `SET @@local.net_read_timeout=360;`.
 
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`()
@@ -98,7 +98,7 @@ declare continue handler for SQLSTATE '02000' set done = 1;
 
 drop temporary table if exists mart;
 create temporary table if not exists mart as
-	select customer_id, rental_id, fee# into c_id, r_id, fe
+	select customer_id, rental_id, fee
 	from (select c.customer_id as customer_id, 
 	r.rental_id as rental_id, ifnull(
 	(datediff(date_add(date(r.rental_date), 
@@ -118,16 +118,33 @@ create temporary table if not exists mart as
     while count < (
     select count(customer_id) from mart
     ) do
-		select * into c_id, r_id, fe
+	select * into c_id, r_id, fe
         from mart 
         where rental_id = count;
-		insert into ticket values (0, current_timestamp(), c_id, r_id, fe, 0);
+	
+	insert into ticket values (0, current_timestamp(), c_id, r_id, fe, 0);
         set count = count + 1;
     end while;
 END
 ```
 
 ## Práctica
+Elaborar un procedimiento almacenado con uso de cursores que muestre el monto que han gastado los clientes en
+rentas y multas.
+
+Entradas:
+* Ninguna
+
+Salidas (tabla temporal):
+* ID del cliente
+* Nombre del cliente
+* Apellido del cliente
+* Rentas (monto)
+* Multas (monto)
+
+Reglas de negocio:
+* Para obtener la información de multas usar la tabla customer_ticket que se creó en clase para registrar multas.
 
 ```sql
+
 ```
