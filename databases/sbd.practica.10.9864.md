@@ -1,5 +1,20 @@
 # Práctica 10
 
+Elaborar un procedimiento almacenado con el uso de cursor y handler que
+muestre la lista de películas rentadas y la cantidad de veces que ha sido rentada
+cada película dentro de un intervalo de fechas.
+
+Entradas:
+
+* Fecha1
+* Fecha 2
+
+Salidas:
+
+* ID de la película
+* Título
+* Cantidad de veces rentada
+
 # Versión 1
 
 Se veía mejor que usar cursores y es funcional.
