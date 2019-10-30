@@ -145,5 +145,25 @@ Reglas de negocio:
 * Para obtener la información de multas usar la tabla customer_ticket que se creó en clase para registrar multas.
 
 ```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `practica_11`()
+BEGIN
+	drop temporary table if exists p11;
+	create temporary table if not exists p11 as
+	select c.customer_id, c.first_name, 
+	c.last_name, sum(amount), t.fee
+	from customer as c
+	join rental as r
+	on r.customer_id = c.customer_id
+	join payment as p
+	on p.rental_id = r.rental_id
+	join (select sum(fee) as fee, customer_id
+	from ticket group by customer_id) as t
+	on t.customer_id = c.customer_id
+	group by c.customer_id;
 
+	select * from p11;
+END
 ```
+
+# Práctica 12
+
