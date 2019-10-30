@@ -82,7 +82,7 @@ END
 
 # Práctica 11
 ## Customer_Ticket
-Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio. Para poder usarlo es importante usar `SET @@local.net_read_timeout=360;`.
+Ya que la tabla de customer ticket no tiene apenas datos, hice un relleno automático antes de empezar con el ejercicio. Para poder usarlo es importante usar `SET @@local.net_read_timeout=360`.
 
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `customer_ticket`()
@@ -129,8 +129,7 @@ END
 ```
 
 ## Práctica
-Elaborar un procedimiento almacenado con uso de cursores que muestre el monto que han gastado los clientes en
-rentas y multas.
+Elaborar un procedimiento almacenado con uso de cursores que muestre el monto que han gastado los clientes en rentas y multas.
 
 Entradas:
 * Ninguna
