@@ -1,5 +1,5 @@
 # Ejercicio 1
-Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos sakila, para calcular un bono para los clientes de acuerdo a la cantidad de rentas realizadas durante un periodo de tiempo y presente el resultado como una lista de salida. **(25 puntos)**.
+Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos sakila, para calcular un bono para los clientes de acuerdo a ~~la cantidad de rentas~~ al importe de las rentas realizadas durante un periodo de tiempo y presente el resultado como una lista de salida. **(25 puntos)**.
 
 * Restricciones
     * El procedimiento almacenado deberá utilizar cursores.
@@ -16,15 +16,68 @@ Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos s
 * Reglas de negocio
     * Para cada cliente obtener la suma del monto de las rentas que ha realizado durante un periodo de tiempo específico.
     * Para cada cliente calcular el bono a otorgar con base a lo siguiente
-    * Si el monto de la suma de las rentas es menor a 50 no se le otorga bono (cero dlls).
-    * Si el monto de la suma de las rentas es mayor o igual a 50 pero menor a 100 se le otorga un bono correspondiente al 2.5% del monto de sus rentas.
-    * Si el monto de la suma de las rentas es mayor o igual a 100 pero menor a 150 se le otorga un bono correspondiente al 5% del monto de sus rentas.
-    * Si el monto de la suma de las rentas es mayor o igual a 150 pero menor a 200 se le otorga un bono correspondiente al 7.5% del monto de sus rentas.
-    * Si el monto de la suma de las rentas es mayor o igual a 200 se le otorga un bono correspondiente al 10% del monto de sus rentas.
-    * Por ejemplo si el cliente 1, ha realizado rentas por 123.78 dólares, le corresponde un bono del 5% del monto de sus rentas, 6.19 dólares.
+          * Si el monto de la suma de las rentas es menor a 50 no se le otorga bono (cero dlls).
+          * Si el monto de la suma de las rentas es mayor o igual a 50 pero menor a 100 se le otorga un bono correspondiente al 2.5% del monto de sus rentas.
+          * Si el monto de la suma de las rentas es mayor o igual a 100 pero menor a 150 se le otorga un bono correspondiente al 5% del monto de sus rentas.
+          * Si el monto de la suma de las rentas es mayor o igual a 150 pero menor a 200 se le otorga un bono correspondiente al 7.5% del monto de sus rentas.
+          * Si el monto de la suma de las rentas es mayor o igual a 200 se le otorga un bono correspondiente al 10% del monto de sus rentas.
+    
+> Por ejemplo si el cliente 1, ha realizado rentas por 123.78 dólares, le corresponde un bono del 5% del monto de sus rentas, 6.19 dólares.
 
 ```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `rental_bonus`(fecha_inicial timestamp, fecha_final timestamp)
+BEGIN
+   declare done int default 0;
+   declare c_id int default 0;
+   declare x_id decimal(8, 2) default 0.00;
+   declare b_id decimal(8, 2) default 0.00;
 
+   declare id cursor for select customer_id from customer order by customer_id asc;
+   declare continue handler for SQLSTATE '02000' set done = 1;
+
+   drop temporary table if exists temp2;
+   create temporary table temp2 (id int, first_name varchar(50), 
+      last_name varchar(50), count decimal(8, 2), bonus decimal(8, 2));
+
+   drop temporary table if exists temp1;
+   create temporary table temp1 as
+      (select c.customer_id as id,
+      sum(p.amount) as cant
+      from customer as c
+      join rental as r
+      on c.customer_id = r.customer_id
+      join payment as p
+      on c.customer_id = p.customer_id
+      where r.rental_date 
+      between fecha_inicial and fecha_final
+      group by r.customer_id
+      order by id asc);
+   open id;
+
+   repeat
+      fetch id into c_id;
+      set x_id = ifnull((select cant from temp1 where id = c_id limit 1), 0);
+
+      case
+         when (x_id < 50) then set b_id = 0;
+         when (x_id >= 50) and (x_id < 100) then set b_id = 0.025;
+         when (x_id >= 100) and (x_id < 150) then set b_id = 0.05;
+         when (x_id >= 150) and (x_id < 200) then set b_id = 0.075;
+         when (x_id >= 200) then set b_id = 0.1;
+         else set b_id = 0;
+      end case;
+
+      insert into temp2 values (
+         c_id, (select first_name from customer where customer_id = c_id), 
+         (select last_name from customer where customer_id = c_id), x_id, b_id*x_id
+      );
+      set x_id = 0;
+      set b_id = 0;
+   until done end repeat;
+   close id;
+
+   select * from temp2;
+END
 ```
 
 # Ejercicio 2
