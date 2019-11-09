@@ -15,7 +15,7 @@ Salidas:
 * Título
 * Cantidad de veces rentada
 
-# Versión 1
+## Versión 1
 
 Se veía mejor que usar cursores y es funcional.
 
@@ -36,7 +36,7 @@ BEGIN
 END
 ```
 
-# Versión 2
+## Versión 2
 
 Abre una tabla para cada película (sino pues para que usamos **cursores**).
 
