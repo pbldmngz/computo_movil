@@ -22,4 +22,4 @@
 
 ## Explique brevemente la función de las capas de software de E/S
 |Capa|Función|
-|*---*|*---*|
+|---|---|
