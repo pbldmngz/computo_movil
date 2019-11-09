@@ -32,17 +32,18 @@
 ## 4. Una unidad de E/S consta de dos componentes: uno electrónico (que es la tarjeta controladora del dispositivo) y uno mecánico (que es el dispositivo mismo). Para el caso específico de un disco magnético, ¿Cómo funciona la controladora?
 El controlador de un disco magnético tendría que traducir la instrucción de bits a bloques de bytes, después se lo comunica a la cpu y al finalizar generaría una interrupción para que el SO verifique que todo está bien o el cpu obtenga el control.
 
-## ¿Cuáles son los tres métodos para el manejo de E/S?
+## 5. ¿Cuáles son los tres métodos para el manejo de E/S?
 * Polling
 * Manejo de interrupciones
 * Direct Memory Access (DMA)
 
-## Explique el manejo de interrupciones
+## 6. Explique el manejo de interrupciones
 Consiste en el que el usuario no se percate de que el dispositivo fue suspendido a la hora de sincronizar una tarea.
 
-## ¿En qué consiste el algoritmo de Polling?
+## 7. ¿En qué consiste el algoritmo de Polling?
+Realiza una operación de consulta constante hacia un dispositivo de hardware, para crear una actividad sin usar interrupciones.
 
-## ¿Cuáles son las funciones del reloj?
+## 8. ¿Cuáles son las funciones del reloj?
 * Sincronización de procesos.
 * Controlar tiempos de ejecución.
 * Calendarización.
