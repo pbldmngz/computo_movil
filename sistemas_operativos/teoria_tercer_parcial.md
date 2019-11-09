@@ -23,6 +23,4 @@
 ## Explique brevemente la función de las capas de software de E/S
 |Capa|Función|
 |---|---|
-|Proceso del usuario|
-* Solicitud de entrada/salida
-* Replica de E/S|
+|Proceso del usuario|* Solicitud de entrada/salida * Replica de E/S|
