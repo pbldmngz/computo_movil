@@ -1,5 +1,5 @@
 # Ejercicio 1
-Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos sakila, para calcular un bono para los clientes de acuerdo a ~~la cantidad de rentas~~ al importe de las rentas realizadas durante un periodo de tiempo y presente el resultado como una lista de salida. **(25 puntos)**.
+Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos sakila, para calcular un bono para los clientes de acuerdo ~~a la cantidad de rentas~~ al importe de las rentas realizadas durante un periodo de tiempo y presente el resultado como una lista de salida. **(25 puntos)**.
 
 * Restricciones
     * El procedimiento almacenado deberá utilizar cursores.
