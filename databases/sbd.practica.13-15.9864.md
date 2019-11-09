@@ -6,6 +6,8 @@ Reglas de negocio:
 * La cuenta debe tener tener 10$ adicionales para la comisión.
 * Si la cantidad a retirara es mayor al saldo no se debe registrar el retiro.
 
+Se usa `SIGNAL sqlstate '45001' set message_text = "exit message"` para escribir un custom message bajo alguna condición.
+
 ```sql
 Drop table if exists cuenta;
 CREATE TABLE cuenta(
@@ -28,9 +30,17 @@ cuenta (numero_cuenta)
 );
 ```
 
-```sql
+**Respuesta:**
 
+```sql
+CREATE DEFINER=`spectra`@`%` TRIGGER `retiro_BEFORE_INSERT` BEFORE INSERT ON `retiro` FOR EACH ROW BEGIN
+	declare s int default (select saldo from cuenta where numero_cuenta = new.cuenta);
+    if (new.retiro > s) or (s < 20 + 10) then SIGNAL sqlstate '45001' set message_text = "no se puede realizar el retiro";
+    else update cuenta set saldo = saldo - new.retiro where numero_cuenta = new.cuenta;
+    end if;
+END
 ```
+
 # Práctica 14
 Crear un trigger para insertar la información de una multa en la tabla ticket si la fecha de entrega de la película excede los días límite para regresarla.
 
