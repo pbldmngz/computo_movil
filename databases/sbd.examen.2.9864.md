@@ -80,6 +80,8 @@ BEGIN
 END
 ```
 
+EJEMPLO: `call rental_bonus("2005-05-26 02:04:30", "2005-05-26 22:04:30")`
+
 # Ejercicio 2
 Elaborar un reporte, en la base de datos sakila, de las rentas realizadas por categoría durante un intervalo de fechas específico. El reporte deberá presentar el nombre de la categoría, la sumas de rentas de esa categoría y una estimación del monto cobrado por las rentas utilizando el valor promedio de renta de las películas por categoría. **(25 puntos)**.
 
@@ -103,6 +105,8 @@ Elaborar un reporte, en la base de datos sakila, de las rentas realizadas por ca
 
 ```
 
+EJEMPLO: ``
+
 # Ejercicio 3
 Escribir un procedimiento que agregue una nueva entrada a la tabla “film_category” que guarda la(s) categoría(s) a la(s) que pertenece cada película. **(15 puntos)**.
 
@@ -119,6 +123,8 @@ Escribir un procedimiento que agregue una nueva entrada a la tabla “film_categ
 
 ```
 
+EJEMPLO: ``
+
 # Ejercicio 4
 Realizar un procedimiento en el que registre un nuevo actor en la base de datos Sakila. **(15 puntos)**.
 
@@ -132,6 +138,7 @@ Realizar un procedimiento en el que registre un nuevo actor en la base de datos 
 ```sql
 
 ```
+EJEMPLO: ``
 
 # Ejercicio 5
 Crear un procedimiento que actualice el costo de reemplazo de las películas de una determinada categoría. **(20 puntos)**
@@ -154,3 +161,5 @@ Crear un procedimiento que actualice el costo de reemplazo de las películas de 
 ```sql
 
 ```
+
+EJEMPLO: ``
