@@ -21,6 +21,7 @@ Elaborar el procedimiento almacenado *“Rental_Bonus”*, en la base de datos s
           * Si el monto de la suma de las rentas es mayor o igual a 100 pero menor a 150 se le otorga un bono correspondiente al 5% del monto de sus rentas.
           * Si el monto de la suma de las rentas es mayor o igual a 150 pero menor a 200 se le otorga un bono correspondiente al 7.5% del monto de sus rentas.
           * Si el monto de la suma de las rentas es mayor o igual a 200 se le otorga un bono correspondiente al 10% del monto de sus rentas.
+          
     
 > Por ejemplo si el cliente 1, ha realizado rentas por 123.78 dólares, le corresponde un bono del 5% del monto de sus rentas, 6.19 dólares.
 
