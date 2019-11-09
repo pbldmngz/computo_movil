@@ -23,4 +23,8 @@
 ## Explique brevemente la función de las capas de software de E/S
 |Capa|Función|
 |---|---|
-|Proceso del usuario|* Solicitud de entrada/salida * Replica de E/S|
+|Proceso del usuario|Solicitud de entrada/salida y Replica de E/S, Hace llemadas a E/S y le da formato|
+|Software independiente del dispositivo|Nombre, protección, bloqueo, uso de buffer, asignación|
+|Manejadores de dispositivo|Conforma los registros del dispositivo y verifica el estado|
+|Manejadores de introducciones|Despierta al manejador al terminar la E/S|
+|Hardware|Lleva a cabo la operación de E/S|
