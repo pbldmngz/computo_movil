@@ -48,3 +48,11 @@ Realiza una operación de consulta constante hacia un dispositivo de hardware, p
 * Controlar tiempos de ejecución.
 * Calendarización.
 * Despertar procesos dormidos.
+
+## 9. De acuerdo a lo anterior, explique la planificación de discos así como los algoritmos de planificación de discos.
+
+## 10. Existen comandos para visualizar hardware en Linux, describa algunos.
+**lscpu:** informa sobre la CPU
+**lshw -short:** información breve y detallada sobre unidades de hardware
+**hwinfo:** descripción más extensa que lshw
+
