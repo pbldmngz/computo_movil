@@ -34,10 +34,10 @@ cuenta (numero_cuenta)
 
 ```sql
 CREATE DEFINER=`spectra`@`%` TRIGGER `retiro_BEFORE_INSERT` BEFORE INSERT ON `retiro` FOR EACH ROW BEGIN
-	declare s int default (select saldo from cuenta where numero_cuenta = new.cuenta);
-    if (new.retiro > s) or (s < 20 + 10) then SIGNAL sqlstate '45001' set message_text = "no se puede realizar el retiro";
-    else update cuenta set saldo = saldo - new.retiro where numero_cuenta = new.cuenta;
-    end if;
+	declare s int default (select saldo from cuenta where numero_cuenta = new.cuenta) - 10;
+   	if (s - new.retiro) <= 20 then SIGNAL sqlstate '45001' set message_text = "no se puede realizar el retiro";
+    	else update cuenta set saldo = saldo - new.retiro where numero_cuenta = new.cuenta;
+    	end if;
 END
 ```
 
