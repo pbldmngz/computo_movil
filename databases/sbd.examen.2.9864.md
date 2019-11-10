@@ -136,7 +136,22 @@ Realizar un procedimiento en el que registre un nuevo actor en la base de datos 
       * Si se intenta registrar un actor que ya existe, el procedimiento deberá finalizar y mostrar el mensaje “el actor ya existe”. Probar el procedimiento primero con datos duplicados y después con datos válidos.
 
 ```sql
-
+CREATE DEFINER=`spectra`@`%` PROCEDURE `actor_register`(first_name varchar(50), last_name varchar(50))
+BEGIN
+  if 
+    not exists (
+      select a.first_name, a.last_name 
+      from actor as a
+      where a.first_name = first_name
+      and a.last_name = last_name
+    ) 
+    then insert into actor (first_name, last_name)
+    values (first_name, last_name);
+    select "¡Inserción exitosa!";
+  else
+    select "El actor ya existe";
+  end if;
+END
 ```
 EJEMPLO: ``
 
