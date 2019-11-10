@@ -82,5 +82,14 @@ Reglas de negocio:
 * Al sueldo anterior sumarle el aumento y actualizarlo en la tabla trabaja_en.
 
 ```sql
-
+CREATE DEFINER=`root`@`localhost` TRIGGER `empleado_AFTER_UPDATE` AFTER UPDATE ON `empleado` FOR EACH ROW 
+BEGIN
+	if old.antiguedad != new.antiguedad
+		then update trabaja_en set sueldo = (sueldo/100)*(
+			select factor_compensacion 
+			from antiguedad 
+			where antiguedad = new.antiguedad) + sueldo
+		where nss = new.nss;
+	end if;
+END
 ```
