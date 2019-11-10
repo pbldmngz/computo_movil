@@ -153,7 +153,8 @@ BEGIN
   end if;
 END
 ```
-EJEMPLO: ``
+
+EJEMPLO: `call actor_register("Pablo", "Dominguez")`
 
 # Ejercicio 5
 Crear un procedimiento que actualice el costo de reemplazo de las películas de una determinada categoría. **(20 puntos)**
