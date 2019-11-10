@@ -129,11 +129,12 @@ EJEMPLO: ``
 Realizar un procedimiento en el que registre un nuevo actor en la base de datos Sakila. **(15 puntos)**.
 
 * Entradas
-      * Nombre y apellidos de un actor.
+  * Nombre y apellidos de un actor.
 * Salidas
-      * Mensaje de éxito al registrar el actor o mensaje de error si se duplica al actor.
+  * Mensaje de éxito al registrar el actor o mensaje de error si se duplica al actor.
 * Reglas de negocio
-      * Si se intenta registrar un actor que ya existe, el procedimiento deberá finalizar y mostrar el mensaje “el actor ya existe”. Probar el procedimiento primero con datos duplicados y después con datos válidos.
+  * Si se intenta registrar un actor que ya existe, el procedimiento deberá finalizar y mostrar el mensaje “el actor ya existe”. 
+  * Probar el procedimiento primero con datos duplicados y después con datos válidos.
 
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `actor_register`(first_name varchar(50), last_name varchar(50))
@@ -159,20 +160,20 @@ EJEMPLO: `call actor_register("Pablo", "Dominguez")`
 # Ejercicio 5
 Crear un procedimiento que actualice el costo de reemplazo de las películas de una determinada categoría. **(20 puntos)**
 * Restricciones
-      * El procedimiento almacenado deberá utilizar cursores.
-      * Uso de tabla temporal para guardar el resultado y mostrarlo antes de finalizar la ejecución del procedimiento
+  * El procedimiento almacenado deberá utilizar cursores.
+  * Uso de tabla temporal para guardar el resultado y mostrarlo antes de finalizar la ejecución del procedimiento
 * Entradas
-      * El nombre de la categoría
-      * Porcentaje a aumentar.
+  * El nombre de la categoría
+  * Porcentaje a aumentar.
 * Salidas
-      * Una lista con:
-        * ID de la película
-        * Nombre de la película
-        * Costo anterior
-        * Aumento
-        * Costo nuevo
+  * Una lista con:
+    * ID de la película
+    * Nombre de la película
+    * Costo anterior
+    * Aumento
+    * Costo nuevo
 * Reglas de negocio
-    * El aumento será el porcentaje o el importe que se indica en los parámetros de entrada (el que sea superior).
+  * El aumento será el porcentaje o el importe que se indica en los parámetros de entrada (el que sea superior).
 
 ```sql
 
