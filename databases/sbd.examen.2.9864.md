@@ -138,18 +138,18 @@ Realizar un procedimiento en el que registre un nuevo actor en la base de datos 
 ```sql
 CREATE DEFINER=`spectra`@`%` PROCEDURE `actor_register`(first_name varchar(50), last_name varchar(50))
 BEGIN
-  if 
-    not exists (
-      select a.first_name, a.last_name 
-      from actor as a
-      where a.first_name = first_name
-      and a.last_name = last_name
-    ) 
-    then insert into actor (first_name, last_name)
+  if exists (
+    select a.first_name, a.last_name 
+    from actor as a
+    where a.first_name = first_name
+    and a.last_name = last_name
+  ) 
+  then select "El actor ya existe";
+
+  else
+    insert into actor (first_name, last_name)
     values (first_name, last_name);
     select "¡Inserción exitosa!";
-  else
-    select "El actor ya existe";
   end if;
 END
 ```
@@ -166,13 +166,13 @@ Crear un procedimiento que actualice el costo de reemplazo de las películas de 
       * Porcentaje a aumentar.
 * Salidas
       * Una lista con:
-      * ID de la película
-      * Nombre de la película
-      * Costo anterior
-      * Aumento
-      * Costo nuevo
-      * Reglas de negocio
-      * El aumento será el porcentaje o el importe que se indica en los parámetros de entrada (el que sea superior).
+        * ID de la película
+        * Nombre de la película
+        * Costo anterior
+        * Aumento
+        * Costo nuevo
+* Reglas de negocio
+    * El aumento será el porcentaje o el importe que se indica en los parámetros de entrada (el que sea superior).
 
 ```sql
 
