@@ -86,20 +86,20 @@ EJEMPLO: `call rental_bonus("2005-05-26 02:04:30", "2005-05-26 22:04:30")`
 Elaborar un reporte, en la base de datos sakila, de las rentas realizadas por categoría durante un intervalo de fechas específico. El reporte deberá presentar el nombre de la categoría, la sumas de rentas de esa categoría y una estimación del monto cobrado por las rentas utilizando el valor promedio de renta de las películas por categoría. **(25 puntos)**.
 
 * Restricciones
-      * El procedimiento almacenado deberá utilizar cursores.
-      * Uso de tabla temporal para guardar el resultado y mostrarlo antes de finalizar la ejecución del procedimiento.
+  * El procedimiento almacenado deberá utilizar cursores.
+  * Uso de tabla temporal para guardar el resultado y mostrarlo antes de finalizar la ejecución del procedimiento.
 * Entradas
-      * Fecha inicial
-      * Fecha final
+  * Fecha inicial
+  * Fecha final
 * Salidas
-      * ID de la categoría
-      * Nombre de la categoría
-      * Suma de las rentas por categoría
-      * Ingreso promedio (sumas de las rentas * valor de renta promedio por categoría)
+  * ID de la categoría
+  * Nombre de la categoría
+  * Suma de las rentas por categoría
+  * Ingreso promedio (sumas de las rentas * valor de renta promedio por categoría)
 * Reglas de negocio
-      * Utilizar al menos dos procedimientos (llamada otro procedimiento).
-      * Para cada categoría obtener la suma de las rentas que se han realizado durante un periodo de tiempo específico.
-      * Para cada categoría calcular el valor promedio de renta con base al valor de renta de cada película en la categoría.
+  * Utilizar al menos dos procedimientos (llamada otro procedimiento).
+  * Para cada categoría obtener la suma de las rentas que se han realizado durante un periodo de tiempo específico.
+  * Para cada categoría calcular el valor promedio de renta con base al valor de renta de cada película en la categoría.
 
 ```sql
 
