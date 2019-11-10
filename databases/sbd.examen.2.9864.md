@@ -76,7 +76,7 @@ BEGIN
    until done end repeat;
    close id;
 
-   select * from temp2;
+   select * from temp2 where count != 0; #Quitar el where para tambien ver al resto de clientes
 END
 ```
 
