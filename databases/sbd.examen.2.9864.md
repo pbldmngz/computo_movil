@@ -251,10 +251,46 @@ Crear un procedimiento que actualice el costo de reemplazo de las películas de 
     * Aumento
     * Costo nuevo
 * Reglas de negocio
-  * El aumento será el porcentaje o el importe que se indica en los parámetros de entrada (el que sea superior).
+  * El aumento será el porcentaje ~~o el importe~~ que se indica en los parámetros de entrada ~~(el que sea superior)~~.
 
 ```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `ex5`(cat varchar(25), inc decimal(4,2))
+BEGIN
+  declare done int default 0;
+  declare id int default 0;
+  
+  declare l cursor for    
+    select f.film_id
+    from film as f
+    join film_category as fc
+    on fc.film_id = f.film_id
+    join category as c
+    on c.category_id = fc.category_id
+    where c.name = cat;
+  declare continue handler for SQLSTATE '02000' set done = 1;
 
+  drop temporary table if exists temp;
+  create temporary table temp (id int, title varchar(50), costo_ant decimal(4,2), 
+    inc decimal(4,2), costo_act decimal(4,2));
+
+  open l;
+
+  repeat
+    fetch l into id;
+
+    insert into temp values (id, 
+      (select title from film where film_id = id), 
+      (select replacement_cost from film where film_id = id), 
+      (select replacement_cost*inc from film where film_id = id), 
+      (select replacement_cost + replacement_cost*inc from film where film_id = id));
+
+    #update film set replacement_cost = replacement_cost + 
+    #replacement_cost*inc where film_id = id;
+  until done end repeat;
+  close l;
+
+  select * from temp;
+END
 ```
 
-EJEMPLO: ``
+EJEMPLO: `call ex5("Action", 0.1)`
