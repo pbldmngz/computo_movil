@@ -102,7 +102,68 @@ Elaborar un reporte, en la base de datos sakila, de las rentas realizadas por ca
   * Para cada categoría calcular el valor promedio de renta con base al valor de renta de cada película en la categoría.
 
 ```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `cat_avg`(id int, out aver decimal(11, 6), out nombre varchar(25))
+BEGIN
+  select sum(f.rental_rate)/count(f.film_id),
+  c.name into aver, nombre
+  from film as f
+  join film_category as fc
+  on fc.film_id = f.film_id
+  join category as c
+  on c.category_id = fc.category_id
+  where c.category_id = id
+  group by c.category_id;
+END
+```
 
+```sql
+CREATE DEFINER=`spectra`@`%` PROCEDURE `ex2`(fecha_inicial timestamp, fecha_final timestamp)
+BEGIN
+  declare av decimal (11,6) default 0;
+  declare rev decimal (11,6) default 0;
+  declare co  int default 0;
+  declare nm varchar(25) default "";
+  declare done int default 0;
+  declare id int default 0;
+
+  declare cats cursor for
+    select category_id from category;
+  declare continue handler for SQLSTATE '02000' set done = 1;
+
+  drop temporary table if exists dogs;
+  create temporary table dogs (id int, nombre varchar(25), count int, 
+    suma_real decimal(8, 2), promedio_cat decimal(8, 2));
+
+  open cats;
+
+  repeat
+    fetch cats into id;
+    call cat_avg(id, av, nm);
+
+    select sum(p.amount), 
+    count(c.category_id) into rev, co
+    from rental as r
+    join inventory as i
+    on r.inventory_id = i.inventory_id
+    join film as f
+    on i.film_id = f.film_id
+    join film_category as fc
+    on fc.film_id = f.film_id
+    join category as c
+    on c.category_id = fc.category_id
+    join payment as p
+    on p.rental_id = r.rental_id
+    where (r.rental_date between fecha_inicial and fecha_final)
+    and c.category_id = id
+    group by c.category_id;
+
+    insert into dogs values (id, nm, co, rev, av);
+  until done end repeat;
+
+  close cats;
+
+  select * from dogs;
+END
 ```
 
 EJEMPLO: ``
