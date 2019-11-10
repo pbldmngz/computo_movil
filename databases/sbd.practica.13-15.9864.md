@@ -67,7 +67,7 @@ BEGIN
 	where r.rental_id = new.rental_id;
 
 	if (n > 0) 
-		then insert into ticket values (0, current_timestamp(), 
+		then insert into ticket values (0, new.return_date, 
 		new.customer_id, new.rental_id, 0.5*n, 0);
 	end if;
 END
