@@ -11,22 +11,22 @@ Se usa `SIGNAL sqlstate '45001' set message_text = "exit message"` para escribir
 ```sql
 Drop table if exists cuenta;
 CREATE TABLE cuenta(
-numero_cuenta int PRIMARY KEY ,
-saldo float
+	numero_cuenta int PRIMARY KEY ,
+	saldo float
 );
 INSERT INTO cuenta VALUES(1, 100);
 INSERT INTO cuenta VALUES(2, 200);
 
 Drop table if exists retiro;
 CREATE TABLE retiro(
-numero_retiro int PRIMARY KEY
-AUTO_INCREMENT,
-fecha_retiro datetime,
-cuenta int,
-retiro float,
-Comsion float,
-foreign key (cuenta) REFERENCES
-cuenta (numero_cuenta)
+	numero_retiro int PRIMARY KEY
+	AUTO_INCREMENT,
+	fecha_retiro datetime,
+	cuenta int,
+	retiro float,
+	Comsion float,
+	foreign key (cuenta) REFERENCES
+	cuenta (numero_cuenta)
 );
 ```
 
