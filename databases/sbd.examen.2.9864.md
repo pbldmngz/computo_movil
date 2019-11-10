@@ -181,7 +181,24 @@ Escribir un procedimiento que agregue una nueva entrada a la tabla “film_categ
   * Si ya existe la entrada o fila que se pretende añadir a film_category, aparecerá un mensaje diciendo el film x ya pertenece a esa categoría. En caso contrario se procederá a dar de alta la fila en la tabla film_category.
 
 ```sql
-
+CREATE DEFINER=`spectra`@`%` PROCEDURE `ex3`(f_id int, cat varchar(25))
+BEGIN
+  declare c_id int default (select category_id from category where name = cat);
+  if not exists (
+    select film_id 
+    from film 
+    where film_id = f_id
+  ) then select concat("La categoría ", cat, " no existe") as result;
+  elseif exists (
+    select category_id 
+    from film_category 
+    where film_id = f_id
+  ) then select concat("La película con ID ", f_id, " ya pertenece a la categoría ", cat) as result;
+  else 
+    insert into film_category values(f_id, c_id);
+    select '!Inserción Exitosa!' as result;
+  end if;
+END
 ```
 
 EJEMPLO: ``
