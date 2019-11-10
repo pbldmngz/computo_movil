@@ -111,13 +111,13 @@ EJEMPLO: ``
 Escribir un procedimiento que agregue una nueva entrada a la tabla “film_category” que guarda la(s) categoría(s) a la(s) que pertenece cada película. **(15 puntos)**.
 
 * Entradas
-      * El procedimiento recibirá como parámetros el identificador de película y el nombre de la categoría.
+  * El procedimiento recibirá como parámetros el identificador de película y el nombre de la categoría.
 * Salidas
-      * Mensaje de éxito al registrar una nueva entrada, o mensajes de error según corresponda.
+  * Mensaje de éxito al registrar una nueva entrada, o mensajes de error según corresponda.
 * Reglas de negocio
-      * Si no existe el film correspondiente al número pasado como parámetro, se mostrará un mensaje diciendo “ El film con nº x no existe” en x debe aparecer el número de film pasado como parámetro y se abandonará el procedimiento.
-      * Si no existe la categoría pasada como parámetro, se mostrará un mensaje diciendo “la categoría x no existe” donde x será el nombre de la categoría pasada como parámetro y se abandonará el procedimiento.
-      * Si ya existe la entrada o fila que se pretende añadir a film_category, aparecerá un mensaje diciendo el film x ya pertenece a esa categoría. En caso contrario se procederá a dar de alta la fila en la tabla film_category.
+  * Si no existe el film correspondiente al número pasado como parámetro, se mostrará un mensaje diciendo “ El film con nº x no existe” en x debe aparecer el número de film pasado como parámetro y se abandonará el procedimiento.
+  * Si no existe la categoría pasada como parámetro, se mostrará un mensaje diciendo “la categoría x no existe” donde x será el nombre de la categoría pasada como parámetro y se abandonará el procedimiento.
+  * Si ya existe la entrada o fila que se pretende añadir a film_category, aparecerá un mensaje diciendo el film x ya pertenece a esa categoría. En caso contrario se procederá a dar de alta la fila en la tabla film_category.
 
 ```sql
 
