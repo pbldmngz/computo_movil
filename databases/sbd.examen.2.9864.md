@@ -47,7 +47,7 @@ BEGIN
       join rental as r
       on c.customer_id = r.customer_id
       join payment as p
-      on c.customer_id = p.customer_id
+      on r.rental_id = p.rental_id
       where r.rental_date 
       between fecha_inicial and fecha_final
       group by r.customer_id
