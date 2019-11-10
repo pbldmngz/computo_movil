@@ -224,7 +224,6 @@ BEGIN
     and a.last_name = last_name
   ) 
   then select "El actor ya existe";
-
   else
     insert into actor (first_name, last_name)
     values (first_name, last_name);
