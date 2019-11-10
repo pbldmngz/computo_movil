@@ -131,8 +131,8 @@ BEGIN
   declare continue handler for SQLSTATE '02000' set done = 1;
 
   drop temporary table if exists dogs;
-  create temporary table dogs (id int, nombre varchar(25), count int, 
-    suma_real decimal(8, 2), promedio_cat decimal(8, 2));
+  create temporary table dogs (id int, nombre varchar(25), gen_cat decimal(8, 2), 
+    suma_real decimal(8, 2), count int);
 
   open cats;
 
@@ -157,8 +157,8 @@ BEGIN
     and c.category_id = id
     group by c.category_id;
 
-    insert into dogs values (id, nm, co, rev, av);
-  until done end repeat;
+    insert into dogs values (id, nm, co*av, rev, co);
+    until done end repeat;
 
   close cats;
 
@@ -166,7 +166,7 @@ BEGIN
 END
 ```
 
-EJEMPLO: ``
+EJEMPLO: `call ex2("2005-05-26 02:04:30", "2008-05-26 22:04:30")`
 
 # Ejercicio 3
 Escribir un procedimiento que agregue una nueva entrada a la tabla “film_category” que guarda la(s) categoría(s) a la(s) que pertenece cada película. **(15 puntos)**.
@@ -201,7 +201,7 @@ BEGIN
 END
 ```
 
-EJEMPLO: ``
+EJEMPLO: `call ex3(12,12)`
 
 # Ejercicio 4
 Realizar un procedimiento en el que registre un nuevo actor en la base de datos Sakila. **(15 puntos)**.
