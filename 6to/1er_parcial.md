@@ -1,4 +1,5 @@
 # Redes y Comunicación
+## Clase
 * **Nodo de red:** 
 	* Originan, enrutan y reciben datos
 	* Se identidican por sus direcciones de red
@@ -43,38 +44,63 @@
 			* Comunicaciones por contacto directo
 			* Individuos generalmente anónimos
 > La red más conocida es internet.
-* **Protocolo:** Declaración de como se llevará a cabo la comunicación.
+* **Protocolo:** Declaración de como se llevará a cabo la comunicación. Para reducir la complejidad de una red, se suelen organizar como pilas de capas encimadas.
+	* **Capas:** Su propósito es ofecer un servicio a capas superiores, ocultando el proceso.
 	* **Complejidad de un protocolo:**
 		* Número de capas
 		* Nombre de las capas
 		* Contenidos de las capas
 		* Funciones de las capas
 		* Propósitos de las capas
-	* **Peers:** Entidades que abarcan las capas correspondientes en diferentes máquinas. *Utilizan protocolos para comunicarse entre sí.*
+	* **Peers:** Entidades que abarcan las capas correspondientes en diferentes máquinas. **Utilizan protocolos para comunicarse entre sí.**
 		* Procesos de software
 		* Dispositivos de hardware
 		* Seres humnanos
-	* **Interface:** Par de capas adyacentes
+	* **Interface:** Par de capas adyacentes. Decide que operaciones y servicios podrá exponer la capa inferior a la superior
 	* **Arquitectura de red:** Conjunto de capas y protocolos
 	* **Protocol stack:** Lista de protocolos usados por ciertos sistemas, uno por capa
+* **Cables:**
 * **Cableado estructurado:** Conectar cables de forma ordenada para facilitar el mantenimiento
+* **Tipos de transmisión:**
+	* **Simplex:** Trafico en una sola dirección por un solo carril
+	* **Half-Duplex:** Tráfico posible en ambias direcciones pero con un solo carril
+	* **Full-Duplex:** Ambas direcciones, dos carriles
 * **Cables más usados:**
 	* Category 5e (Cat 5e)
 	* Category 6 (Cat 6)
 	* Fibra óptica
 * **Enrutamiento:** Forma en que los datos encuantran camino hasta llegar a su destino
 	* **Esquemas generales de enrutamiento:**
-		* **Unicast:** A un nodo específico
-		* **Multicast:** A un grupo de nodos
-		* **Broadcast:** A todos en la red
-		* **Anycast:** A uno de un grupo
-		* **Geocast:** A un grupo por localización geográfica
+		* **Point to point:**
+			* Conecta pares de máquinas
+			* Generalmente tienen múltiples rutas
+			* Cuando hay un remitente y un receptor, también se le llama *unicast*
+		* **Broadcast:** Toda la red comparte el canal de comunicación
+			* **Unicast:** A un nodo específico
+			* **Multicast:** A un grupo de nodos
+			* **Broadcast:** A todos en la red
+			* **Anycast:** A uno de un grupo
+			* **Geocast:** A un grupo por localización geográfica
 * **Tomar en cuenta al diseñar una red:**
 	* **Reliability:** Los paquetes de información viajan sin excesivas pérdidas
 	* Evolución de la red
 	* Asignación de recursos
 	* Seguridad de la red
+* **Tamaño de la red:** Redes grandes generalemente se subdividen en otras más pequeñas
+	* 1m - Personal Area Network
+	* 10-1000m - Local Area Network
+	* 10km - Metropolitan Area Network
+	* 100-1000km - Wide Area Network
+	* 10,000km - the Internet
 * **Congestión:** Sobrecarga de información en la red
+* **Dispositivos de Hardware:** Ejemplos
+	* Hub
+	* Gateway
+	* Router
+	* Switch
+	* Bridge
+	* Network interface controller
+	* Modem
 * **Seguridad:**
 	* Confidencialidad
 	* Autentificación
@@ -86,3 +112,23 @@
 	* Genera overhead
 	* Es más lenta
 * **Connection-oriented:** Velocidad sobre consistencia
+* **Topologías de red:** Representación geométrica de los nodos, su colocación
+	* **Topología física:** La disposición física de los nodos
+		* Anillo
+		* Doble anillo
+		* Estrella
+		* Árbol
+		* Malla
+		* Bus
+	* **Topología lógica:** La información fluyendo en la red
+* **Comandos:**
+	* ipconfig - 
+	* hostname -
+	* ping - 
+	* tracert
+	* nslookup -
+	* netstat -
+	* route -
+	* arp
+## Presentaciones
+* **:**
