@@ -26,8 +26,13 @@
 	* **Sandbox:** Ejecución de código en un ambiente limitado
 	* **Ejecución especulativa:** Especula el resultado antes de terminar una operación
 	* **Principio de Locard:** Cuando una persona entra/sale de una escena, esta siempre deja un rastro y/o toma posesión de algo
-	* **Header/Footer carving:** Obtener archivos de datos crudos usando headers y footers distintos
-	* **Header/Maximum (file) size carving:** Obtener archivos directamente de los datos crudos con un límite de tamaño para los archivos
+	* **Data carving:**
+		* **Header/Embedded length carving:** 
+			* Obtener archivos de los datos crudos
+			* Headers y footers distintos
+			* Tamaño de archivo definidos por el formato del archivo
+		* **Header/Footer carving:** Obtener archivos de datos crudos usando headers y footers distintos
+		* **Header/Maximum (file) size carving:** Obtener archivos directamente de los datos crudos con un límite de tamaño para los archivos
 	* **Esteganografía:** Ocultar-Escritura/Símbolos. Ocultar información en imágenes
 * **Ingeniería social:** Manipulación a personas para que liberen información confidencial
 	* **Principios básicos de Mitnick:**
@@ -97,10 +102,6 @@
 	* **Conclusiones:**
 		* Resumen técnico
 		* Testimonio y recomendaciones del experto
-* **Header/Embedded length carving:** 
-	* Obtener archivos de los datos crudos
-	* Headers y footers distintos
-	* Tamaño de archivo definidos por el formato del archivo
 * **SSD:** Solid state drive. Las posiciones en memoria no pueden ser sobreescritas si no han sido previamente eliminadas
 	* **TRIM:** 
 		* Ayuda al sistema operativo a conocer la locación exacta de la información a eliminar/mover
