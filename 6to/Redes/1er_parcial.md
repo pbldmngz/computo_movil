@@ -32,17 +32,17 @@
 				* Cada nodo y mensaje será identificado en la red
 			* **Tipos:**
 				* **MANET:** Mobile Ad Hoc Network. Dispositivos móviles que se conectan entre sí temporalmente
-				* **VANET:** Vehicular Ad Hoc Network
-				* **INVANET:** Inteligent Vehicular Ad Hoc Network
-				* **IMANET:** Internet Based Mobile Ad Hoc Network
-		* **OPNET:** Red Oportinista
-			* Comunicación asíncrona
-			* Diseminación de la información
-			* No necesariamente todos los nodos deben contribuir
-			* Está en la capa de aplicación
-			* Cada nodo está informado solamente de los nodos que están dentro de su rango de comunicación directa
-			* Comunicaciones por contacto directo
-			* Individuos generalmente anónimos
+					* **VANET:** Vehicular Ad Hoc Network
+					* **INVANET:** Inteligent Vehicular Ad Hoc Network
+					* **IMANET:** Internet Based Mobile Ad Hoc Network
+				* **OPNET:** Red Oportinista
+					* Comunicación asíncrona
+					* Diseminación de la información
+					* No necesariamente todos los nodos deben contribuir
+					* Está en la capa de aplicación
+					* Cada nodo está informado solamente de los nodos que están dentro de su rango de comunicación directa
+					* Comunicaciones por contacto directo
+					* Individuos generalmente anónimos
 > La red más conocida es internet.
 * **Protocolo:** Declaración de como se llevará a cabo la comunicación. Para reducir la complejidad de una red, se suelen organizar como pilas de capas encimadas.
 	* **Capas:** Su propósito es ofecer un servicio a capas superiores, ocultando el proceso.
@@ -131,4 +131,14 @@
 	* route -
 	* arp
 ## Presentaciones
-* **:**
+* **TCP:** Transmision Control Protocol
+	* Triple handshake
+	* Header
+* **FTP:** File Transfer Protocol
+	* Máxima velocidad
+	* Menor seguridad
+* **DNS:** Domain Name System
+	* Base de datos distribuida y jerárquica
+	* Almacena información de nombres de dominio
+* **DHSP:** Dynamic Host Configuration Protocol
+	* Conjunto de reglas para dar direcciones IP y opciones de configuración a dispositivos de una red
