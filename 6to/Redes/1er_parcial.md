@@ -107,11 +107,8 @@
 	* Integridad
 * **Overhead:** Información adicional que viaja junto a los paquetes de datos
 * **Acknowledgement:** Acuse de recibo. Se regresa un aviso de que llegó la información
-* **Connection-less:** 
-	* Por un puerto u otro, almacena los datos y luego los envía.
-	* Genera overhead
-	* Es más lenta
-* **Connection-oriented:** Velocidad sobre consistencia
+* **Connection-less:** El paquete lleva la ruta
+* **Connection-oriented:** Traza ruta antes de mandarlo, devuelve acknowledgement
 * **Topologías de red:** Representación geométrica de los nodos, su colocación
 	* **Topología física:** La disposición física de los nodos
 		* Anillo
@@ -129,7 +126,7 @@
 	* nslookup -
 	* netstat -
 	* route -
-	* arp
+	* arp -
 ## Presentaciones
 * **TCP:** Transmision Control Protocol
 	* Triple handshake
@@ -142,3 +139,14 @@
 	* Almacena información de nombres de dominio
 * **DHSP:** Dynamic Host Configuration Protocol
 	* Conjunto de reglas para dar direcciones IP y opciones de configuración a dispositivos de una red
+	* Asigna dinámicamente dirección IP y otros parámetros
+* **Cross-layer design:** Ignorar las reglar y comincarse con un puente a capas distantes
+* **Broadcast Storm:** Inundación de emisiones por broadcast en una red
+* **OSI:** Open System Interconnection
+* **Capa 1 - física:** Capa que transfiere los bits
+* **Capa 2 - enlace de datos:** Intercambia paquetes entre el host y la red en la que está conectado
+* **Capa 3 - de red:** Manda paquetes
+* **Capa 4 - de transporte:** Transporta entre las adyacentes
+* **Capa 5 - sesión:**
+* **Capa 6 - presentación:**
+* **Capa 7 - aplicaciones:**
