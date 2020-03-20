@@ -32,17 +32,17 @@
 				* Cada nodo y mensaje será identificado en la red
 			* **Tipos:**
 				* **MANET:** Mobile Ad Hoc Network. Dispositivos móviles que se conectan entre sí temporalmente
-				* **VANET:** Vehicular Ad Hoc Network
-				* **INVANET:** Inteligent Vehicular Ad Hoc Network
-				* **IMANET:** Internet Based Mobile Ad Hoc Network
-		* **OPNET:** Red Oportinista
-			* Comunicación asíncrona
-			* Diseminación de la información
-			* No necesariamente todos los nodos deben contribuir
-			* Está en la capa de aplicación
-			* Cada nodo está informado solamente de los nodos que están dentro de su rango de comunicación directa
-			* Comunicaciones por contacto directo
-			* Individuos generalmente anónimos
+					* **VANET:** Vehicular Ad Hoc Network
+					* **INVANET:** Inteligent Vehicular Ad Hoc Network
+					* **IMANET:** Internet Based Mobile Ad Hoc Network
+				* **OPNET:** Red Oportinista
+					* Comunicación asíncrona
+					* Diseminación de la información
+					* No necesariamente todos los nodos deben contribuir
+					* Está en la capa de aplicación
+					* Cada nodo está informado solamente de los nodos que están dentro de su rango de comunicación directa
+					* Comunicaciones por contacto directo
+					* Individuos generalmente anónimos
 > La red más conocida es internet.
 * **Protocolo:** Declaración de como se llevará a cabo la comunicación. Para reducir la complejidad de una red, se suelen organizar como pilas de capas encimadas.
 	* **Capas:** Su propósito es ofecer un servicio a capas superiores, ocultando el proceso.
@@ -107,11 +107,8 @@
 	* Integridad
 * **Overhead:** Información adicional que viaja junto a los paquetes de datos
 * **Acknowledgement:** Acuse de recibo. Se regresa un aviso de que llegó la información
-* **Connection-less:** 
-	* Por un puerto u otro, almacena los datos y luego los envía.
-	* Genera overhead
-	* Es más lenta
-* **Connection-oriented:** Velocidad sobre consistencia
+* **Connection-less:** El paquete lleva la ruta
+* **Connection-oriented:** Traza ruta antes de mandarlo, devuelve acknowledgement
 * **Topologías de red:** Representación geométrica de los nodos, su colocación
 	* **Topología física:** La disposición física de los nodos
 		* Anillo
@@ -129,6 +126,27 @@
 	* nslookup -
 	* netstat -
 	* route -
-	* arp
+	* arp -
 ## Presentaciones
-* **:**
+* **TCP:** Transmision Control Protocol
+	* Triple handshake
+	* Header
+* **FTP:** File Transfer Protocol
+	* Máxima velocidad
+	* Menor seguridad
+* **DNS:** Domain Name System
+	* Base de datos distribuida y jerárquica
+	* Almacena información de nombres de dominio
+* **DHSP:** Dynamic Host Configuration Protocol
+	* Conjunto de reglas para dar direcciones IP y opciones de configuración a dispositivos de una red
+	* Asigna dinámicamente dirección IP y otros parámetros
+* **Cross-layer design:** Ignorar las reglar y comincarse con un puente a capas distantes
+* **Broadcast Storm:** Inundación de emisiones por broadcast en una red
+* **OSI:** Open System Interconnection
+* **Capa 1 - física:** Capa que transfiere los bits
+* **Capa 2 - enlace de datos:** Intercambia paquetes entre el host y la red en la que está conectado
+* **Capa 3 - de red:** Manda paquetes
+* **Capa 4 - de transporte:** Transporta entre las adyacentes
+* **Capa 5 - sesión:**
+* **Capa 6 - presentación:**
+* **Capa 7 - aplicaciones:**
