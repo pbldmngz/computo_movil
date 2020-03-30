@@ -1,3 +1,37 @@
+# Index
+- [Redes y comunicación, segundo parcial](#redes-y-comunicaci-n--segundo-parcial)
+  * [Siglas](#siglas)
+  * [Presentación 1](#presentaci-n-1)
+    + [TCP/IP](#tcp-ip)
+      - [TCP](#tcp)
+      - [UDP](#udp)
+  * [Presentación 2](#presentaci-n-2)
+    + [Motivos por el cual OSI no funcionó](#motivos-por-el-cual-osi-no-funcion-)
+    + [Fallas del TCP/IP](#fallas-del-tcp-ip)
+    + [Multiplexing, Demultiplexing y Encapsulación en implementacion por capas](#multiplexing--demultiplexing-y-encapsulaci-n-en-implementacion-por-capas)
+  * [Presentación 3](#presentaci-n-3)
+    + [Network standarization](#network-standarization)
+    + [Network performance](#network-performance)
+  * [Presentación 4](#presentaci-n-4)
+    + [Port numbers](#port-numbers)
+    + [Broadcast Storm problem](#broadcast-storm-problem)
+  * [Presentación 5, 6 , 7 - Arquitectura de direcciones de internet](#presentaci-n-5--6---7---arquitectura-de-direcciones-de-internet)
+    + [IPv4](#ipv4)
+      - [Header](#header)
+    + [IPv6](#ipv6)
+      - [Header](#header-1)
+    + [Basic IP Address Structure](#basic-ip-address-structure)
+      - [Classful addressing](#classful-addressing)
+      - [Subnet addressing](#subnet-addressing)
+      - [DHSP](#dhsp)
+      - [Variable-Length Subnet Masks](#variable-length-subnet-masks)
+      - [IPv4 embebida en IPv6](#ipv4-embebida-en-ipv6)
+      - [CIDR - Classless Inter-Domain Routing](#cidr---classless-inter-domain-routing)
+  * [Presentación 8](#presentaci-n-8)
+    + [Implementación de un servicio connection-less](#implementaci-n-de-un-servicio-connection-less)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # Redes y comunicación, segundo parcial
 ## Siglas
 * IMP = Interface Message Processor
