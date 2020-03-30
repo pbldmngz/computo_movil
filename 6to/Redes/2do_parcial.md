@@ -30,8 +30,6 @@
   * [Presentación 8](#presentaci-n-8)
     + [Implementación de un servicio connection-less](#implementaci-n-de-un-servicio-connection-less)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # Redes y comunicación, segundo parcial
 ## Siglas
 * IMP = Interface Message Processor
