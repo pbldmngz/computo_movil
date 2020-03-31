@@ -22,6 +22,8 @@
 * DS = Differentiated Service
 * DF = Don't Fragment
 * MF = More Fragments
+* MPLS = MultiProtocol Label Switching
+* DAG = Directed Acyclic Graph
 
 * IANA = Internet Assigned Numbers Authority 
 * ARPA = Advanced Research Projects Agency
@@ -203,4 +205,81 @@
 * Se suele adjuntar al final de la IP precedido de un "/". 128.0.0.0/24
 
 ## Presentación 8
+* Connectionless:
+    * Paquetes son inyectados a la red y ruteados de forma independiente.
+    * Ninguna configuración previa es requerida.
+    * Los paquetes se llaman datagramas.
+    * La red es llamada una red de datagramas.
+* Connection-oriented:
+    * Se establece la ruta del paqute antes de que cualquier paquete sea enviado.
+    * Esta conexión se llama Circuito Virtual.
+    * A la red se la llama Red de Circuito Virtual.
 ### Implementación de un servicio connection-less
+* En una red de datagramas, si un paquete excede el tamaño máximo de paquete, este se fragmenta.
+* A lo largo del camino, cada enrutador tiene una tabla que dice hacia donde debe enviar los paquetes.
+    * En la tabla hay pares que señalan el destino y a que nodo debe ir a continuación para acercarse.
+* Al llegar, los paquetes son almacenados momentáneamente para verificar el checksum.
+* Algoritmo de enrutamiento: El algoritmo que gestiona las tablas y toma las decisiones de enrutamiento.
+
+### Implementación de un servicio connection-oriented
+* Para un servicio connection-oriented, necesitamos una red de circuito virtual. El propósito es no perder tiempo eligiendo ruta en cada paquete.
+* En vez de eso, al conectarse, la ruta desde la fuente al destino es elegida y almacenada en las tablas de los routers.
+* Cuando se rompe la conexion, también se rompe el circuito.
+* Cada paquete lleva un identificador que dice a qué circuito pertenece.
+* Label switching: Se asignal etiquetas a otros paquetes circulando por el mismo circuito.
+
+### Comparación Circuito Virtual vs Red de Datagramas
+* Es un **trade-off** en el tiempo de parseo y en el setup.
+
+Tema | Red de Datagramas | Circuito Virtual
+--- | --- | ---
+Configuración del circuito | No requiere | Requerida
+Direccionamiento | Los paquetes contienen la dirección completa | Cada paquete tiene un identificador de Circuito Virtual
+Información de estado | Los enrutadores no guardan información sobre las conexiones | Cada VC necesita un espacio en la tabla del enrutador
+Enrutamiento | Cada paquete es enrutado de forma independiente | La ruta se genera al establecerse la conexión, todos los paquetes la siguen
+Efecto de fallo de enrutamiento | Ninguno excepto por los paquetes perdidos al crashear | Todos los VC que pasaban por el enrutador afectado son finalizados
+Calidad de servicio | Difícil | Fácil si se disponen de recursos suficientes por adelantado para cada VC
+Control de congestión | Difícil | Fácil si se disponen de recursos suficientes por adelantado para cada VC
+
+## Presentación 9 (y final de la 8) - Algoritmos de enrutamiento
+* Su función es hacer llegar un paquete de forma eficiente desde el punto A al punto B, generalmente a través de distintos saltos.
+* Si se usan datagramas, estas rutas se deben de aplicar a cada paquete.
+* Si se usan VC solo tiene que ser calculado al inicio.
+* Session routing mantiene la ruta durante una sesión.
+* Forwarding: 
+    * Maneja cada paquete que va llegando y los envía hacia donde digan las tablas.
+    * Los otros procesos son responsables de llenar y actualizar las tablas de enrutamiento. Ahí es cuando entra el algoritmo de enrutamiento.
+### Propiedades deseables en un algoritmo de enrutamiento
+* Correctness
+* Simplicity
+* Robustness: Soportar cambios en la topología.
+* Estabilidad: Llegar rapidamente a la solución y que esta sea fija, que llegue rápido al equilibrio.
+* Fairness: Dar el mismo trato a todas las conexiones.
+* Eficiencia
+
+### Tipos generales de algoritmos en enrutamiento
+* Algoritmos adaptativos: Dynamic routing algorithms
+    * Obtienen información de otros enrutadores.
+    * Cambian las rutas de ser necesario.
+    * Se utiliza una métrica para optimización, como número de saltos, distancia o tiempo.
+* Algoritmos no adaptativos: Static routing
+    * No basan sus mediciones en la topología o el tráfico.
+    * La elección de la ruta se computó por adelantado y se cargó a los enrutadores al encender la red.
+* No soporta fallos, solo se utiliza cuando todo el funcionamiento está claro.
+
+#### Principio de optimalidad
+* Cualquier camino dentro de un camino mayor óptimo, también será optimo.
+* Sink tree: Mejor distribución de rutas entre nodos. Procurar que todo quede en pocos caminos cortos. No tiene ciclos.
+
+#### Flooding
+* Se envía un paquete hacia todos los nodos próximos excepto por el que llegó. 
+* Gasta muchos recursos.
+* Siempre llegará el paquete.
+* Duplicidad que se eleva hacia el infinito.
+* Extremadamente robusto.
+* No requiere apenas configuración.
+* Se puede utilizar de "building block".
+* Es usado como métrica contra otros algoritmos.
+
+* Maximiza la probabilidad de una entrega correcta a costa de los recursos de la red.
+* Se puede limitar la replicación poniendo un tiempo de vida o un límite de saltos.
