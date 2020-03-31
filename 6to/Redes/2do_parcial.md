@@ -29,6 +29,13 @@
       - [CIDR - Classless Inter-Domain Routing](#cidr---classless-inter-domain-routing)
   * [Presentación 8](#presentaci-n-8)
     + [Implementación de un servicio connection-less](#implementaci-n-de-un-servicio-connection-less)
+    + [Implementación de un servicio connection-oriented](#implementaci-n-de-un-servicio-connection-oriented)
+    + [Comparación Circuito Virtual vs Red de Datagramas](#comparaci-n-circuito-virtual-vs-red-de-datagramas)
+  * [Presentación 9 (y final de la 8) - Algoritmos de enrutamiento](#presentaci-n-9--y-final-de-la-8----algoritmos-de-enrutamiento)
+    + [Propiedades deseables en un algoritmo de enrutamiento](#propiedades-deseables-en-un-algoritmo-de-enrutamiento)
+    + [Tipos generales de algoritmos en enrutamiento](#tipos-generales-de-algoritmos-en-enrutamiento)
+      - [Principio de optimalidad](#principio-de-optimalidad)
+      - [Flooding](#flooding)
 
 # Redes y comunicación, segundo parcial
 ## Siglas
