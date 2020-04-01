@@ -23,7 +23,7 @@
     + [Basic IP Address Structure](#basic-ip-address-structure)
       - [Classful addressing](#classful-addressing)
       - [Subnet addressing](#subnet-addressing)
-      - [DHSP](#dhsp)
+      - [DHCP](#dhcp)
       - [Variable-Length Subnet Masks](#variable-length-subnet-masks)
       - [IPv4 embebida en IPv6](#ipv4-embebida-en-ipv6)
       - [CIDR - Classless Inter-Domain Routing](#cidr---classless-inter-domain-routing)
@@ -221,7 +221,7 @@
 * Las máscaras de subred son formadas por un 1 seguido de 0's
 * La longitud del prefijo es la cantidad de 1's. Se expresa /32 /1 /n
 
-#### DHSP
+#### DHCP
 * Protocolo de gestión de redes usado en UDP/IP.
 * Asigna una dirección al conectarse un dispositivo.
 
