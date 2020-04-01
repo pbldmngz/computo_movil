@@ -51,7 +51,7 @@
 * BER = Bit Error Rate/Ratio
 * BEP = Bit Error Probability
 * DNS = Domain Name System
-* DHSP = Dynamic Host Configuration Protocol
+* DHCP = Dynamic Host Configuration Protocol
 * IPv4 = Internet Protocol Version #
 * VLSM = Variable Length Subnet Mask
 * CIDR = Classless Inter-Domain Routing
