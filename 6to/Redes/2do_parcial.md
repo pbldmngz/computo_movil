@@ -240,7 +240,7 @@
 * Método para asignar direcciones y enrutamiento IP.
 * Se divide: Bits más significativos son el prefijo de red, los menos significativos el identificador de host.
 * Al usar CIDR ningún rango de IP pertenece a una clase, por contraparte requiere de una máscara similar a la máscara de subred, llamada Máscara de CIDR.
-* Un prefino de n bits es predefinido para los primeros bits de una IP.
+* Un prefijo de n bits es predefinido para los primeros bits de una IP.
 * Se suele adjuntar al final de la IP precedido de un "/". 128.0.0.0/24
 
 ## Presentación 8
