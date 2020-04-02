@@ -23,12 +23,19 @@
     + [Basic IP Address Structure](#basic-ip-address-structure)
       - [Classful addressing](#classful-addressing)
       - [Subnet addressing](#subnet-addressing)
-      - [DHSP](#dhsp)
+      - [DHCP](#dhcp)
       - [Variable-Length Subnet Masks](#variable-length-subnet-masks)
       - [IPv4 embebida en IPv6](#ipv4-embebida-en-ipv6)
       - [CIDR - Classless Inter-Domain Routing](#cidr---classless-inter-domain-routing)
   * [Presentación 8](#presentaci-n-8)
     + [Implementación de un servicio connection-less](#implementaci-n-de-un-servicio-connection-less)
+    + [Implementación de un servicio connection-oriented](#implementaci-n-de-un-servicio-connection-oriented)
+    + [Comparación Circuito Virtual vs Red de Datagramas](#comparaci-n-circuito-virtual-vs-red-de-datagramas)
+  * [Presentación 9 (y final de la 8) - Algoritmos de enrutamiento](#presentaci-n-9--y-final-de-la-8----algoritmos-de-enrutamiento)
+    + [Propiedades deseables en un algoritmo de enrutamiento](#propiedades-deseables-en-un-algoritmo-de-enrutamiento)
+    + [Tipos generales de algoritmos en enrutamiento](#tipos-generales-de-algoritmos-en-enrutamiento)
+      - [Principio de optimalidad](#principio-de-optimalidad)
+      - [Flooding](#flooding)
 
 # Redes y comunicación, segundo parcial
 ## Siglas
@@ -44,7 +51,7 @@
 * BER = Bit Error Rate/Ratio
 * BEP = Bit Error Probability
 * DNS = Domain Name System
-* DHSP = Dynamic Host Configuration Protocol
+* DHCP = Dynamic Host Configuration Protocol
 * IPv4 = Internet Protocol Version #
 * VLSM = Variable Length Subnet Mask
 * CIDR = Classless Inter-Domain Routing
@@ -214,7 +221,7 @@
 * Las máscaras de subred son formadas por un 1 seguido de 0's
 * La longitud del prefijo es la cantidad de 1's. Se expresa /32 /1 /n
 
-#### DHSP
+#### DHCP
 * Protocolo de gestión de redes usado en UDP/IP.
 * Asigna una dirección al conectarse un dispositivo.
 
@@ -230,10 +237,10 @@
 * Concatenar IPv6 con IPv4 asegurándose de que los bits 63-71 entán en 0, insertándolos si es necesario. Insertar al final un sufijo de bits en 0 hasta llegar a 128.
 
 #### CIDR - Classless Inter-Domain Routing
-* Mpétodo para asignar direcciones y enrutamiento IP.
+* Método para asignar direcciones y enrutamiento IP.
 * Se divide: Bits más significativos son el prefijo de red, los menos significativos el identificador de host.
 * Al usar CIDR ningún rango de IP pertenece a una clase, por contraparte requiere de una máscara similar a la máscara de subred, llamada Máscara de CIDR.
-* Un prefino de n bits es predefinido para los primeros bits de una IP.
+* Un prefijo de n bits es predefinido para los primeros bits de una IP.
 * Se suele adjuntar al final de la IP precedido de un "/". 128.0.0.0/24
 
 ## Presentación 8
