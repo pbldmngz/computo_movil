@@ -42,7 +42,7 @@
 	* Tome notas por escrito
 	* Limite el # de participaciones e insista en la preparación previa
 	* Desarrolle una lista de verificación para cada producto que sea probable que revise
-	* Asigne recursos y programe tiempo para las RTF
+	* Asigne recursos y programe tiempo para las RTF (Walkthroughts e inspecciones)
 	* Dé una capacitación significativa a todos los revisores
 	* Revisa las primeras revisiones
 > El proceso de revisión reduce sustancialmente el costo de actividades posteriores
@@ -63,5 +63,19 @@
 * Programación por pares:
 	* Verificación de escritorio continua mientras se va creando el producto
 	* Inmediato descubrimiento de errores
-* Revisión técnica:
-	*
+* Proceso de inspección:
+	* Entry
+	* Overview (Kickoff)
+	* Planning
+	* Checking
+	* Loggin
+	* Follow-up
+	* Exit
+	* Release
+> Es una técnica de revisión formal en la que los requisitos, diseño o código son examinados a detalle por una o varias personas en busca de problemas
+
+* Inspecciones vs otros métodos:
+	* Walkthrought para el entrenamiento o la formación
+	* Revisiones técnicas para el concenso
+	* Inspecciones para incrementar la calidad de la documentación y su proceso
+* 
