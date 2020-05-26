@@ -27,4 +27,5 @@
 			* If they wrap
 			* Count is loss when the router crashes
 			* If a sequence is corrupted it will be rejected
+* Algorithm comparison
 ![Distance Vector Routing vs Link State Routing](DVRvsLSR.jpg)
