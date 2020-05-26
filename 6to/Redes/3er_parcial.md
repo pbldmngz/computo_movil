@@ -27,5 +27,12 @@
 			* If they wrap
 			* Count is loss when the router crashes
 			* If a sequence is corrupted it will be rejected
-* Algorithm comparison
+	* Algorithm comparison
 ![Distance Vector Routing vs Link State Routing](DVRvsLSR.jpg)
+* Hierarchical Routing
+	* Routers are divided into different scales: regions < clusters < zones < groups
+	* Each router knows everything about its own region but not about the others
+	* Increased path length, decreased routing table size
+	* Packets go to a main node in a region and then get redirected to its destination
+* Broadcast routing
+	
