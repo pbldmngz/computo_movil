@@ -22,29 +22,46 @@
 				* Planeación estratégica
 				* Asignación de recursos
 			* **Sistema de gestión de calidad:**
-				* **a nivel de empresa:** Para implementar una infraestructura de calidad es necesario disponer de un sistema de calidad que se adecúe a los objetivos de la empresa.
-				* **Estuctura** que se establece para llevar a cabo la gestión:
-					* Responsabilidades
-					* Actividades
-					* Recursos
-					* Procedimientos
-				* **La dirección es responsable de:**
-					* Fijar una política de calidad: 
-						* "el cliente siempre tiene la razón"
-						* "los trenes llegan con menos de 5 minutos de atraso"
-					* Desiciones relativas al inicio, desarrollo, implantación y actualización de un sistema de calidad
-				* **Un sistema de calidad**
-					* **debe:**
-						* Ser eficaz
-						* Comprendido por todos
-						* Confiable
-						* Prevenir en lugar de detectar
-					* **consta de:**
-						* **Documentación:** Se describen sistemas y procedimientos ajustándose a una norma.
-							* **Manual de calidad:** Descripción del sistema que sirve de referencia
-							* **Procedimientos de calidad:** Instrucciones específicas para ciertas actividades o procesos
-							* **Registros de datos sobre calidad:** Almacenamiento de información sobre actividades relacionadas con la calidad
-						* **Parte práctica:**
+				* **A nivel de empresa:** Para implementar una infraestructura de calidad es necesario disponer de un sistema de calidad que se adecúe a los objetivos de la empresa.
+					* **Estuctura** que se establece para llevar a cabo la gestión:
+						* Responsabilidades
+						* Actividades
+						* Recursos
+						* Procedimientos
+					* **La dirección es responsable de:**
+						* Fijar una política de calidad: 
+							* "el cliente siempre tiene la razón"
+							* "los trenes llegan con menos de 5 minutos de atraso"
+						* Desiciones relativas al inicio, desarrollo, implantación y actualización de un sistema de calidad
+					* **Un sistema de calidad**
+						* **debe:**
+							* Ser eficaz
+							* Comprendido por todos
+							* Confiable
+							* Prevenir en lugar de detectar
+						* **consta de:**
+							* **Documentación:** Se describen sistemas y procedimientos ajustándose a una norma.
+								* **Manual de calidad:** 
+									* Los elementos, requisitos y medios adoptados deben de ir por escrito, ordenadamente en forma de políticas y procedimientos
+									* Se debe describir para servir de referencia al inplantar el sistema
+									* En empresas grandes puere realizarse:
+										* Para la totalidad de la empresa
+										* Nivel departamento, producto...
+										* Específicopara compras, desarrollos/proyectos...
+								* **Procedimientos de calidad:** Instrucciones específicas para ciertas actividades o procesos. Se fundamentan en:
+									* Buena práctica y saber hacer
+									* Los códigos, normas y especificaciones a los que deben ajustarse
+								* **Registros de datos sobre calidad:** Almacenamiento de información sobre actividades relacionadas con la calidad o evalucación de productos:
+									* Datos de pruebas
+									* Datos de revisiones
+									* Inspecciones
+									* Datos de costes
+									* Actividades
+									* etc...
+							* **Parte práctica: Aspectos**
+								* **Físicos:** Lugar, herramientas, computadoras...
+								* **Humanos:** Formación del personal & creación y cordinación de equipos de trabajo
+				* **A nivel de proyecto:** 
 	* **Calidad en Software:** Es el grado en que un sistema, componente o proceso cumple con:
 		* Los requerimientos especificados
 		* Las necesidades/expectativas del cliente/usuario
