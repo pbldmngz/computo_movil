@@ -159,7 +159,7 @@ Para evaluar las características del software se utilizan métricas, **EJEMPLOS
 	* Relacionadas con el acoplamiento entre clases
 ### Proceso de mejora del software
 > Creo que esto es un ciclo pero no me cuadran los detalles, hacen referencia a esta imagen
-![alt text](https://https://github.com/pbldmngz/school/edit/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
+![Ejemplo](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
 
 1. Revisar el enfoque de la organización
 2. Documentar y analizar las lecciones
