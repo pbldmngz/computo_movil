@@ -207,5 +207,14 @@ Factores que hacen que las pruebas no garanticen la fiabilidad:
 * Las pruebas pueden contener errores
 * Las pruebas pueden contener patrones de uso incorrectos
 
+### Modelos de desarrollo
+Se selecciona una metodología de desarrollo de ingeniería en software según:
+* La naturaleza del proyecto y aplicación
+* Los métodos y las herramientas a utilizar
+* Los controles y entregas que se requieren
 
-
+Modelos vistos:
+* Línea secuencial
+![Modelo de línea secuencial](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/modelo_linea_secuencial.jpg "Modelo de línea secuencial")
+* Construcción de prototipos
+![Modelo de construcción de prototipos](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/modelo_construccion_prototipos.jpg "Modelo de construcción de prototipos")
