@@ -17,9 +17,29 @@
 				* Verificación: Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
 				* Validación: Comprobar si el software satisface los requisitos del usuario
 		* **Aseguramiento de calidad:** Actividades que evalúan el proceso en el que se desarrolla un producto.
-		* **Gestión de calidad:** Determina y aplica objetivos y directrices de calidad. Incluye:
-			* Planeación estratégica
-			* Asignación de recursos
+		* **Gestión de calidad:** Determina y aplica objetivos y directrices de calidad. 
+			* Incluye:
+				* Planeación estratégica
+				* Asignación de recursos
+			* Sistema de gestión de calidad:
+				* **a nivel de empresa:** Para implementar una infraestructura de calidad es necesario disponer de un sistema de calidad que se adecúe a los objetivos de la empresa.
+				* Estuctura que se establece para llevar a cabo la gestión:
+					* Responsabilidades
+					* Actividades
+					* Recursos
+					* Procedimientos
+				* La dirección es responsable de:
+					* Fijar una política de calidad: "el cliente siempre tiene la razón" o "los trenes llegan con menos de 5 minutos de atraso"
+					* Desiciones relativas al inicio, desarrollo, implantación y actualización de un sistema de calidad
+				* Un sistema de calidad 
+					* debe:
+						* Ser eficaz
+						* Comprendido por todos
+						* Confiable
+						* Prevenir en lugar de detectar
+					* consta de:
+						* Documentación:
+						* Parte práctica:
 	* **Calidad en Software:** Es el grado en que un sistema, componente o proceso cumple con:
 		* Los requerimientos especificados
 		* Las necesidades/expectativas del cliente/usuario
