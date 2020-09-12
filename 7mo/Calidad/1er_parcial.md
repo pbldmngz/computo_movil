@@ -8,14 +8,28 @@
 	* Se conoce la interconexión entre tareas
 	* Planeación de riesgo
 * **Calidad:**
-	* **Control de calidad:** Acciones que aseguran que un producto cumpla las metas de calidad.
-	* **Aseguramiento de calidad:** Infraestructura de apoyo a los métodos.
+	* **Tópicos relacionados con la calidad:**
+		* **Control de calidad:** Acciones que aseguran que un producto cumpla las metas de calidad. 
+			* Objetivos:
+				* Controlar un proceso
+				* Eliminar causas de defectos desde un comienzo
+			* Verificación/Validación:
+				* Verificación: Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
+				* Validación: Comprobar si el software satisface los requisitos del usuario
+		* **Aseguramiento de calidad:** Actividades que evalúan el proceso en el que se desarrolla un producto.
+		* **Gestión de calidad:** Determina y aplica objetivos y directrices de calidad. Incluye:
+			* Planeación estratégica
+			* Asignación de recursos
 	* **Calidad en Software:** Es el grado en que un sistema, componente o proceso cumple con:
 		* Los requerimientos especificados
 		* Las necesidades/expectativas del cliente/usuario
-	* **Calidad esperada:**
+	* **Calidad esperada** es: 
 		* Calidad programada = Estimación
-		* Calidad necesaria = Requerimientos
+		* Calidad necesaria = **Requerimientos:**
+			* Requerimientos explícitos: Están en el documento de especificación de requisitos del sistema.
+				* Funcionales: Lo que el software tiene que hacer
+				* No funcionales/ Extendidos: Requisitos de seguridad, rendimeinto...
+			* Requerimientos implícitos: No están el el documento de especificación de requisitos del sistema.
 		* Calidad realizada = Producto final
 	* **Consideraciones en calidad de software:**
 		* Se desarrolla, no fabrica
