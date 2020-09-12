@@ -213,8 +213,13 @@ Se selecciona una metodología de desarrollo de ingeniería en software según:
 * Los métodos y las herramientas a utilizar
 * Los controles y entregas que se requieren
 
-Modelos vistos:
-* Línea secuencial
+##### Modelos vistos:
+Línea secuencial:
+
 ![Modelo de línea secuencial](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/modelo_linea_secuencial.jpg "Modelo de línea secuencial")
-* Construcción de prototipos
+
+Construcción de prototipos:
+
 ![Modelo de construcción de prototipos](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/modelo_construccion_prototipos.jpg "Modelo de construcción de prototipos")
+
+## MoProSoft - Modelo de procesos para la industria del software
