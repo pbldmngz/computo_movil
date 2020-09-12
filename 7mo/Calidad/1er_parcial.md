@@ -62,7 +62,7 @@
 								* **Físicos:** Lugar, herramientas, computadoras...
 								* **Humanos:** Formación del personal & creación y cordinación de equipos de trabajo
 				* **A nivel de proyecto:** A cada proyecto hay que generarle un plan específico de calidad.
-					* El plan de aseguramiento debe contener:
+					* **El plan de aseguramiento debe contener:**
 						* Objetivos de calidad
 						* Estándares
 						* Herramientas, técnicas y métodos de apoyo
@@ -76,7 +76,37 @@
 							* Del aseguramiento de calidad
 							* De la configuración del software
 						* Actividades de revisión
+							* Técnicas de revisión y pruebas: Enfocadas a la detección de errores y defectos más que calidad
 						* Informes de problemas
+					* **El aseguramiento de calidad se realiza a través de modelos:**
+						* **Modelo Boehm:** 
+							* Se descomponen las características en tres niveles antes de aplicar las métricas
+								* Usos principales
+								* Componentes intermedios
+								* Componentes primitivos
+							* Los componentes se centran en el producto final. 
+							* Se identifican características de calidad desde el punto de vista del usuario
+						* **Modelo McCall:**
+							* Revisión:
+								* Facilidad de recibir mantenimiento
+								* Flexibilidad, fácil de modificar
+								* Facilidad de someterse a pruebas
+							* Operación:
+								* Correción, cumple con requisitos
+								* Confiabilidad
+								* Eficiencia
+								* Integridad, grado en el que es posible controlar el acceso no autorizado
+								* Usabilidad, curva de aprendizaje
+							* Transición:
+								* Portabilidad, facilidad para transferir de un ambiente a otro
+								* Reusabilidad
+								* Interoperabilidad, acoplar un sistema a otro
+						* Modelo factores/criterios/métricas
+						* Modelo ISO 9126
+						* Paradigma Goal-Question-Metric
+						* Modelo de Gilb
+						* Modelo CMM
+						* [Modelo SPICE](https://docs.google.com/presentation/d/13B7L73Hbt8Ds1i7R3EpQ1KVz8R8bQEekhajfb2sMytA/edit?usp=sharing)
 	* **Calidad en Software:** Es el grado en que un sistema, componente o proceso cumple con:
 		* Los requerimientos especificados
 		* Las necesidades/expectativas del cliente/usuario
