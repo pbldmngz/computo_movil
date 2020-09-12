@@ -61,7 +61,22 @@
 							* **Parte práctica: Aspectos**
 								* **Físicos:** Lugar, herramientas, computadoras...
 								* **Humanos:** Formación del personal & creación y cordinación de equipos de trabajo
-				* **A nivel de proyecto:** 
+				* **A nivel de proyecto:** A cada proyecto hay que generarle un plan específico de calidad.
+					* El plan de aseguramiento debe contener:
+						* Objetivos de calidad
+						* Estándares
+						* Herramientas, técnicas y métodos de apoyo
+						* Control del código y equipos
+						* Documentación
+							* Referenciada en el plan
+							* De desarrollo
+							* De control o gestión
+						* Mantenimiento y almacenamiento de datos sobre la documentación
+						* Gestión 
+							* Del aseguramiento de calidad
+							* De la configuración del software
+						* Actividades de revisión
+						* Informes de problemas
 	* **Calidad en Software:** Es el grado en que un sistema, componente o proceso cumple con:
 		* Los requerimientos especificados
 		* Las necesidades/expectativas del cliente/usuario
