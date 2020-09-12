@@ -1,0 +1,8 @@
+# Ingeniería en Software - CETYS Universidad, campus Ensenada - ¿Manifiesto o testamento?
+Para cuando leas esto es probable que ya me haya graduado de mi carrera y me haya olvidado de lo que escribí. En todo caso, dado que *de primero a cuarto semestre la escuela aún se preocupa por tí* (puro relleno y tronco común), no me fue necesario hacer esta clase de apuntes. A partir de quinto semestre tienes que moverte solo ya que *CETYS no meterá las manos por ti* y el porcentaje de retención de la carrera comenzará a bajar. Tienen gráficas muy bonitas al respecto, (un descarado coordinador nos la mostró como parte de su estudio de maestría) pero no harán nada con ellas. 
+
+>Si vas a menos de media carrera consulta con tus *senpais* a ver si ya la arreglaron, que lo dudo, en caso de que no, considera lo peor y entra a otro lado, *esta escuela es un meme*.
+
+Pero por lo pronto, si tienes *tontas esperanzas* o simplemente quieres pasar tus examenes, puedes usar el contenido de estas carpetas para moverte. Vas a ver que hay algunas completas, que son de *buenos profesores que merecen nuestro respeto*. Otras que apenas tienen contenidos que son de *profesores mediocres*. Las materias que no ves caen en una categoría peor a la mediocridad, son las de relleno o de *profesores que ni se presentaron realmente a clases* o solo dejaron la misma tarea durante todo el semestre.
+
+>Si el departamento que se encarga de rastrear a los que manchan la imagen de la institución no encuentra esto subiré por escrito **todas las quejas que han sido ignoradas** durante años y un par de historias interesantes sobre la escuela.
