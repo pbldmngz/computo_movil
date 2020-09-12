@@ -67,7 +67,7 @@
 				* En empresas grandes puere realizarse:
 					* Para la totalidad de la empresa
 					* Nivel departamento, producto...
-					* Específicopara compras, desarrollos/proyectos...
+					* Específico para compras, desarrollos/proyectos...
 			* **Procedimientos de calidad:** Instrucciones específicas para ciertas actividades o procesos. Se fundamentan en:
 				* Buena práctica y saber hacer
 				* Los códigos, normas y especificaciones a los que deben ajustarse
@@ -97,8 +97,17 @@
 	* Gestión 
 		* Del aseguramiento de calidad
 		* De la configuración del software
-	* Actividades de revisión
-		* Técnicas de revisión y pruebas: Enfocadas a la detección de errores y defectos más que calidad
+	* Actividades de revisión:
+		* **Técnicas/tipos de revisión y pruebas:** Enfocadas a la detección de errores y defectos más que calidad
+			* **Revisiones de gestión:** Controlar el progreso y detectar inconsistencias de los planes con la programación y requisitos
+			* **Revisiones técnicas:** Revisar documentación producida a lo largo del proyecto
+			* **Inspecciones:** Revisiones que involucran al autor del producto
+			* **Walkthrough:** Inspecciones conducidas únicamente por miembros del equipo de desarrollo, que examina una parte del producto
+			* **Auditorías:** Evaluaciones independientes sobre el cumplimiento de planes, estándares, procedimientos...
+		* **En cualquier revisión se pretente:**
+			* Señalar la necesidad de mejorar el producto
+			* Confirmar las partes del producto que no es necesario mejorar
+			* Conseguir un trabajo técnico de una calidad más uniforme
 	* Informes de problemas
 * **El aseguramiento de calidad se realiza a través de modelos:**
 	* **Modelo Boehm:** 
@@ -158,9 +167,6 @@ Para evaluar las características del software se utilizan métricas, **EJEMPLOS
 	* Relacionas con el control intramodular
 	* Relacionadas con el acoplamiento entre clases
 ### Proceso de mejora del software
-> Creo que esto es un ciclo pero no me cuadran los detalles, hacen referencia a esta imagen
-![Ejemplo](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
-
 1. Revisar el enfoque de la organización
 2. Documentar y analizar las lecciones
 3. Definir los procesos y las medidas
@@ -170,7 +176,36 @@ Para evaluar las características del software se utilizan métricas, **EJEMPLOS
 7. Planificar las acciones
 8. Establecer estrategias y prioridades
 9. Desarrollar documentaciones y documentar los resultados
-A. Evaluar la práctica actual
-B. Estímulo para mejora
-C Establecer contexto y patrocinador
-* Establecer infraestructura de mejora
+10. Evaluar la práctica actual
+11. Estímulo para mejora
+12. Establecer contexto y patrocinador
+13 Establecer infraestructura de mejora
+
+> Creo que esto es un ciclo pero no me cuadran los detalles, hacen referencia a esta imagen
+![Ejemplo](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
+
+#### Fiabilidad
+* No hay fallos durante la ejecución durante un tiempo y ambientes determinados.
+* Los fallos se pueden producir por:
+	* Defectos en el código
+	* En el diseño
+	* En el análisis
+	* Durante el mantenimiento
+
+##### Tipos de fallo
+| Tipo de fallo | Descripción |
+| ------------- |-------------|
+| Transitorio | Ocurre solo con ciertas entradas |
+| Permanente | Ocurre con todas las entradas |
+| Recuperable | El sistema se recupera sin intervención |
+| Recuperable II | Se requiere intervención para recuperarlo |
+| No corruptor | No corrompe el estado del sistema de datos |
+| Corruptor | Corrompe el estado del sistema de datos |
+
+Factores que hacen que las pruebas no garanticen la fiabilidad:
+* La especificación puede no reflejar los requerimientos del usuario
+* Las pruebas pueden contener errores
+* Las pruebas pueden contener patrones de uso incorrectos
+
+
+
