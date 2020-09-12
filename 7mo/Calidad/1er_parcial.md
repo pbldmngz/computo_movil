@@ -132,6 +132,7 @@
 ### Métricas
 Una métrica es una asignación de *valor* a un atributo, ya sea tiempo, complejidad, etc... de un producto o proceso.
 >Para la evaluación de calidad es más habitual centrarse en las métricas del producto que las del proceso
+
 Para evaluar las características del software se utilizan métricas, **EJEMPLOS:**
 * Métricas basadas en atributos internos del producto:
 	* Medidas de estructuración de un programa
