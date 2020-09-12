@@ -39,8 +39,8 @@
 * **Incluye:**
 	* Planeación estratégica
 	* Asignación de recursos
-* **Sistema de gestión de calidad:**
-##### A nivel de empresa: 
+##### Sistema de gestión de calidad
+###### A nivel de empresa: 
 >Para implementar una infraestructura de calidad es necesario disponer de un sistema de calidad que se adecúe a los objetivos de la empresa.
 
 * **Estuctura** que se establece para llevar a cabo la gestión:
@@ -81,7 +81,7 @@
 		* **Parte práctica: Aspectos**
 			* **Físicos:** Lugar, herramientas, computadoras...
 			* **Humanos:** Formación del personal & creación y cordinación de equipos de trabajo
-##### A nivel de proyecto
+###### A nivel de proyecto
 >A cada proyecto hay que generarle un plan específico de calidad.
 
 * **El plan de aseguramiento debe contener:**
