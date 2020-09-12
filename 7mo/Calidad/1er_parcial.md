@@ -158,3 +158,19 @@ Para evaluar las características del software se utilizan métricas, **EJEMPLOS
 	* Relacionas con el control intramodular
 	* Relacionadas con el acoplamiento entre clases
 ### Proceso de mejora del software
+> Creo que esto es un ciclo pero no me cuadran los detalles, hacen referencia a esta imagen
+![alt text](https://https://github.com/pbldmngz/school/edit/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
+
+1. Revisar el enfoque de la organización
+2. Documentar y analizar las lecciones
+3. Definir los procesos y las medidas
+4. Planificar y realizar procesos piloto
+5. Planificar, ejecutar y seguir la intalación
+6. Establecer equipos de acción
+7. Planificar las acciones
+8. Establecer estrategias y prioridades
+9. Desarrollar documentaciones y documentar los resultados
+A. Evaluar la práctica actual
+B. Estímulo para mejora
+C Establecer contexto y patrocinador
+* Establecer infraestructura de mejora
