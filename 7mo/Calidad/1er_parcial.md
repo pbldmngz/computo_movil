@@ -14,8 +14,8 @@
 				* Controlar un proceso
 				* Eliminar causas de defectos desde un comienzo
 			* **Verificación/Validación:**
-				* Verificación: Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
-				* Validación: Comprobar si el software satisface los requisitos del usuario
+				* **Verificación:** Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
+				* **Validación:** Comprobar si el software satisface los requisitos del usuario
 		* **Aseguramiento de calidad:** Actividades que evalúan el proceso en el que se desarrolla un producto.
 		* **Gestión de calidad:** Determina y aplica objetivos y directrices de calidad. 
 			* **Incluye:**
@@ -33,7 +33,7 @@
 						* "el cliente siempre tiene la razón"
 						* "los trenes llegan con menos de 5 minutos de atraso"
 					* Desiciones relativas al inicio, desarrollo, implantación y actualización de un sistema de calidad
-				* **Un sistema de calidad **
+				* **Un sistema de calidad**
 					* **debe:**
 						* Ser eficaz
 						* Comprendido por todos
