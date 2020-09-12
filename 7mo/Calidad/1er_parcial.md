@@ -129,3 +129,31 @@
 	* Modelo de Gilb
 	* Modelo CMM
 	* [Modelo SPICE](https://docs.google.com/presentation/d/13B7L73Hbt8Ds1i7R3EpQ1KVz8R8bQEekhajfb2sMytA/edit?usp=sharing)
+### Métricas
+Una métrica es una asignación de *valor* a un atributo, ya sea tiempo, complejidad, etc... de un producto o proceso.
+>Para la evaluación de calidad es más habitual centrarse en las métricas del producto que las del proceso
+Para evaluar las características del software se utilizan métricas, **EJEMPLOS:**
+* Métricas basadas en atributos internos del producto:
+	* Medidas de estructuración de un programa
+	* Métricas de complejidad
+	* Métricas de cobertura de pruebas
+	* Métricas de calidad de diseño
+* Métricas basadas en atributos externos del producto:
+	* Métricas de portabilidad
+	* Métricas de defectos
+	* Métricas de usabilidad
+	* Métricas de mantenibilidad
+	* Métricas de fiabilidad
+* Métricas basadas en código fuente:
+	* Total de líneas de código
+	* Total de líneas de comentarios
+	* Total de instrucciones
+	* Densidad de la documentación
+* Métricas para sistemas orientados a objetos:
+	* Acoplamiento
+	* Herencia
+	* Cohesión
+* Métricas basadas en estructura de diseño:
+	* Relacionas con el control intramodular
+	* Relacionadas con el acoplamiento entre clases
+### Proceso de mejora del software
