@@ -17,23 +17,25 @@
 Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 
 ### Tipos de redes
-* Las redes sensoriales reciben y transmiten información sobre el estado del mundo físico
-* Los nodos son muy pequeños y suelen estar integrados a otros dispositivos
-	* Velocímetro
-	* GPS
-	* Sensores en el tanque de gasolina
-	* etc...
 	
 #### Clasificación
 
 |Rango|Nombre|
 |---|---|
-|1m|PAN|
-|10-1000m|LAN|
-|10km|MAN|
-|100-1000km|WAN|
-|10.000km|Internet/planetary|
+|1 m|PAN|
+|10-1000 m|LAN|
+|10 km|MAN|
+|100-1000 km|WAN|
+|10.000 km|Internet/planetary|
 |+|Interplanetary Network|
+
+#### Topología
+* **Definición de topología:**
+	* **Topología física:** Disposición física de los dispositivos en la red y como están conectados
+	* **Topología lógica:** Circulación de información en la red
+* **Tipos:**
+
+![Topologías de red](https://github.com/pbldmngz/school/blob/master/7mo/Redes/imagenes/topologias_red.jpg "Topologías de red")
 
 #### Ad hoc
 * Es una red hecha a medida, inalámbrica, autónoma y temporal, que no requiere infraestructura.
@@ -55,6 +57,7 @@ Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 			* Las redes que utilizan este método se llaman **DTN:** Delay Tolerant Network
 	* **W. Mesh Net.:** Wireless Mesh Network
 	* **WSN:** Wireless Sensor Network
+
 ### Hardware de red
 #### Ejemplos
 * **Repetidor:** Recibe una señal débil y la potencia
