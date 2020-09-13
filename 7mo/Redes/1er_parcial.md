@@ -87,3 +87,40 @@ Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 * **Simplex:** Permiten el tráfico en una sola dirección
 * **Half-duplex:** Permiten el tráfico en ambas direcciones pero no a la vez
 * **Full-duplex:** Permiten el tráfico en ambos sentidos simultáneamente
+
+### Categorías estándar
+* **De facto:** Sucedieron sin un plan formal
+	* HTTP y Bluetooth
+	* Si un estándar *de facto* es exitoso puede convertirse en de jure al *adoptarlo* una organización
+* **De jure:** Se adoptaron como regla por una organización estandarizadora
+	* Algunas organizaciones:
+		* ITU: International Telecomunication Union
+		* ISO: International Organization of Standarization
+		* IETF: Internet Engineering Task Force
+		* IEEE: Institute of Electrical and Electronics Engineers
+		
+### OSI vs TCP
+![OSI vs TCP](https://github.com/pbldmngz/school/blob/master/7mo/Redes/imagenes/osi_tcp.jpg "OSI vs TCP")
+
+#### Capas del modelo TCP
+* **Capa de aplicación:** Contiene los protocolos de alto nivel como TELNET, FTP o SMTP
+* **Capa de transporte:** 
+	* Se definen dos protocolos de transporte aquí:
+		* **TCP:** Transmission Control Protocol
+			* Envía un flujo de Bytes a otra máquina que luego vuelve a montarlos en la capa de internet
+			* También puede asegurarse de que no se satura un receptor con más mensajes de los que puede procesar
+		* **UDP:** User Datagram Protocol
+			* Se usa cuando no necesitas integridad en la información sino velocidad
+			* Por ejemplo: Audio en llamadas o streaming de vídeo
+* **Capa de internet:** 
+	* Permite al host injectar paquetes en cualquier red y hacerlos viajar de forma intependiente hacia el destino
+	* Es posible que los paquetes lleguen en desorden, es problema de las capas superiores el arreglarlo
+	* Esta capa define un formato oficial de paquete y protocolo llamados respectivamente
+		* IP (Internet Protocol)
+		* ICMP (Internet Control Message Protocol)
+	* El objetivo de esta capa es llevar los paquetes IP a donde se supone que van
+* **Capa de enlace:** Interfaz entre el host y los enlaces de transmisión.
+
+##### Protocolos por capas
+
+![Protocolos por capa](https://github.com/pbldmngz/school/blob/master/7mo/Redes/imagenes/protocolos_capas.jpg "Distribución de protocoloes por capas")
