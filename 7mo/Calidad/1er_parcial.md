@@ -224,26 +224,66 @@ Construcción de prototipos:
 
 ## MoProSoft - Modelo de procesos para la industria del software
 ### Introducción
-* Propósito:
-	* Estandarización
-	* Calidad en los servicios
-	* Nivel de competitividad internacional
-* Requerimientos:
-	* Fácil de entender
-	* Fácil de aplicar
-	* No costoso en su adopción
-	* Alcanzar evaluaciones exitosas con otros modelos
-* Alcance:
-	* Empresas dedicasdas al desarrollo/mantenimiento de software
-	* Enfoque basado en procesos
+#### Propósito:
+* Estandarización
+* Calidad en los servicios
+* Nivel de competitividad internacional
+#### Requerimientos:
+* Fácil de entender
+* Fácil de aplicar
+* No costoso en su adopción
+* Alcanzar evaluaciones exitosas con otros modelos
+#### Alcance:
+* Empresas dedicasdas al desarrollo/mantenimiento de software
 * Enfoque basado en procesos
+#### Estructura del modelo de procesos:
+Enfoque basado en procesos
+* **Categoría de alta dirección (DIR):** 
+	* Gestión del negocio
+	* Razón de ser de la organización
+	* Sus objetivos y condiciones para lograrlos
+* **Categoría de gestión (GES):""
+	* Gestión de procesos, proyectos y recursos
+	* Necesidades de los clientes
+	* Evaluar los resultados
+	* Mejora contínua
+* **Categoría de operación (OPE):**
+	* Proyectos de desarrollo y mantenimiento de software
+##### Roles
+* **Cliente:** Es el que solicita un producto de software y financia el proyecto
+* **Usuario:** Es el que va a usar dicho software
+* **Grupo directivo:** Son los que dirigen una organización y son responsables de su funcionamiento exitoso
+* **Responsable del proceso:** Es el encargado de la realización de prácticas de un proceso y del cumplimiento de sus objetivos
+* **Involucrado:** Otros roles con habilidades requeridas para la ejecución de actividades o tares específicas.
+	* Analista
+	* Programador
+	* Revisor
+	* etc...
+##### Producto de software
+Es el producto que se genera en el procesos de desarrollo y mantenimiento de software.
+
+Se clasifican como:
+* Especificación de requerimientos
+* Análisis y diseño
+* Software
+* Prueba
+* Registro de rastreo y manual
+
+##### Configuración del software
+Es un conjunto consistente de productos de software.
+
+* **Plan:** Programa detallado de las actividades, responsables de realizarlas y calendario
+* **Reporte:** Informe del resultado de las actividades realizadas
+* **Registro:** Evidencia de actividades desempeñadas
+* **Lección aprendida:** Experiencia positiva o negativa obtenida durante la realización de alguna actividad
+* **Otro producto:** Contrato, propuestas tecnológicas, documentación, etc...
 
 ### Definición
-* Patrón de procesos (documentación):
+* **Patrón de procesos (documentación):**
 	* Definición general
 	* Prácticas
 	* Guías de ajuste
-* Definición general de proceso:
+* **Definición general de proceso:**
 	* Nombre
 	* Categoría
 	* Objetivos medibles y resultados esperados
@@ -251,8 +291,24 @@ Construcción de prototipos:
 	* Objetivos específicos
 	* Indicadores (cumplimiento de objetivos)
 	* Metas cuantitativas
-
-
-
-
-
+	* Responsabilidad es el rol principal responsable
+	* Autoridad es el rol responsable de validar la ejecución del proceso
+	* Procesos relacionados
+	* Entradas (nombre y referecia de origen)
+	* Salidas (nombre, descripción y origen)
+	* Productos internos (nombre y descripción)
+* **Prácticas:**
+	* Roles involucrados
+	* Capacitación
+	* Actividades (se asocian a los objetivos y describen tareas y roles responsables)
+	* Diagrama de flujo de trabajo
+	* Verificaciones y validaciones (internas y externas)
+	* Incorporación a la base de conocimientos
+	* Recursos de infraestructura (asocia actividad y recurso)
+	* Mediciones para evaluar los indicadores del proceso
+	* Capacitación
+	* Manejo de situaciones excepcionales
+	* Lecciones aprendidas duranta el proceso
+* **Guías de ajuste**
+	* Descripción de posible modificaciones al proceso que no deben afrectar sus objetivos
+	* Uso del patrón, el patrón de procesos fue utilizado como esquema para documentar los procesos de MoProSoft
