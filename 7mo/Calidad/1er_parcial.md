@@ -242,7 +242,7 @@ Enfoque basado en procesos
 	* Gestión del negocio
 	* Razón de ser de la organización
 	* Sus objetivos y condiciones para lograrlos
-* **Categoría de gestión (GES):""
+* **Categoría de gestión (GES):**
 	* Gestión de procesos, proyectos y recursos
 	* Necesidades de los clientes
 	* Evaluar los resultados
