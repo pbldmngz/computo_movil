@@ -223,3 +223,36 @@ Construcción de prototipos:
 ![Modelo de construcción de prototipos](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/modelo_construccion_prototipos.jpg "Modelo de construcción de prototipos")
 
 ## MoProSoft - Modelo de procesos para la industria del software
+### Introducción
+* Propósito:
+	* Estandarización
+	* Calidad en los servicios
+	* Nivel de competitividad internacional
+* Requerimientos:
+	* Fácil de entender
+	* Fácil de aplicar
+	* No costoso en su adopción
+	* Alcanzar evaluaciones exitosas con otros modelos
+* Alcance:
+	* Empresas dedicasdas al desarrollo/mantenimiento de software
+	* Enfoque basado en procesos
+* Enfoque basado en procesos
+
+### Definición
+* Patrón de procesos (documentación):
+	* Definición general
+	* Prácticas
+	* Guías de ajuste
+* Definición general de proceso:
+	* Nombre
+	* Categoría
+	* Objetivos medibles y resultados esperados
+	* Descripción de actividades y productos
+	* Objetivos específicos
+	* Indicadores (cumplimiento de objetivos)
+	* Metas cuantitativas
+
+
+
+
+
