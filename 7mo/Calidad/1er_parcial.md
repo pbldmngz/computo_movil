@@ -1,3 +1,28 @@
+# Índice
+- [Aseguramiento de Calidad - Primer parcial](#aseguramiento-de-calidad---primer-parcial)
+  * [Calidad](#calidad)
+    + [Tópicos relacionados con la calidad:](#tópicos-relacionados-con-la-calidad)
+      - [Gestión de calidad](#gestión-de-calidad)
+        * [Sistema de gestión de calidad](#sistema-de-gestión-de-calidad)
+          + [A nivel de empresa:](#a-nivel-de-empresa)
+          + [A nivel de proyecto](#a-nivel-de-proyecto)
+    + [Métricas](#métricas)
+    + [Proceso de mejora del software](#proceso-de-mejora-del-software)
+      - [Fiabilidad](#fiabilidad)
+        * [Tipos de fallo](#tipos-de-fallo)
+    + [Modelos de desarrollo](#modelos-de-desarrollo)
+        * [Modelos vistos:](#modelos-vistos)
+  * [MoProSoft - Modelo de procesos para la industria del software](#moprosoft---modelo-de-procesos-para-la-industria-del-software)
+    + [Introducción](#introducción)
+      - [Propósito:](#propósito)
+      - [Requerimientos:](#requerimientos)
+      - [Alcance:](#alcance)
+      - [Estructura del modelo de procesos:](#estructura-del-modelo-de-procesos)
+        * [Roles](#roles)
+        * [Producto de software](#producto-de-software)
+        * [Configuración del software](#configuración-del-software)
+    + [Definición](#definición)
+
 # Aseguramiento de Calidad - Primer parcial
 * **Métodos de la ingeniería en software:**
 	* Entender dominio del problema
@@ -35,7 +60,9 @@
 		* **Verificación:** Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
 		* **Validación:** Comprobar si el software satisface los requisitos del usuario
 * **Aseguramiento de calidad:** Actividades que evalúan el proceso en el que se desarrolla un producto.
-#### Gestión de calidad: Determina y aplica objetivos y directrices de calidad. 
+#### Gestión de calidad: 
+Determina y aplica objetivos y directrices de calidad. 
+
 * **Incluye:**
 	* Planeación estratégica
 	* Asignación de recursos
