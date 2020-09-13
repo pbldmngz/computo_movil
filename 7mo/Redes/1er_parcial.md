@@ -23,6 +23,18 @@ Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 	* GPS
 	* Sensores en el tanque de gasolina
 	* etc...
+	
+#### Clasificación
+
+|Rango|Nombre|
+|---|---|
+|1m|PAN|
+|10-1000m|LAN|
+|10km|MAN|
+|100-1000km|WAN|
+|10.000km|Internet/planetary|
+|+|Interplanetary Network|
+
 #### Ad hoc
 * Es una red hecha a medida, inalámbrica, autónoma y temporal, que no requiere infraestructura.
 * **Tipos:**
@@ -44,11 +56,31 @@ Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 	* **W. Mesh Net.:** Wireless Mesh Network
 	* **WSN:** Wireless Sensor Network
 ### Hardware de red
-* **Repetidor:**
-* **Hub:**
-* **Gateway:**
-* **Router:**
-* **Switch:**
-* **Bridge:**
-* **Network Interface Controller (NIC):**
-* **Modem:**
+#### Ejemplos
+* **Repetidor:** Recibe una señal débil y la potencia
+* **Hub:** Permite centralizar el cableado de una red
+* **Gateway:** Enlace entre dos redes con protocolos y arquitecturas diferentes
+* **Router:** Permite la interconexión de dispositivos en una red
+* **Switch:** Se conectan dispositivos de red para formar una LAN por ethernet
+* **Bridge:** Conectan varias redes
+* **Network Interface Controller (NIC):** Tarjeta de Red
+* **Modem:** Convierte señales digitales en analógicas para permitir la interacción entre computadoras por línea telefónica o cablemodem
+
+#### Medios de transmisión
+##### Medio
+* **Guiado:** 
+	* Medios magnéticos
+	* Par trenzado
+	* Cable coaxial
+	* Linea eléctrica
+	* Fibra óptica
+* **No guiado:**
+	* Espectro electromagnético
+	* Radio
+	* Microondas
+	* Infrarojo
+	* Luz
+##### Modo
+* **Simplex:** Permiten el tráfico en una sola dirección
+* **Half-duplex:** Permiten el tráfico en ambas direcciones pero no a la vez
+* **Full-duplex:** Permiten el tráfico en ambos sentidos simultáneamente
