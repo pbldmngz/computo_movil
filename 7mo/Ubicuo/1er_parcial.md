@@ -1,5 +1,5 @@
 # Índice
-- [Software ubicuo](#software-ubicuo)
+- [Software ubicuo](#software-ubicuo---primer-parcial)
   * [Principios de cómputo ubicuo](#principios-de-cómputo-ubicuo)
   * [Línea del tiempo relevante](#línea-del-tiempo-relevante)
   * [Cómputo móvil](#cómputo-móvil)
@@ -18,7 +18,7 @@
 - [Fundamentos de la Inteligencia Artificial](#fundamentos-de-la-inteligencia-artificial)
   * [Los 4 enfoques](#los-4-enfoques)
   
-# Software ubicuo
+# Software ubicuo - primer parcial
 ## Principios de cómputo ubicuo
 * Ayuda a hacer algo
 * La mejor computadora es la que no te das cuenta que existe
