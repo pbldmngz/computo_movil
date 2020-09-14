@@ -207,6 +207,17 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 	* **Enfoque del modelo cognitivo**
 		* La ciencia cognitiva reúne modelos de computadora de AI y técnicas experimentales de la psicología para construir teorías precisas y comprobables de la mente humana
 		* Se fundamenta en investigación experimental con humanos y animales
+* **Pensando racionalmente:**
+	* Enfoque basado en las leyes del pensamiento/lógica
+	* Uso de silogismos (conclusiones en base a dos enunciados)
+		* Sócrates es un hombre
+		* Todos los hombres son mortales
+		* **Por lo tanto, Sócrates es mortal**
+	* **Obstáculos:**
+		* No es sencillo traducir conocimiento informal en conocimiento formal usando notación lógica, particularmente cuando el conocimiento no es 100% seguro.
+			* Falacias y paradojas
+		* Hay diferencia entre resolver un problema "en principio" y en la práctica
+			* Intratabilidad: Demasiadas variables pueden agotar recursos de cualquier computadora
 * **Actuando como humano:**
 	* Debe de pasar la prueba de Turing
 		* La prueba de Turing consiste en:
@@ -219,17 +230,6 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 			* Representación del conocimiento
 			* Razonamiento automatizado
 			* Aprendizaje máquina
-* **Pensando racionalmente:**
-	* Enfoque basado en las leyes del pensamiento/lógica
-	* Uso de silogismos (conclusiones en base a dos enunciados)
-		* Sócrates es un hombre
-		* Todos los hombres son mortales
-		* **Por lo tanto, Sócrates es mortal**
-	* **Obstáculos:**
-		* No es sencillo traducir conocimiento informal en conocimiento formal usando notación lógica, particularmente cuando el conocimiento no es 100% seguro.
-			* Falacias y paradojas
-		* Hay diferencia entre resolver un problema "en principio" y en la práctica
-			* Intratabilidad: Demasiadas variables pueden agotar recursos de cualquier computadora
 * **Actuando racionalmente:** Enfoque del agente racional
 	* Debe ser autónomo, percibir su entorno, persistir a través de periodos extensos de tiempo, adaptarse al cambio y crear-perseguir metas propias
 	* Actúa para lograr el mejor resultado posible
