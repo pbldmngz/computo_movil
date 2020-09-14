@@ -48,7 +48,7 @@
 	* **Calidad realizada** = Producto final
 * **Consideraciones en calidad de software:**
 	* Se desarrolla, no fabrica
-	* Producto lógigo, no físico
+	* Producto lógico, no físico
 	* No se degrada
 	* Se suele entregar con defectos de forma consciente debido a su complejidad
 	* Gran parte del desarrollo se hace a medida, sin usar componentes existentes
