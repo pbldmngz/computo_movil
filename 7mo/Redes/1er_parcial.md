@@ -52,6 +52,7 @@ Todas las computadoras de la red pueden comunicarse entre si, ej: **Torrent.**
 
 |Rango|Nombre|
 |---|---|
+|-|WBAN|
 |1 m|PAN|
 |10-1000 m|LAN|
 |10 km|MAN|
