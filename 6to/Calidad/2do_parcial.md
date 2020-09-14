@@ -79,3 +79,5 @@
 	* Revisiones técnicas para el concenso
 	* Inspecciones para incrementar la calidad de la documentación y su proceso
 * 
+
+> A partir de este punto me valió madres el resto del semestre y aproveche la cuarentena del 2020 para no hacer nada
