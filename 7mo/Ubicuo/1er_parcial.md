@@ -151,7 +151,7 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 	* Hay un límite en la presición a la que un componente puede sincronizar su reloj, no hay una noción correcta de tiempo a nivel global
 	* Los mensajes enviado dependen también del retraso de la red
 * **Fallos independientes:** 
-	* Un sistema informático puede fallar, la robustez es buen diseño
+	* Un sistema informático va a fallar, la robustez es buen diseño
 	* Los sistemas distribuidos fallan en formas nuevas
 	* Problemas de red pueden llevar a tener un componente aislado pero no detenido
 	* Dilemas como esperar un acknowledgement y nunca recibirlo
@@ -165,3 +165,35 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 	* Un sistema distribuido es escalable si el costo de añadir nuevos usuarios es constante. 
 	* Se deben evitar cuellos de botella y la información debe estar estructurada, la información accesada frecuentemente puede ser replicada
 * **Manejo de fallos:** Va a fallar, te toca a ti prevenir como
+
+### Objetivos
+* **Disponibilidad de recursos:** Compartir con mayor rendimiento
+* **Transparencia en la distribución:** Para facilidad de uso
+* **Apertura:** Soporte a la interoperabilidad, portabilidad y extensibilidad
+* **Escalabilidad:** Con respecto al tamaño (cantidad de usuarios), distribución geográfica y dominios administrativos
+
+# Fundamentos de la Inteligencia Artificial
+## Los 4 enfoques
+* **Pensando como humano:** 
+	* **¿Cómo piensa un humano? Para saberlo se utilizan**
+		* Introspección
+		* Experimentos psicológicos
+		* Tomografías o imágenes cerebrales
+	* **Enfoque del modelo cognitivo**
+		* La ciencia cognitiva reúne modelos de computadora de AI y técnicas experimentales de la psicología para construir teorías precisas y comprobables de la mente humana
+		* Se fundamenta en investigación experimental con humanos y animales
+* **Actuando como humano:**
+	* Debe de pasar la prueba de Turing
+		* La prueba de Turing consiste en:
+			* Dos personas y una máquina, una de las personas hace de juez y los otros dos participantes deberán hacerle creer que son el humano
+			* No se necesita interacción física para demostrar inteligencia
+				* Pero si necesita visión por computadora para percibir objetos y
+				* Robótica para manipularlos
+		* Compone:
+			* Procesamiento del lenguaje natural
+			* Representación del conocimiento
+			* Razonamiento automatizado
+			* Aprendizaje máquina
+* **Pensando racionalmente:**
+
+* **Actuando racionalmente:**
