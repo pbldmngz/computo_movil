@@ -184,13 +184,14 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 * **Apertura:** Integrar componentes escritos por diferentes programadores es un gran reto
 * **Seguridad:** Se puede utilizar la encriptación pero los ataque DoS siguen siendo un problema
 * **Escalabilidad:** 
-	* Un sistema distribuido es escalable si el costo de añadir nuevos usuarios es constante. 
-	* Se deben evitar cuellos de botella y la información debe estar estructurada, la información accesada frecuentemente puede ser replicada
+	* Un sistema distribuido es escalable si el costo de añadir nuevos usuarios es constante
+	* Se deben evitar cuellos de botella y la información debe estar estructurada
+	* La información accesada frecuentemente puede ser replicada
 * **Manejo de fallos:** Va a fallar, te toca a ti prevenir como
 
 ### Objetivos
-* **Disponibilidad de recursos:** Compartir con mayor rendimiento
-* **Transparencia en la distribución:** Para facilidad de uso
+* **Disponibilidad de recursos:** Compartir mejorando el rendimiento
+* **Transparencia en la distribución:** Para la facilidad de uso
 * **Apertura:** Soporte a la interoperabilidad, portabilidad y extensibilidad
 * **Escalabilidad:** Con respecto al tamaño (cantidad de usuarios), distribución geográfica y dominios administrativos
 
