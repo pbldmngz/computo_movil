@@ -152,7 +152,7 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 
 ![Prefijos de magnitos en FLOPS](https://github.com/pbldmngz/school/blob/master/7mo/Ubicuo/imagenes/flops.jpg "Prefijos de magnitos en FLOPS")
 
-> El 100% de las supercomputadoras del top 500 corren actualmente sobre algús sabor de Linux
+> El 100% de las supercomputadoras del top 500 corren actualmente sobre algún sabor de Linux
 
 #### ¿Qué puede ser distribuido?
 * **Hardware distribuido:** Dos o más computadoras con información local y procesadores
