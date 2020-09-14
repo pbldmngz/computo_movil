@@ -1,5 +1,5 @@
 # Índice
-- [Software ubicuo](#software-ubicuo---primer-parcial)
+- [Software ubicuo - primer parcial](#software-ubicuo---primer-parcial)
   * [Principios de cómputo ubicuo](#principios-de-cómputo-ubicuo)
   * [Línea del tiempo relevante](#línea-del-tiempo-relevante)
   * [Cómputo móvil](#cómputo-móvil)
