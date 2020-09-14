@@ -1,3 +1,23 @@
+# Índice
+- [Software ubicuo](#software-ubicuo)
+  * [Principios de cómputo ubicuo](#principios-de-cómputo-ubicuo)
+  * [Línea del tiempo relevante](#línea-del-tiempo-relevante)
+  * [Cómputo móvil](#cómputo-móvil)
+    + [Diferentes nombres](#diferentes-nombres)
+    + [Estándares](#estándares)
+  * [Sistemas distribuidos](#sistemas-distribuidos)
+    + [¿Qué es un sistema?](#-qué-es-un-sistema)
+    + [Tipos de sistemas](#tipos-de-sistemas)
+      - [¿Qué es un sistema distribuido?](#-qué-es-un-sistema-distribuido)
+        * [Características](#características)
+        * [Rendimiento](#rendimiento)
+      - [¿Qué puede ser distribuido?](#-qué-puede-ser-distribuido)
+    + [Problemas](#problemas)
+      - [Retos](#retos)
+    + [Objetivos](#objetivos)
+- [Fundamentos de la Inteligencia Artificial](#fundamentos-de-la-inteligencia-artificial)
+  * [Los 4 enfoques](#los-4-enfoques)
+  
 # Software ubicuo
 ## Principios de cómputo ubicuo
 * Ayuda a hacer algo
@@ -195,5 +215,31 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 			* Razonamiento automatizado
 			* Aprendizaje máquina
 * **Pensando racionalmente:**
-
-* **Actuando racionalmente:**
+	* Enfoque basado en las leyes del pensamiento/lógica
+	* Uso de silogismos (conclusiones en base a dos enunciados)
+		* Sócrates es un hombre
+		* Todos los hombres son mortales
+		* **Por lo tanto, Sócrates es mortal**
+	* **Obstáculos:**
+		* No es sencillo traducir conocimiento informal en conocimiento formal usando notación lógica, particularmente cuando el conocimiento no es 100% seguro.
+			* Falacias y paradojas
+		* Hay diferencia entre resolver un problema "en principio" y en la práctica
+			* Intratabilidad: Demasiadas variables pueden agotar recursos de cualquier computadora
+* **Actuando racionalmente:** Enfoque del agente racional
+	* Debe ser autónomo, percibir su entorno, persistir a través de periodos extensos de tiempo, adaptarse al cambio y crear-perseguir metas propias
+	* Actúa para lograr el mejor resultado posible
+	* Ser un agente racional incluye hacer inferencias correctas
+	* Las inferencias correctas pueden no ser siempre razonables, es posible que se llegue a un callejón sin salida
+	* **Ventajas:**
+		* Es más general que aquel basado en las leyes del pensamiento
+		* Es un desarrollo científico más adecuado que los enfoques basado en el comportamiento/pensamiento humano
+		* La racionalidad está matemáticamente bien definida
+	* **Racionalidad:**
+		* **Racionalidad perfecta:** 
+			* Tiene toda la información y capacidad de cálculo disponible, es básicamente el **demonio de Laplace**
+			* No es factible en entornos complicados
+			* Es buen punto de partida para el análisis
+		* **Racionalidad limitada:** 
+			* Siempre hay incertidumbre porque le faltan datos y capacidad de cómputo
+			* Enfoque en situaciones donde no se dispone de tiempo o recursos
+	
