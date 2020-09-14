@@ -90,4 +90,78 @@ Describe el uso de computadoras sin la necesidad de estar conectadas a una red.
 ## Sistemas distribuidos
 ### ¿Qué es un sistema?
 Genera una **salida** que **depende de la entrada** después de un **retraso.**
+
 ### Tipos de sistemas
+* **CVS - Continous Variable Systems:** Sus estados (entradas y salidas) cambian continuamente
+* **DES - Discrete Event Systems:**
+	* Cambio de estados desencadenados únicamente por eventos
+	* Solo tiene estados **discretos**
+		* Es un sistema hecho por el hombre
+		* En la naturaleza casi siempre se encuentran estados **continuos**
+	* El cambio es repentino, de golpe, como un evento en vez de un degradado
+
+#### ¿Qué es un sistema distribuido?
+Computadoras autónomas enlazadas entre sí en una red, reespaldadas por software que les permite actuar como una. Se hace ya que se puede conseguir mucho más poder que con una sola máquina.
+
+|Sistema centralizado|Sistema distribuido|
+|---|---|
+|Estado almacenado en una sola computadora|Estado dividido en varias computadoras|
+|Simple|Robusto|
+|Fácil de entender|Complejo|
+|Más rápido para un usuario individual|Más escalable, soporta a varios usuarios|
+
+##### Características
+* **Características:**
+	* Sin memoria compartida, comunicación a base de mensajes
+	* Cada máquina corre su propio sistema local
+	* """Heterogeneidad"""
+* **Ideal:** 
+	* Que parezca una sola computadora en vez de un grupo de muchas
+	* Oculta la información interna y detalles de la comunicación
+	* Provee una interfaz uniforme
+* **Fácilmente expandible**
+* **Disponibilidad continua:** Fallos en un componente pueden ser cubiertos por otros componenentes
+
+##### Rendimiento
+* **Rpeak:**
+	* Es el valor máximo teorizado del rendimiento del sistema procesando números flotantes
+	* Se lo mide en FLOPS (floating point operations per second)
+* **Rmax:**
+	* Es el valor máximo medido con un software en una operación real
+	* Rmax nunca será mayor a Rpeak
+
+![Prefijos de magnitos en FLOPS](https://github.com/pbldmngz/school/blob/master/7mo/Ubicuo/imagenes/flops.jpg "Prefijos de magnitos en FLOPS")
+
+> El 100% de las supercomputadoras del top 500 corren actualmente sobre algús sabor de Linux
+
+#### ¿Qué puede ser distribuido?
+* **Hardware distribuido:** Dos o más computadoras con información local y procesadores
+* **Control distribuido:** Control de un sistema de forma paralela desde diferentes ubicaciones
+* **Datos distribuidos:** La información se almacena en diferentes ubicaciones
+
+> **Hardware** distribuido **+** **Control** distribuido **+** **Datos** distribuidos **=** **Sistema distribuido**
+
+### Problemas
+* **Concurrencia:** 
+	* Dos computadoras intentan acceder al mismo recurso
+	* Los retrasos de la red no son constantes por lo que es difícil sincronizar
+* **No hay un reloj global:**
+	* De ser necesario cooperar, se coordinan intercambiando mensajes
+	* La coordinación requiere de nociones del antes y después
+	* Hay un límite en la presición a la que un componente puede sincronizar su reloj, no hay una noción correcta de tiempo a nivel global
+	* Los mensajes enviado dependen también del retraso de la red
+* **Fallos independientes:** 
+	* Un sistema informático puede fallar, la robustez es buen diseño
+	* Los sistemas distribuidos fallan en formas nuevas
+	* Problemas de red pueden llevar a tener un componente aislado pero no detenido
+	* Dilemas como esperar un acknowledgement y nunca recibirlo
+	* ¿Fue el sistema que no recibió tu mensaje o simplemente falló?
+
+#### Retos
+* **Heterogeneidad:** Hay diversidad en los modelos, diseños, sistemas operativos y características en general. Protocolos de comunicación y middleware puede enmascararlo
+* **Apertura:** Integrar componentes escritos por diferentes programadores es un gran reto
+* **Seguridad:** Se puede utilizar la encriptación pero los ataque DoS siguen siendo un problema
+* **Escalabilidad:** 
+	* Un sistema distribuido es escalable si el costo de añadir nuevos usuarios es constante. 
+	* Se deben evitar cuellos de botella y la información debe estar estructurada, la información accesada frecuentemente puede ser replicada
+* **Manejo de fallos:** Va a fallar, te toca a ti prevenir como
