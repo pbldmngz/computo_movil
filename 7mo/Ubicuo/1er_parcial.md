@@ -109,7 +109,7 @@ Describe el uso de computadoras sin la necesidad de estar conectadas a una red.
 
 ## Sistemas distribuidos
 ### ¿Qué es un sistema?
-Genera una **salida** que **depende de la entrada** después de un **retraso.**
+Genera una **salida** que **depende de una entrada** después de un **retraso.**
 
 ### Tipos de sistemas
 * **CVS - Continous Variable Systems:** Sus estados (entradas y salidas) cambian continuamente
