@@ -23,6 +23,8 @@
         * [Configuración del software](#configuración-del-software)
     + [Definición](#definición)
 
+-----
+
 # Aseguramiento de Calidad - Primer parcial
 * **Métodos de la ingeniería en software:**
 	* Entender dominio del problema
