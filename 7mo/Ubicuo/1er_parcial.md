@@ -231,7 +231,7 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 			* Razonamiento automatizado
 			* Aprendizaje máquina
 * **Actuando racionalmente:** Enfoque del agente racional
-	* **Debe** 
+	* **Debe:** 
 		* Ser autónomo
 		* Percibir su entorno
 		* Persistir a través de periodos extensos de tiempo
