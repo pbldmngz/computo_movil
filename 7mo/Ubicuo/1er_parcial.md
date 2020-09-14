@@ -17,7 +17,9 @@
     + [Objetivos](#objetivos)
 - [Fundamentos de la Inteligencia Artificial](#fundamentos-de-la-inteligencia-artificial)
   * [Los 4 enfoques](#los-4-enfoques)
-  
+ 
+-----
+
 # Software ubicuo - primer parcial
 ## Principios de cómputo ubicuo
 * Ayuda a hacer algo
