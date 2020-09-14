@@ -195,6 +195,8 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 * **Apertura:** Soporte a la interoperabilidad, portabilidad y extensibilidad
 * **Escalabilidad:** Con respecto al tamaño (cantidad de usuarios), distribución geográfica y dominios administrativos
 
+-----
+
 # Fundamentos de la Inteligencia Artificial
 ## Los 4 enfoques
 * **Pensando como humano:** 
