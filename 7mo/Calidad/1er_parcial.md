@@ -1,10 +1,10 @@
 # Índice
 - [Aseguramiento de Calidad - Primer parcial](#aseguramiento-de-calidad---primer-parcial)
   * [Calidad](#calidad)
-    + [Tópicos relacionados con la calidad:](#tópicos-relacionados-con-la-calidad)
+    + [Tópicos relacionados con la calidad](#tópicos-relacionados-con-la-calidad)
       - [Gestión de calidad](#gestión-de-calidad)
         * [Sistema de gestión de calidad](#sistema-de-gestión-de-calidad)
-          + [A nivel de empresa:](#a-nivel-de-empresa)
+          + [A nivel de empresa](#a-nivel-de-empresa)
           + [A nivel de proyecto](#a-nivel-de-proyecto)
     + [Métricas](#métricas)
     + [Proceso de mejora del software](#proceso-de-mejora-del-software)
@@ -51,7 +51,7 @@
 	* Se suele entregar con defectos de forma consciente debido a su complejidad
 	* Gran parte del desarrollo se hace a medida, sin usar componentes existentes
 	* Flexible, los fragmentos se pueden cambiar y reutilizar
-### Tópicos relacionados con la calidad:
+### Tópicos relacionados con la calidad
 * **Control de calidad:** Acciones que aseguran que un producto cumpla las metas de calidad. 
 	* **Objetivos:**
 		* Controlar un proceso
@@ -60,14 +60,14 @@
 		* **Verificación:** Comprobar si los productos desarrollados en cierta etapa cumplen con los requerimientos
 		* **Validación:** Comprobar si el software satisface los requisitos del usuario
 * **Aseguramiento de calidad:** Actividades que evalúan el proceso en el que se desarrolla un producto.
-#### Gestión de calidad: 
+#### Gestión de calidad
 Determina y aplica objetivos y directrices de calidad. 
 
 * **Incluye:**
 	* Planeación estratégica
 	* Asignación de recursos
 ##### Sistema de gestión de calidad
-###### A nivel de empresa: 
+###### A nivel de empresa
 >Para implementar una infraestructura de calidad es necesario disponer de un sistema de calidad que se adecúe a los objetivos de la empresa.
 
 * **Estuctura** que se establece para llevar a cabo la gestión:
@@ -206,7 +206,7 @@ Para evaluar las características del software se utilizan métricas, **EJEMPLOS
 10. Evaluar la práctica actual
 11. Estímulo para mejora
 12. Establecer contexto y patrocinador
-13 Establecer infraestructura de mejora
+13. Establecer infraestructura de mejora
 
 > Creo que esto es un ciclo pero no me cuadran los detalles, hacen referencia a esta imagen
 ![Ejemplo](https://github.com/pbldmngz/school/blob/master/7mo/Calidad/imagenes/proceso_mejora_software.jpg "Ejemplo que soy demasiado cuadrado para entender")
