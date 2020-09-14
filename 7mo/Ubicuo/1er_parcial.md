@@ -136,7 +136,7 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 * **Características:**
 	* Sin memoria compartida, comunicación a base de mensajes
 	* Cada máquina corre su propio sistema local
-	* """Heterogeneidad"""
+	* Heterogeneidad
 * **Ideal:** 
 	* Que parezca una sola computadora en vez de un grupo de muchas
 	* Oculta la información interna y detalles de la comunicación
