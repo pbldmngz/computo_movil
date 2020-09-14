@@ -231,7 +231,12 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 			* Razonamiento automatizado
 			* Aprendizaje máquina
 * **Actuando racionalmente:** Enfoque del agente racional
-	* Debe ser autónomo, percibir su entorno, persistir a través de periodos extensos de tiempo, adaptarse al cambio y crear-perseguir metas propias
+	* **Debe** 
+		* Ser autónomo
+		* Percibir su entorno
+		* Persistir a través de periodos extensos de tiempo
+		* Adaptarse al cambio
+		* Crear y perseguir metas propias
 	* Actúa para lograr el mejor resultado posible
 	* Ser un agente racional incluye hacer inferencias correctas
 	* Las inferencias correctas pueden no ser siempre razonables, es posible que se llegue a un callejón sin salida
