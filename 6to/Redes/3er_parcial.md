@@ -35,4 +35,6 @@
 	* Increased path length, decreased routing table size
 	* Packets go to a main node in a region and then get redirected to its destination
 * Broadcast routing
-	*
+	* 
+	
+> Aquí comenzó la cuarentena de 2020 así que me valió madres el semestre y no estudié realmente
