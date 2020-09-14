@@ -168,7 +168,7 @@ Computadoras autónomas enlazadas entre sí en una red, reespaldadas por softwar
 * **No hay un reloj global:**
 	* De ser necesario cooperar, se coordinan intercambiando mensajes
 	* La coordinación requiere de nociones del antes y después
-	* Hay un límite en la presición a la que un componente puede sincronizar su reloj, no hay una noción correcta de tiempo a nivel global
+	* Hay un límite en la precisión a la que un componente puede sincronizar su reloj, no hay una noción correcta de tiempo a nivel global
 	* Los mensajes enviado dependen también del retraso de la red
 * **Fallos independientes:** 
 	* Un sistema informático va a fallar, la robustez es buen diseño
