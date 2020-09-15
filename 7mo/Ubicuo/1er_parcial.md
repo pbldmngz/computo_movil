@@ -37,6 +37,7 @@
 	* Mejora la capacidad de tráfico de los móviles
 	* Se solicitó a la FCC la asignación de gran cantidad de frecuencias del espectro radioeléctrico para garantizar servicios
 * En **1955** Ericson comercializó el Mobile Telephone System A, un teléfono móvil de 40 kg que se instalaba en tu auto
+* En **1956** John McCarthy organizó la primer conferencia de IA
 * En **1965** AT&T comenzó a usar computadoras para hacer conmutación
 * En **1973** Motorola saca el primer teléfono móvil, el DynaTAC 8000x, pesaba 800g y tardaba 10 horas en cargarse para solo una de utilidad
 * En **1984** Nokia saca otro teléfono para carros, de 10kg llamado Mobira Talkman
