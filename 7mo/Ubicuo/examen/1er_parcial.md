@@ -1,4 +1,4 @@
-# Examen
+# Primer examen parcial
 1. El 802.11 se refiere a la siguiente tecnología de comunicación inalámbrica: **WiFi**
 2. Un agente racional es cualquier entidad capaz de percibir su medioambiente con la ayuda de sensores y actuar en ese medio utilizando actuadores. **Verdadero**
 3. Un obstáculo principal de un enfoque de pensar racional es la Intratabilidad. ¿A qué se refiere la "Intratabilidad" de un problema?
