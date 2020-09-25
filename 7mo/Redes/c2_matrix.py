@@ -25,7 +25,7 @@ def texto_valido(text):
             return False
     return True
 
-#Esto es para correrlo desde consola, "python c_matrix.py texto llave 0encripta-1decripta", si la llave es válida
+#Esto es para correrlo desde consola, "python c2_matrix.py texto llave 0encripta-1decripta", si la llave es válida
 if texto_valido(sys.argv[2]):
     print(encrypt(sys.argv[1], len(sys.argv[2]), sys.argv[2]) if sys.argv[3] == "0" else decrypt(sys.argv[1], len(sys.argv[2]), sys.argv[2]))
 else: print("La llave no es válida")
