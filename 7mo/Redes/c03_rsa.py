@@ -9,7 +9,7 @@ def encrypt(msg, e, n):
 def decrypt(ctx, n, d):									
 	return "".join([chr((ord(t)**d)%n) for t in ctx])	#Proceso inverso, haciéndo operaciones con la otra llave
 
-def base(m, p, q):
+def base(en, p, q):
 	n = p*q 											#Obtener el valor de N
 	z = (p-1)*(q-1)										#Obtener el valor de Z
 
@@ -21,11 +21,16 @@ def base(m, p, q):
 		if j%e == 0:
 			d = j//e
 			break
+	
+	m = input("Mensaje: ")
 
-	encrypted = encrypt(m, e, n)						#Llamar al método de encriptación
-	print("Texto cifrado: ", encrypted)
+	if en.lower() == "encrypt":
+		encrypted = encrypt(m, e, n)					#Llamar al método de encriptación
+		print("Texto cifrado: ", encrypted)
+	elif en.lower() == "decrypt":
+		decrypted = decrypt(m, n, d)					#Llamar al método de decriptación
+		print("Texto descifrado: ", decrypted)
+	else: print("Parámetro '{}' no reconocido".format(en))
 
-	decrypted = decrypt(encrypted, n, d)				#Llamar al método de decriptación
-	print("Texto descifrado: ", decrypted)
-
-base(sys.argv[1], int(sys.argv[2]), int(sys.argv[3])) 	#Ejecutar el código en consola de la forma: python rsa_9864.py mensaje primo otro_primo
+base(sys.argv[1], int(sys.argv[2]), 					#Ejecutar el código en consola de la forma: 
+	int(sys.argv[3])) 									#python c03_rsa.py encrypt/decrypt primo otro_primo
