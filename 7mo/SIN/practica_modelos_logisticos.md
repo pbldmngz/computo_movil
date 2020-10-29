@@ -175,7 +175,7 @@ library(rpart.plot)
 ```
 
 ### Creación el árbol de clasificación
-Se utiliza la función **rpart()** para crear el árbol de decisión 
+Se utiliza la función **rpart()** para crear el árbol de decisión.
 ```r
 modelo.arbol = rpart(Reverse ~ Circuit + Issue + Petitioner + LowerCourt + Unconst, 
 data = train.arbol, method = "class", minbucket = 25)
