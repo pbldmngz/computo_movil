@@ -1,5 +1,5 @@
 # Reporte
-
+## Cargar datos
 Se tienen 5 archivos .cvs que se quieren importar, lo primero es cambiar el directorio. Luego se importan los archivos.
 ```r 
 setwd("C:/este-directorio") 
@@ -11,6 +11,8 @@ arbol.D = read.csv("stevens.csv")
 cluster = read.csv("insurance.csv")
 ```
 
+## Regresión lineal
+### Creación del modelo de regresión lineal
 Se utiliza **lm()** para crear un modelo de regresión lineal. Se crean considerando sus respectivas variables.
 ```r
 modelo.reg.lin.0 = lm(Price ~ AGST, data = lin.reg)
@@ -18,6 +20,7 @@ modelo.reg.lin.1 = lm(Price ~ AGST + HarvestRain + WinterRain + Age + FrancePop,
 modelo.reg.lin.2 = lm(Price ~ AGST + HarvestRain, data = lin.reg)
 ```
 
+### Interpretación de modelos
 Se utiliza **summary()** para conocer los coeficientes de las variables del modelo y su nivel de significancia.
 ```r
 summary(modelo.reg.lin.0)
@@ -46,6 +49,7 @@ Multiple R-squared:  0.435,	Adjusted R-squared:  0.4105
 F-statistic: 17.71 on 1 and 23 DF,  p-value: 0.000335
 ```
 
+### Predicción de valores y medición de desempeño
 Se utiliza **predict()** para predecir los valores de cada modelo.
 ```r
 predicciones0 = predict(modelo.reg.lin.0, newdata = lin.reg.test)
@@ -72,7 +76,9 @@ r2.1 = 1 - SSE1/SST
 r2.2 = 1 - SSE2/SST
 ```
 
-
+## Regresión logística
+### Caso de estudio
+Se utiliza **str()** para ver la estructura.
 ```r
 str(log.reg)
 ```
@@ -96,7 +102,7 @@ Resultado:
  $ PoorCare            : int  0 0 0 0 0 1 0 0 1 0 ...
 ```
 
-
+### Creación de datos de prueba
 ```r
 install.packages("caTools")
 library(caTools)
@@ -109,24 +115,27 @@ log.train = subset(log.reg, split == T)
 log.test = subset(log.reg, split==F)
 ```
 
+### Creación de modelo de regresión logística
 ```r
-modelo.reg.lin.1 = glm(PoorCare ~ OfficeVisits + Narcotics, data = log.train, family = binomial)
-```
+modelo.reg.log.1 = glm(PoorCare ~ OfficeVisits + Narcotics, data = log.train, family = binomial)
 
-```r
-predict.train.log = predict(modelo.reg.lin.1, newdata = log.train, type = "response")
+predict.train.log = predict(modelo.reg.log.1, newdata = log.train, type = "response")
 tapply(predict.train.log, log.train$PoorCare, mean)
 ```
 
+### Predicciones e valores y medición de desempeño
 ```r
 predict.log = predict(modelo.reg.log.1, newdata = log.test, type = "response")
 table(log.test$PoorCare, predict.log > 0.5)
 ```
 
+### Gráfica e la curva ROC para elegir el valor de tolerancia
 ```r
 install.packages("ROCR")
 ```
 
+## Árboles de decisión
+### Creación del set de datos
 ```r
 library(caTools)
 set.seed(3000)
@@ -135,6 +144,7 @@ train.arbol = subset(arbol.D, split==T)
 test.arbol = subset(arbol.D, split==F)
 ```
 
+### Instalar librerías
 ```r
 install.packages("rpart")
 install.packages("rpart.plot")
@@ -145,12 +155,19 @@ library(rpart)
 library(rpart.plot)
 ```
 
+### Creación el árbol de clasificación
 ```r
 modelo.arbol = rpart(Reverse ~ Circuit + Issue + Petitioner + LowerCourt + Unconst, 
 data = train.arbol, method = "class", minbucket = 25)
+```
 
+### Interpretación del árbol de clasificación
+```r
 prp(modelo.arbol)
+```
 
+### Predicciones
+```r
 pred.arbol = predict(modelo.arbol, newdata = test.arbol, type = "class")
 
 table(test.arbol$Reverse, pred.arbol)
