@@ -1,17 +1,24 @@
 # Reporte
 
-```r
-setwd("C:/Users/Onlin/Downloads/lucia")
+Se tienen 5 archivos .cvs que se quieren importar, lo primero es cambiar el directorio. Luego se importan los archivos.
+
+```r 
+setwd("C:/este-directorio") 
 
 lin.reg = read.csv("wine.csv")
 lin.reg.test = read.csv("wine_test.csv")
 log.reg = read.csv("quality.csv")
 arbol.D = read.csv("stevens.csv")
 cluster = read.csv("insurance.csv")
+```
 
+Se utiliza **lm()** para crear un modelo de regresión lineal. Se crean considerando sus respectivas variables.
+
+```r
 modelo.reg.lin.0 = lm(Price ~ AGST, data = lin.reg)
 modelo.reg.lin.1 = lm(Price ~ AGST + HarvestRain + WinterRain + Age + FrancePop, data = lin.reg)
 modelo.reg.lin.2 = lm(Price ~ AGST + HarvestRain, data = lin.reg)
+```
 
 summary(modelo.reg.lin.0)
 summary(modelo.reg.lin.1)
