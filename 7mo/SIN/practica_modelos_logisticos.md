@@ -162,6 +162,7 @@ split = sample.split(arbol.D$Reverse, SplitRatio = 0.7)
 train.arbol = subset(arbol.D, split==T)
 test.arbol = subset(arbol.D, split==F)
 ```
+![arbol_de](https://github.com/pbldmngz/school/blob/master/7mo/SIN/practica_modelos_logisticos/arbol.png "Arbol")
 
 ### Instalar librerías
 ```r
