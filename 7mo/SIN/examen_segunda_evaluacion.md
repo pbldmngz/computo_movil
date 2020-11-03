@@ -56,7 +56,7 @@ lin.reg = read.csv("SkillCraft1_Dataset.csv")
 ```
 
 > De querer hacerlo se puede ver la estructura usando `str(lin.reg)`, se obtendría algo como esto:
-```r 
+```
 'data.frame':	3395 obs. of  20 variables:
  $ GameID              : int  52 55 56 57 58 60 61 72 77 81 ...
  $ LeagueIndex         : int  5 5 4 3 3 2 1 7 4 4 ...
@@ -91,7 +91,7 @@ summary(modelo.reg.lin.0)
 ```
 
 Obteniendo un resultado como este:
-```r
+```
 Call:
 lm(formula = lin.reg$LeagueIndex ~ lin.reg$APM)
 
