@@ -1,5 +1,5 @@
 # Segunda evaluación - examen práctico
-## Actividades
+## Instrucciones
 * Diseña e implementa un dashboard con tu set de datos, justifica en un documento la información y gráficos que estás presentando, en donde se vea claramente las preguntas y respuestas que ofrece tu tablero.
 * Diseña un modelo predictivo con tu set de datos con R, documenta el desarrollo de tu modelo, así como su interpretación.
 
@@ -12,6 +12,14 @@
 * archivo de tableau
 * archivos de R
 * documento de texto con la justificación del proyecto y los elementos documentales planteados en el ejercicio.
+
+## Dashboard en Tableau
+Se utilizó [SkillCraft](https://github.com/pbldmngz/school/blob/master/7mo/SIN/examen_segunda_evaluacion/res/SkillCraft1_Dataset.csv), un dataset con información detallada de partidas de StarCraft II, para obtener información relevante a la hora de intentar ser el mejor en ese juego. [Ver aquí información específica](https://github.com/pbldmngz/school/blob/master/7mo/SIN/examen_segunda_evaluacion/res/SkillCraft1%20Master%20Table%20Dataset%20Data%20Set.pdf).
+
+Para facilitar la comprensión, se decidió dividir la información obtenida en tres dashboards.
+
+### Dashboard de introducción
+![Dashboard#1]("https://github.com/pbldmngz/school/blob/master/7mo/SIN/examen_segunda_evaluacion/dashboard_img/Datos.png")
 
 ## Cargar datos
 Se tienen 5 archivos .cvs que se quieren importar, lo primero es cambiar el directorio. Luego se importan los archivos.
