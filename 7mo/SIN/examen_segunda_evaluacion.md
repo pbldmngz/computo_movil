@@ -140,5 +140,5 @@ plot(lin.reg$APM, lin.reg$LeagueIndex, ylab="League Index", xlab = "Actions per 
 abline(modelo.reg.lin.0, col="red")
 ```
 
-Como se puede ver en esta gráfica, se coincide parcialmente, estos datos son difíciles de hacer encajar en el modelo debido a la gran dispersión que hay entre los datos, que vendrían a decir que, aunque si es cierto que las acciones por minuto son relevantes en función a lo bueno que es un jugador, hacer más rápido algo no significa **siempre** que se hace mejor.
+Como se puede ver en esta gráfica, se coincide parcialmente. Estos datos son difíciles de hacer encajar en el modelo debido a la gran dispersión que hay entre los datos, que vendrían a decir que, aunque si es cierto que las acciones por minuto son relevantes en función a lo bueno que es un jugador, hacer más rápido algo no significa **siempre** que se hace mejor.
 ![Plot](https://github.com/pbldmngz/school/blob/master/7mo/SIN/examen_segunda_evaluacion/res/3.jpg)
