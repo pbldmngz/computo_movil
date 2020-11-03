@@ -162,7 +162,6 @@ split = sample.split(arbol.D$Reverse, SplitRatio = 0.7)
 train.arbol = subset(arbol.D, split==T)
 test.arbol = subset(arbol.D, split==F)
 ```
-![arbol_de](https://github.com/pbldmngz/school/blob/master/7mo/SIN/practica_modelos_logisticos/arbol.png "Arbol")
 
 ### Instalar librerías
 ```r
@@ -183,6 +182,7 @@ data = train.arbol, method = "class", minbucket = 25)
 ```
 
 > Se creará un árbol de clasificación, para ello se requiere utilizar el argumento **method** al que se le asignará el valor **class**. El argumento **minbucket** sirve para controlar el número de ramas del árbol, ya que si éste es muy bajo se crearan muchas ramas y el modelo no podrá predecir valores que estén fuera del set de datos de entrenamiento y si es muy alto, el modelo será muy simple y la precisión muy baja.
+![arbol_de](https://github.com/pbldmngz/school/blob/master/7mo/SIN/practica_modelos_logisticos/arbol.png "Arbol")
 
 ### Interpretación del árbol de clasificación
 Para graficar:
