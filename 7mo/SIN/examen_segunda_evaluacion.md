@@ -82,5 +82,63 @@ lin.reg = read.csv("SkillCraft1_Dataset.csv")
 
 Se utiliza **lm()** para crear un modelo de regresión lineal. Se crean considerando sus respectivas variables, en este caso la variable dependiente corresponde a LeagueIndex y la única independiente que se usará, a APM.
 ```r 
-modelo.reg.lin.0 = lm(LeagueIndex ~ APM)
+modelo.reg.lin.0 = lm(lin.reg$LeagueIndex ~ lin.reg$APM)
 ```
+
+Se utiliza **summary()** para conocer los coeficientes de las variables del modelo y su nivel de significancia.
+```r
+summary(modelo.reg.lin.0)
+```
+
+Obteniendo un resultado como este:
+```r
+Call:
+lm(formula = lin.reg$LeagueIndex ~ lin.reg$APM)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.2657 -0.7979  0.0523  0.8314  3.2482 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.9196917  0.0481111   39.90   <2e-16 ***
+lin.reg$APM 0.0193461  0.0003757   51.49   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.137 on 3393 degrees of freedom
+Multiple R-squared:  0.4387,	Adjusted R-squared:  0.4385 
+F-statistic:  2651 on 1 and 3393 DF,  p-value: < 2.2e-16
+```
+
+Se utiliza **predict()** para predecir los valores del modelo y con esto también una operaciones con el objetivo de obtener el valor del desempeño del modelo.
+```r
+predicciones0 = predict(modelo.reg.lin.0)
+
+SSE0 = sum((lin.reg$LeagueIndex - predicciones0) ^ 2)
+SST = sum((lin.reg$LeagueIndex - mean(lin.reg$LeagueIndex)) ^ 2)
+r2.0 = 1 - SSE0/SST
+
+SSE0
+SST
+r2.0
+```
+
+Obteniendo un resultado tal que así, donde lo relevante es saber que el desempeño de este modelo es de un 43%, lo cual no se puede considerar como bueno.
+```r
+> SSE0
+[1] 4386.332
+> SST
+[1] 7813.941
+> r2.0
+[1] 0.438653
+```
+
+Para terminar, se quiere mostrar gráficamente lo que se ha hecho, para ello usamos **plot()**, y para visualizar el modelo, que vendría siendo "lo esperado".
+```r
+plot(lin.reg$APM, lin.reg$LeagueIndex, ylab="League Index", xlab = "Actions per Minute")
+abline(modelo.reg.lin.0, col="red")
+```
+
+Como se puede ver en esta gráfica, se coincide parcialmente, estos datos son difíciles de hacer encajar en el modelo debido a la gran dispersión que hay entre los datos, que vendrían a decir que, aunque si es cierto que las acciones por minuto son relevantes en función a lo bueno que es un jugador, hacer más rápido algo no significa **siempre** que se hace mejor.
+![Plot](https://github.com/pbldmngz/school/blob/master/7mo/SIN/examen_segunda_evaluacion/res/3.jpg)
